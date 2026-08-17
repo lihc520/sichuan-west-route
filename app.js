@@ -409,6 +409,83 @@ const routeData = {
   snow: { itinerary: snowItinerary, roadSegments: snowRoadSegments, stays: snowStays, summary: "雪山加量线：顺时针主线基础上增加长坪沟，10 月 7 日凌晨从四姑娘山直奔成都机场。" }
 };
 
+const routeMapPoints = {
+  chengdu: { name: "成都", x: 865, y: 130, dx: -16, dy: -24, anchor: "end" },
+  airport: { name: "成都机场", x: 905, y: 188, dx: -15, dy: 27, anchor: "end" },
+  dujiangyan: { name: "都江堰", x: 765, y: 90, dx: 0, dy: -22, anchor: "middle" },
+  yingxiu: { name: "映秀", x: 690, y: 118, dx: -13, dy: 28, anchor: "end" },
+  wolong: { name: "卧龙熊猫苑", x: 580, y: 108, dx: 0, dy: -23, anchor: "middle" },
+  siguniang: { name: "四姑娘山镇", x: 455, y: 120, dx: -16, dy: -24, anchor: "end" },
+  shuangqiao: { name: "双桥沟", x: 405, y: 67, dx: -13, dy: -15, anchor: "end" },
+  changping: { name: "长坪沟", x: 505, y: 64, dx: 14, dy: -14, anchor: "start" },
+  maobiliang: { name: "猫鼻梁", x: 505, y: 158, dx: 16, dy: 5, anchor: "start" },
+  xiaojin: { name: "小金", x: 365, y: 205, dx: -15, dy: -11, anchor: "end" },
+  danba: { name: "丹巴", x: 270, y: 270, dx: -16, dy: -10, anchor: "end" },
+  jiaju: { name: "甲居 / 中路", x: 205, y: 226, dx: -13, dy: -12, anchor: "end" },
+  yak: { name: "牦牛谷", x: 305, y: 350, dx: -14, dy: 29, anchor: "end" },
+  bamei: { name: "八美", x: 390, y: 400, dx: -14, dy: 29, anchor: "end" },
+  moshi: { name: "墨石公园", x: 350, y: 451, dx: -14, dy: 22, anchor: "end" },
+  tagong: { name: "塔公草原", x: 475, y: 430, dx: 0, dy: 34, anchor: "middle" },
+  gunong: { name: "姑弄村", x: 450, y: 360, dx: -15, dy: -12, anchor: "end" },
+  muya: { name: "木雅金塔", x: 525, y: 390, dx: 15, dy: -12, anchor: "start" },
+  xinduqiao: { name: "新都桥 / 瓦泽", x: 555, y: 495, dx: 13, dy: 27, anchor: "start" },
+  yuzixi: { name: "鱼子西", x: 620, y: 542, dx: 14, dy: 11, anchor: "start" },
+  honghaizi: { name: "红海子", x: 610, y: 425, dx: 15, dy: 27, anchor: "start" },
+  airportRoad: { name: "康定机场路", x: 625, y: 378, dx: -14, dy: -16, anchor: "end" },
+  kangding: { name: "康定", x: 680, y: 365, dx: 15, dy: 5, anchor: "start" },
+  mugecuo: { name: "木格措", x: 735, y: 322, dx: 14, dy: -9, anchor: "start" },
+  luding: { name: "泸定", x: 740, y: 430, dx: 14, dy: 26, anchor: "start" },
+  yaan: { name: "雅安", x: 805, y: 505, dx: 16, dy: 8, anchor: "start" }
+};
+
+const routeMapConfigs = {
+  balanced: {
+    code: "ROUTE A · 逆时针",
+    name: "传统逆时针均衡线",
+    meta: "主线 16 站 · 重点与条件点 8 处 · 返航前住雅安",
+    main: ["chengdu", "dujiangyan", "yingxiu", "wolong", "siguniang", "xiaojin", "danba", "yak", "bamei", "tagong", "xinduqiao", "honghaizi", "kangding", "luding", "yaan", "airport"],
+    branches: [["siguniang", "shuangqiao"], ["siguniang", "maobiliang"], ["danba", "jiaju"], ["bamei", "moshi"], ["tagong", "gunong"], ["tagong", "muya"], ["xinduqiao", "yuzixi"], ["kangding", "mugecuo"]],
+    sequence: [
+      ["chengdu", "9.30", "取车住宿"], ["dujiangyan", "10.1", "高速过境"], ["yingxiu", "10.1", "轮换司机"], ["wolong", "10.1", "午餐 / 观察高反"],
+      ["siguniang", "10.1–2", "连住两晚"], ["maobiliang", "10.1", "晴天短停", true], ["shuangqiao", "10.2", "整日核心", false, "scenic"], ["xiaojin", "10.3", "午餐补给"],
+      ["danba", "10.3", "低海拔住宿"], ["jiaju", "10.3", "藏寨二选一", true], ["yak", "10.4", "沿途短停"], ["bamei", "10.4", "午餐加油"],
+      ["moshi", "10.4", "排队可删", true], ["tagong", "10.4–5", "雅拉窗口", false, "scenic"], ["gunong", "10.5", "草原机位", false, "scenic"], ["muya", "10.4–5", "塔公替换点", true],
+      ["xinduqiao", "10.5–6", "贡嘎窗口"], ["yuzixi", "10.5", "默认不去", true], ["honghaizi", "10.6", "路况允许才停", true], ["kangding", "10.6", "午餐下撤"],
+      ["mugecuo", "10.6", "整日替换方案", true], ["luding", "10.6", "进度正常才停", true], ["yaan", "10.6", "低海拔住宿"], ["airport", "10.7", "还车返航"]
+    ]
+  },
+  clockwise: {
+    code: "ROUTE B · 顺时针",
+    name: "顺时针渐进海拔线",
+    meta: "主线 17 站 · 重点与条件点 7 处 · 首晚康定适应",
+    main: ["chengdu", "yaan", "luding", "kangding", "airportRoad", "honghaizi", "tagong", "xinduqiao", "bamei", "yak", "danba", "xiaojin", "siguniang", "wolong", "yingxiu", "dujiangyan", "airport"],
+    branches: [["tagong", "muya"], ["xinduqiao", "yuzixi"], ["bamei", "moshi"], ["danba", "jiaju"], ["siguniang", "maobiliang"], ["siguniang", "shuangqiao"], ["kangding", "mugecuo"]],
+    sequence: [
+      ["chengdu", "9.30", "取车住宿"], ["yaan", "10.1", "高速过境"], ["luding", "10.1", "午餐机动点", true], ["kangding", "10.1", "首晚适应"],
+      ["airportRoad", "10.2", "正规停车区", true], ["honghaizi", "10.2", "贡嘎窗口", true], ["tagong", "10.2", "雅拉窗口", false, "scenic"], ["muya", "10.2", "草原替换点", true],
+      ["xinduqiao", "10.2–3", "住宿 / 贡嘎"], ["yuzixi", "10.2", "默认不去", true], ["bamei", "10.3", "午餐加油"], ["moshi", "10.3", "阴天替补", true],
+      ["yak", "10.3", "沿途短停"], ["danba", "10.3–4", "低海拔住宿"], ["jiaju", "10.4", "藏寨二选一", true], ["xiaojin", "10.4", "午餐补给"],
+      ["maobiliang", "10.4", "晴天核心", true, "scenic"], ["siguniang", "10.4–5", "连住两晚"], ["shuangqiao", "10.5", "整日核心", false, "scenic"], ["wolong", "10.6", "熊猫苑可删"],
+      ["yingxiu", "10.6", "遗址短停"], ["dujiangyan", "10.6–7", "住宿 / 半日"], ["airport", "10.7", "还车返航"]
+    ]
+  },
+  snow: {
+    code: "ROUTE C · 雪山加量",
+    name: "顺时针雪山加量线",
+    meta: "主线 17 站 · 重点与条件点 7 处 · 双桥沟 + 长坪沟",
+    main: ["chengdu", "yaan", "luding", "kangding", "airportRoad", "honghaizi", "tagong", "xinduqiao", "bamei", "yak", "danba", "xiaojin", "siguniang", "wolong", "yingxiu", "dujiangyan", "airport"],
+    branches: [["tagong", "muya"], ["xinduqiao", "yuzixi"], ["bamei", "moshi"], ["danba", "jiaju"], ["siguniang", "maobiliang"], ["siguniang", "shuangqiao"], ["siguniang", "changping"]],
+    sequence: [
+      ["chengdu", "9.30", "取车住宿"], ["yaan", "10.1", "高速过境"], ["luding", "10.1", "午餐机动点", true], ["kangding", "10.1", "首晚适应"],
+      ["airportRoad", "10.2", "高原观景段", true], ["honghaizi", "10.2", "贡嘎窗口", true], ["tagong", "10.2", "雅拉窗口", false, "scenic"], ["muya", "10.2", "草原替换点", true],
+      ["xinduqiao", "10.2–3", "住宿 / 贡嘎"], ["yuzixi", "10.2", "默认不去", true], ["bamei", "10.3", "午餐加油"], ["moshi", "10.3", "阴天替补", true],
+      ["yak", "10.3", "沿途短停"], ["danba", "10.3–4", "低海拔住宿"], ["jiaju", "10.4", "藏寨二选一", true], ["xiaojin", "10.4", "午餐补给"],
+      ["maobiliang", "10.4", "晴天核心", true, "scenic"], ["siguniang", "10.4–6", "连续三晚"], ["shuangqiao", "10.5", "雪山核心", false, "scenic"], ["changping", "10.6", "轻徒步加量", false, "scenic"],
+      ["wolong", "10.7", "凌晨轮换"], ["yingxiu", "10.7", "进度检查"], ["dujiangyan", "10.7", "仅过境"], ["airport", "10.7", "还车返航"]
+    ]
+  }
+};
+
 const spots = [
   { name: "康定折多河老城", region: "康定", level: "core", tag: "核心", time: "1–2h", cost: "免费", altitude: "2,560m", rule: "D1 到得早才散步，晚到直接休息", note: "第一晚适应海拔，餐饮和补给最完整。" },
   { name: "S434 红海子", region: "康定—塔公", level: "core", tag: "核心", time: "20–30min", cost: "可能有清洁费", altitude: "约 4,000m", rule: "只在正规停车区，雨雪立即取消", note: "高山湖泊与雪山公路场景，停留必须短。" },
@@ -513,6 +590,103 @@ function xiaohongshuSearchUrl(query) {
   return `https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(query)}&type=51`;
 }
 
+function mapDaysFromLabel(label) {
+  if (label === "9.30") return [0];
+  const match = label.match(/^10\.(\d)(?:–(\d))?/);
+  if (!match) return [];
+  const start = Number(match[1]);
+  const end = Number(match[2] || match[1]);
+  return Array.from({ length: end - start + 1 }, (_, index) => start + index);
+}
+
+function renderRouteMap() {
+  const config = routeMapConfigs[activePlan];
+  const root = document.querySelector("[data-route-map]");
+  const controls = document.querySelector("[data-map-plan-controls]");
+  document.querySelector("[data-map-route-code]").textContent = config.code;
+  document.querySelector("[data-map-route-name]").textContent = config.name;
+  document.querySelector("[data-map-route-meta]").textContent = config.meta;
+
+  controls.innerHTML = planOptions.map((plan, index) => `
+    <button type="button" role="tab" aria-selected="${plan.id === activePlan}" class="map-route-tab ${plan.id === activePlan ? "active" : ""}" data-map-plan="${plan.id}">
+      <span>${String.fromCharCode(65 + index)}</span>${plan.id === "balanced" ? "逆时针" : plan.id === "clockwise" ? "顺时针" : "雪山+"}
+    </button>`).join("");
+  controls.querySelectorAll("[data-map-plan]").forEach(button => button.addEventListener("click", () => selectPlan(button.dataset.mapPlan)));
+
+  const pathPoints = config.main.map(key => `${routeMapPoints[key].x},${routeMapPoints[key].y}`).join(" ");
+  const branchPaths = config.branches.map(([from, to]) => {
+    const start = routeMapPoints[from];
+    const end = routeMapPoints[to];
+    return `<line class="map-branch-shadow" x1="${start.x}" y1="${start.y}" x2="${end.x}" y2="${end.y}" /><line class="map-branch" x1="${start.x}" y1="${start.y}" x2="${end.x}" y2="${end.y}" />`;
+  }).join("");
+  const nodes = config.sequence.map((item, index) => {
+    const [key, date, note, optional = false, kind = "route"] = item;
+    const point = routeMapPoints[key];
+    const classes = ["map-node", optional ? "optional" : kind, key === "chengdu" || key === "airport" ? "endpoint" : ""].filter(Boolean).join(" ");
+    return `
+      <g class="${classes}" transform="translate(${point.x} ${point.y})" data-map-days="${mapDaysFromLabel(date).join(",")}">
+        <circle r="${optional ? 9 : 11}" />
+        <text class="map-sequence" y="3" text-anchor="middle">${String(index + 1).padStart(2, "0")}</text>
+        <text class="map-label" x="${point.dx}" y="${point.dy}" text-anchor="${point.anchor}">${point.name}</text>
+      </g>`;
+  }).join("");
+
+  root.innerHTML = `
+    <svg viewBox="0 0 960 610" role="img" aria-labelledby="dynamic-map-title dynamic-map-desc">
+      <title id="dynamic-map-title">${config.name}详细途经图</title>
+      <desc id="dynamic-map-desc">地图按编号展示 ${config.sequence.map(item => routeMapPoints[item[0]].name).join("、")}。</desc>
+      <defs>
+        <marker id="route-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" />
+        </marker>
+      </defs>
+      <path class="terrain-river" d="M105 75 C245 130 255 305 342 380 C455 478 630 480 850 535" />
+      <polyline class="route-shadow" points="${pathPoints}" />
+      <polyline class="route-path route-${activePlan}" points="${pathPoints}" marker-end="url(#route-arrow)" />
+      ${branchPaths}
+      <g class="map-road-labels" aria-hidden="true">
+        <text x="630" y="485">G318</text><text x="413" y="388">G248</text><text x="330" y="170">G350</text><text x="622" y="348">S434</text><text x="775" y="390">雅康高速</text>
+      </g>
+      <g class="map-landmark yala" transform="translate(390 290)">
+        <path d="M0 20 L12 0 L21 13 L29 5 L42 20 Z" /><text x="21" y="37" text-anchor="middle">雅拉雪山</text>
+      </g>
+      <g class="map-landmark gongga" transform="translate(600 566)">
+        <path d="M0 20 L13 1 L21 12 L31 3 L45 20 Z" /><text x="22" y="37" text-anchor="middle">贡嘎雪山群</text>
+      </g>
+      ${nodes}
+      <g class="map-compass" transform="translate(82 88)">
+        <path d="M0 34 L15 0 L30 34 L15 27 Z" /><text x="15" y="52" text-anchor="middle">N</text>
+      </g>
+    </svg>`;
+
+  document.querySelector("[data-map-waypoints]").innerHTML = config.sequence.map((item, index) => {
+    const [key, date, note, optional = false, kind = "route"] = item;
+    return `<div class="map-waypoint ${optional ? "optional" : ""} ${kind === "scenic" ? "scenic" : ""}" data-map-days="${mapDaysFromLabel(date).join(",")}">
+      <span>${String(index + 1).padStart(2, "0")}</span><div><strong>${routeMapPoints[key].name}</strong><small>${date} · ${note}</small></div>
+    </div>`;
+  }).join("");
+  window.requestAnimationFrame(() => {
+    root.scrollLeft = window.matchMedia("(max-width: 700px)").matches ? root.scrollWidth - root.clientWidth : 0;
+  });
+}
+
+function selectPlan(planId) {
+  if (!routeData[planId]) return;
+  activePlan = planId;
+  activeDay = 0;
+  localStorage.setItem("chuanxi-route", activePlan);
+  const url = new URL(window.location.href);
+  url.searchParams.set("route", activePlan);
+  window.history.replaceState({}, "", url);
+  renderPlans();
+  renderRouteMap();
+  renderTabs();
+  renderDay();
+  renderRoadbook();
+  renderStays();
+  if (window.lucide) window.lucide.createIcons();
+}
+
 function renderPlans() {
   const controls = document.querySelector("[data-plan-controls]");
   const content = document.querySelector("[data-plan-content]");
@@ -526,20 +700,7 @@ function renderPlans() {
     <div class="plan-stats">${plan.stats.map(item => `<div><span>${item[0]}</span><strong>${item[1]}</strong></div>`).join("")}</div>
     <div class="plan-timeline">${plan.timeline.map((item, index) => `<div><span>${item[0]}</span><strong>${item[1]}</strong><small>${item[2]}</small>${index < plan.timeline.length - 1 ? icon("arrow-right") : ""}</div>`).join("")}</div>
     <p class="plan-verdict"><strong>结论：</strong>${plan.verdict}</p>`;
-  controls.querySelectorAll("[data-plan]").forEach(button => button.addEventListener("click", () => {
-    activePlan = button.dataset.plan;
-    activeDay = 0;
-    localStorage.setItem("chuanxi-route", activePlan);
-    const url = new URL(window.location.href);
-    url.searchParams.set("route", activePlan);
-    window.history.replaceState({}, "", url);
-    renderPlans();
-    renderTabs();
-    renderDay();
-    renderRoadbook();
-    renderStays();
-    if (window.lucide) window.lucide.createIcons();
-  }));
+  controls.querySelectorAll("[data-plan]").forEach(button => button.addEventListener("click", () => selectPlan(button.dataset.plan)));
 }
 
 function renderRoadbook() {
@@ -643,7 +804,10 @@ function renderDay() {
     <div class="day-notes">
       ${day.notes.map((item, index) => `<div><span>NOTE 0${index + 1}</span><strong>${item[0]} · ${item[1]}</strong><p>${item[2]}</p></div>`).join("")}
     </div>`;
-  document.querySelectorAll("[data-map-day]").forEach(node => node.classList.toggle("active", Number(node.dataset.mapDay) === day.mapDay));
+  document.querySelectorAll("[data-map-days]").forEach(node => {
+    const days = node.dataset.mapDays.split(",").filter(Boolean).map(Number);
+    node.classList.toggle("active", days.includes(activeDay));
+  });
   if (window.lucide) window.lucide.createIcons();
 }
 
@@ -727,6 +891,7 @@ function setupActions() {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderPlans();
+  renderRouteMap();
   renderTabs();
   renderDay();
   renderRoadbook();

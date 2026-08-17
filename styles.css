@@ -15,9 +15,10 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { overflow-x: hidden; scroll-behavior: smooth; }
 body {
   margin: 0;
+  overflow-x: hidden;
   color: var(--ink);
   background: var(--paper);
   font-family: var(--sans);
@@ -189,8 +190,9 @@ svg { display: block; }
 .snow-section { position: relative; padding-block: 120px; overflow: hidden; background: #dce6e3; }
 .snow-section::before { content: "05"; position: absolute; right: -18px; top: 34px; color: rgba(23,35,29,.055); font-family: var(--serif); font-size: 260px; font-weight: 900; line-height: 1; }
 .snow-section .content-width { position: relative; z-index: 1; }
-.snow-window-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.snow-window-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .snow-window-grid article { min-width: 0; min-height: 370px; padding: 26px 20px 24px; border-right: 1px solid rgba(23,35,29,.25); }
+.snow-window-grid article:nth-child(-n+3) { border-bottom: 1px solid rgba(23,35,29,.25); }
 .snow-window-grid article:last-child { border-right: 0; }
 .snow-window-grid span, .snow-protocol span { display: block; color: var(--red); font-size: 9px; font-weight: 900; letter-spacing: .08em; }
 .snow-window-grid strong { display: block; margin-top: 54px; color: var(--moss-light); font-size: 11px; }
@@ -410,9 +412,9 @@ input[type="range"]::-webkit-slider-thumb { width: 18px; height: 18px; appearanc
   .stay-row > div:last-child { grid-column: 3 / -1; }
   .spot-grid { grid-template-columns: repeat(2,1fr); }
   .role-grid { grid-template-columns: repeat(3,1fr); }
-  .snow-window-grid { grid-template-columns: repeat(3, 1fr); }
+  .snow-window-grid { grid-template-columns: repeat(2, 1fr); }
   .snow-window-grid article { min-height: 330px; border-bottom: 1px solid rgba(23,35,29,.25); }
-  .snow-window-grid article:nth-child(3) { border-right: 0; }
+  .snow-window-grid article:nth-child(even) { border-right: 0; }
   .snow-window-grid article:nth-last-child(-n+2) { border-bottom: 0; }
 }
 

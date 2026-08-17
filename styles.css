@@ -124,8 +124,8 @@ svg { display: block; }
 .route-rationale p { margin: 9px 0 0; color: #5c665f; font-size: 13px; line-height: 1.8; }
 
 .plan-section { padding-bottom: 120px; }
-.plan-switch { display: inline-flex; border: 1px solid var(--ink); }
-.plan-tab { min-height: 45px; padding: 0 18px; border: 0; border-right: 1px solid var(--ink); background: transparent; font-size: 12px; font-weight: 800; cursor: pointer; }
+.plan-switch { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: min(100%, 720px); border: 1px solid var(--ink); }
+.plan-tab { min-height: 52px; padding: 7px 14px; border: 0; border-right: 1px solid var(--ink); background: transparent; font-size: 11px; font-weight: 800; line-height: 1.35; cursor: pointer; }
 .plan-tab:last-child { border-right: 0; }
 .plan-tab.active { color: white; background: var(--ink); }
 .plan-content { margin-top: 34px; border-top: 2px solid var(--ink); }
@@ -190,9 +190,8 @@ svg { display: block; }
 .snow-section { position: relative; padding-block: 120px; overflow: hidden; background: #dce6e3; }
 .snow-section::before { content: "05"; position: absolute; right: -18px; top: 34px; color: rgba(23,35,29,.055); font-family: var(--serif); font-size: 260px; font-weight: 900; line-height: 1; }
 .snow-section .content-width { position: relative; z-index: 1; }
-.snow-window-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.snow-window-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .snow-window-grid article { min-width: 0; min-height: 370px; padding: 26px 20px 24px; border-right: 1px solid rgba(23,35,29,.25); }
-.snow-window-grid article:nth-child(-n+3) { border-bottom: 1px solid rgba(23,35,29,.25); }
 .snow-window-grid article:last-child { border-right: 0; }
 .snow-window-grid span, .snow-protocol span { display: block; color: var(--red); font-size: 9px; font-weight: 900; letter-spacing: .08em; }
 .snow-window-grid strong { display: block; margin-top: 54px; color: var(--moss-light); font-size: 11px; }
@@ -412,9 +411,9 @@ input[type="range"]::-webkit-slider-thumb { width: 18px; height: 18px; appearanc
   .stay-row > div:last-child { grid-column: 3 / -1; }
   .spot-grid { grid-template-columns: repeat(2,1fr); }
   .role-grid { grid-template-columns: repeat(3,1fr); }
-  .snow-window-grid { grid-template-columns: repeat(2, 1fr); }
+  .snow-window-grid { grid-template-columns: repeat(3, 1fr); }
   .snow-window-grid article { min-height: 330px; border-bottom: 1px solid rgba(23,35,29,.25); }
-  .snow-window-grid article:nth-child(even) { border-right: 0; }
+  .snow-window-grid article:nth-child(3n) { border-right: 0; }
   .snow-window-grid article:nth-last-child(-n+2) { border-bottom: 0; }
 }
 
@@ -439,7 +438,7 @@ input[type="range"]::-webkit-slider-thumb { width: 18px; height: 18px; appearanc
   .route-section, .roadbook-section, .stay-section, .spots-section, .budget-section, .booking-section, .operations-section, .fallback-section, .packing-section, .sources-section, .itinerary-section, .safety-section, .snow-section { padding-block: 82px; }
   .plan-section { padding-bottom: 82px; }
   .section-heading { display: block; margin-bottom: 38px; }
-  .section-heading h2 { font-size: 39px; }
+  .section-heading h2 { font-size: 36px; word-break: normal; text-wrap: wrap; }
   .section-heading > p { margin-top: 20px; }
   .route-map { min-height: 430px; }
   .route-map svg { min-height: 430px; transform: scale(1.13); }
@@ -453,13 +452,15 @@ input[type="range"]::-webkit-slider-thumb { width: 18px; height: 18px; appearanc
   .plan-intro { grid-template-columns: 1fr; gap: 18px; }
   .plan-badge { justify-self: start; }
   .plan-stats { grid-template-columns: repeat(2,1fr); }
+  .plan-switch { width: 100%; }
+  .plan-tab { padding-inline: 8px; font-size: 10px; }
   .plan-stats div:nth-child(2) { border-right: 0; }
   .plan-stats div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .plan-timeline { grid-template-columns: repeat(2,1fr); gap: 28px 0; }
   .day-tabs { display: flex; overflow-x: auto; scrollbar-width: none; }
   .day-tab { flex: 0 0 92px; border-bottom: 0 !important; }
   .day-overview { grid-template-columns: 1fr; gap: 46px; }
-  .day-title h3 { font-size: 45px; }
+  .day-title h3 { font-size: 42px; word-break: normal; text-wrap: wrap; }
   .day-notes { grid-template-columns: 1fr; }
   .day-notes > div { min-height: auto; }
   .snow-section::before { top: 70px; font-size: 170px; }

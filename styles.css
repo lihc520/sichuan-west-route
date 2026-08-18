@@ -124,6 +124,10 @@ svg { display: block; }
 .map-node circle { fill: var(--paper); stroke: var(--red); stroke-width: 2.5; transition: transform .2s ease, fill .2s ease; transform-box: fill-box; transform-origin: center; }
 .map-node .map-sequence { fill: var(--red); font-family: var(--sans); font-size: 7px; font-weight: 900; pointer-events: none; }
 .map-node .map-label { fill: var(--ink); stroke: #dce3da; stroke-width: 4px; paint-order: stroke fill; font-family: var(--sans); font-size: 11px; font-weight: 800; }
+.map-node .map-parking { stroke: #dce3da; stroke-width: 3px; paint-order: stroke fill; font-size: 7px; font-weight: 900; }
+.map-node .parking-easy { fill: var(--moss); }
+.map-node .parking-limited { fill: #8c651e; }
+.map-node .parking-strict { fill: var(--red); }
 .map-node.optional circle { fill: rgba(243,240,232,.85); stroke: var(--gold); stroke-dasharray: 2 2; }
 .map-node.optional .map-sequence { fill: #8c651e; }
 .map-node.scenic circle { fill: var(--gold); stroke: var(--red); }
@@ -144,18 +148,23 @@ svg { display: block; }
 .legend-dot.scenic { background: var(--gold); }
 .legend-line { width: 23px; border-top: 2px dashed var(--gold); }
 .legend-mountain { width: 19px; height: 13px; display: inline-block; background: var(--moss-light); clip-path: polygon(0 100%,35% 16%,55% 70%,72% 36%,100% 100%); }
+.legend-parking { min-width: 21px; height: 17px; padding: 2px 3px; display: inline-grid; place-items: center; border: 1px solid currentColor; font-size: 8px; font-style: normal; font-weight: 900; }
+.legend-parking.easy, .parking-text.parking-easy { color: var(--moss); }
+.legend-parking.limited, .parking-text.parking-limited { color: #8c651e; }
+.legend-parking.strict, .parking-text.parking-strict { color: var(--red); }
 .map-waypoints { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); background: rgba(243,240,232,.58); }
-.map-waypoint { min-width: 0; min-height: 58px; padding: 10px 12px; display: grid; grid-template-columns: 24px 1fr; align-items: center; gap: 8px; border-right: 1px solid rgba(23,35,29,.12); border-bottom: 1px solid rgba(23,35,29,.12); }
+.map-waypoint { min-width: 0; min-height: 68px; padding: 10px 12px; display: grid; grid-template-columns: 24px 1fr; align-items: center; gap: 8px; border-right: 1px solid rgba(23,35,29,.12); border-bottom: 1px solid rgba(23,35,29,.12); }
 .map-waypoint:nth-child(4n) { border-right: 0; }
 .map-waypoint > span { color: var(--red); font-size: 8px; font-weight: 900; }
 .map-waypoint div { min-width: 0; display: grid; gap: 2px; }
 .map-waypoint strong { overflow: hidden; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
 .map-waypoint small { overflow: hidden; color: rgba(23,35,29,.62); font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.map-waypoint em { overflow: hidden; font-size: 8px; font-style: normal; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
 .map-waypoint.optional { box-shadow: inset 3px 0 var(--gold); }
 .map-waypoint.optional > span { color: #8c651e; }
 .map-waypoint.scenic { background: rgba(215,155,53,.13); }
 .map-waypoint.active { color: white; background: var(--red); box-shadow: none; }
-.map-waypoint.active > span, .map-waypoint.active small { color: rgba(255,255,255,.78); }
+.map-waypoint.active > span, .map-waypoint.active small, .map-waypoint.active em { color: rgba(255,255,255,.78); }
 .map-disclaimer { position: relative; z-index: 2; margin: 0; padding: 12px 22px 15px; color: rgba(23,35,29,.62); background: rgba(243,240,232,.72); font-size: 9px; line-height: 1.7; }
 .route-rationale { align-self: start; position: sticky; top: 88px; }
 .mono-label { color: var(--moss-light); }

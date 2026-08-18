@@ -410,33 +410,35 @@ const routeData = {
 };
 
 const routeMapPoints = {
-  chengdu: { name: "成都", x: 865, y: 130, dx: -16, dy: -24, anchor: "end" },
-  airport: { name: "成都机场", x: 905, y: 188, dx: -15, dy: 27, anchor: "end" },
-  dujiangyan: { name: "都江堰", x: 765, y: 90, dx: 0, dy: -22, anchor: "middle" },
-  yingxiu: { name: "映秀", x: 690, y: 118, dx: -13, dy: 28, anchor: "end" },
-  wolong: { name: "卧龙熊猫苑", x: 580, y: 108, dx: 0, dy: -23, anchor: "middle" },
-  siguniang: { name: "四姑娘山镇", x: 455, y: 120, dx: -16, dy: -24, anchor: "end" },
-  shuangqiao: { name: "双桥沟", x: 405, y: 67, dx: -13, dy: -15, anchor: "end" },
-  changping: { name: "长坪沟", x: 505, y: 64, dx: 14, dy: -14, anchor: "start" },
-  maobiliang: { name: "猫鼻梁", x: 505, y: 158, dx: 16, dy: 5, anchor: "start" },
-  xiaojin: { name: "小金", x: 365, y: 205, dx: -15, dy: -11, anchor: "end" },
-  danba: { name: "丹巴", x: 270, y: 270, dx: -16, dy: -10, anchor: "end" },
-  jiaju: { name: "甲居 / 中路", x: 205, y: 226, dx: -13, dy: -12, anchor: "end" },
-  yak: { name: "牦牛谷", x: 305, y: 350, dx: -14, dy: 29, anchor: "end" },
-  bamei: { name: "八美", x: 390, y: 400, dx: -14, dy: 29, anchor: "end" },
-  moshi: { name: "墨石公园", x: 350, y: 451, dx: -14, dy: 22, anchor: "end" },
-  tagong: { name: "塔公草原", x: 475, y: 430, dx: 0, dy: 34, anchor: "middle" },
-  gunong: { name: "姑弄村", x: 450, y: 360, dx: -15, dy: -12, anchor: "end" },
-  muya: { name: "木雅金塔", x: 525, y: 390, dx: 15, dy: -12, anchor: "start" },
-  xinduqiao: { name: "新都桥 / 瓦泽", x: 555, y: 495, dx: 13, dy: 27, anchor: "start" },
-  yuzixi: { name: "鱼子西", x: 620, y: 542, dx: 14, dy: 11, anchor: "start" },
-  honghaizi: { name: "红海子", x: 610, y: 425, dx: 15, dy: 27, anchor: "start" },
-  airportRoad: { name: "康定机场路", x: 625, y: 378, dx: -14, dy: -16, anchor: "end" },
-  kangding: { name: "康定", x: 680, y: 365, dx: 15, dy: 5, anchor: "start" },
-  mugecuo: { name: "木格措", x: 735, y: 322, dx: 14, dy: -9, anchor: "start" },
-  luding: { name: "泸定", x: 740, y: 430, dx: 14, dy: 26, anchor: "start" },
-  yaan: { name: "雅安", x: 805, y: 505, dx: 16, dy: 8, anchor: "start" }
+  chengdu: { name: "成都", x: 865, y: 130, dx: -16, dy: -24, anchor: "end", parking: "easy" },
+  airport: { name: "成都机场", x: 905, y: 188, dx: -15, dy: 27, anchor: "end", parking: "easy" },
+  dujiangyan: { name: "都江堰", x: 765, y: 90, dx: 0, dy: -22, anchor: "middle", parking: "easy" },
+  yingxiu: { name: "映秀", x: 690, y: 118, dx: -13, dy: 28, anchor: "end", parking: "easy" },
+  wolong: { name: "卧龙熊猫苑", x: 580, y: 108, dx: 0, dy: -23, anchor: "middle", parking: "easy" },
+  siguniang: { name: "四姑娘山镇", x: 455, y: 120, dx: -16, dy: -24, anchor: "end", parking: "limited" },
+  shuangqiao: { name: "双桥沟", x: 405, y: 67, dx: -13, dy: -15, anchor: "end", parking: "easy" },
+  changping: { name: "长坪沟", x: 505, y: 64, dx: 14, dy: -14, anchor: "start", parking: "easy" },
+  maobiliang: { name: "猫鼻梁", x: 505, y: 158, dx: 16, dy: 5, anchor: "start", parking: "limited" },
+  xiaojin: { name: "小金", x: 365, y: 205, dx: -15, dy: -11, anchor: "end", parking: "easy" },
+  danba: { name: "丹巴", x: 270, y: 270, dx: -16, dy: -10, anchor: "end", parking: "easy" },
+  jiaju: { name: "甲居 / 中路", x: 205, y: 226, dx: -13, dy: -12, anchor: "end", parking: "limited" },
+  yak: { name: "牦牛谷", x: 305, y: 350, dx: -14, dy: 29, anchor: "end", parking: "strict" },
+  bamei: { name: "八美", x: 390, y: 400, dx: -14, dy: 29, anchor: "end", parking: "easy" },
+  moshi: { name: "墨石公园", x: 350, y: 451, dx: -14, dy: 22, anchor: "end", parking: "easy" },
+  tagong: { name: "塔公草原", x: 475, y: 430, dx: 0, dy: 34, anchor: "middle", parking: "limited" },
+  gunong: { name: "姑弄村", x: 450, y: 360, dx: -15, dy: -12, anchor: "end", parking: "limited" },
+  muya: { name: "木雅金塔", x: 525, y: 390, dx: 15, dy: -12, anchor: "start", parking: "limited" },
+  xinduqiao: { name: "新都桥 / 瓦泽", x: 555, y: 495, dx: 13, dy: 27, anchor: "start", parking: "limited" },
+  yuzixi: { name: "鱼子西", x: 620, y: 542, dx: 14, dy: 11, anchor: "start", parking: "strict" },
+  honghaizi: { name: "红海子", x: 610, y: 425, dx: 15, dy: 27, anchor: "start", parking: "strict" },
+  airportRoad: { name: "康定机场路", x: 625, y: 378, dx: -14, dy: -16, anchor: "end", parking: "strict" },
+  kangding: { name: "康定", x: 680, y: 365, dx: 15, dy: 5, anchor: "start", parking: "limited" },
+  mugecuo: { name: "木格措", x: 735, y: 322, dx: 14, dy: -9, anchor: "start", parking: "easy" },
+  luding: { name: "泸定", x: 740, y: 430, dx: 14, dy: 26, anchor: "start", parking: "limited" },
+  yaan: { name: "雅安", x: 805, y: 505, dx: 16, dy: 8, anchor: "start", parking: "easy" }
 };
+
+const parkingLabels = { easy: "停车方便", limited: "车位有限", strict: "仅正规停车" };
 
 const routeMapConfigs = {
   balanced: {
@@ -625,9 +627,11 @@ function renderRouteMap() {
     const classes = ["map-node", optional ? "optional" : kind, key === "chengdu" || key === "airport" ? "endpoint" : ""].filter(Boolean).join(" ");
     return `
       <g class="${classes}" transform="translate(${point.x} ${point.y})" data-map-days="${mapDaysFromLabel(date).join(",")}">
+        <title>${point.name} · ${parkingLabels[point.parking] || "停车信息待现场确认"}</title>
         <circle r="${optional ? 9 : 11}" />
         <text class="map-sequence" y="3" text-anchor="middle">${String(index + 1).padStart(2, "0")}</text>
         <text class="map-label" x="${point.dx}" y="${point.dy}" text-anchor="${point.anchor}">${point.name}</text>
+        <text class="map-parking parking-${point.parking || "unknown"}" x="0" y="24" text-anchor="middle">${point.parking === "easy" ? "P" : point.parking === "limited" ? "P△" : point.parking === "strict" ? "P!" : ""}</text>
       </g>`;
   }).join("");
 
@@ -661,8 +665,9 @@ function renderRouteMap() {
 
   document.querySelector("[data-map-waypoints]").innerHTML = config.sequence.map((item, index) => {
     const [key, date, note, optional = false, kind = "route"] = item;
+    const point = routeMapPoints[key];
     return `<div class="map-waypoint ${optional ? "optional" : ""} ${kind === "scenic" ? "scenic" : ""}" data-map-days="${mapDaysFromLabel(date).join(",")}">
-      <span>${String(index + 1).padStart(2, "0")}</span><div><strong>${routeMapPoints[key].name}</strong><small>${date} · ${note}</small></div>
+      <span>${String(index + 1).padStart(2, "0")}</span><div><strong>${point.name}</strong><small>${date} · ${note}</small><em class="parking-text parking-${point.parking || "unknown"}">${point.parking === "easy" ? "P · " : point.parking === "limited" ? "P△ · " : point.parking === "strict" ? "P! · " : ""}${parkingLabels[point.parking] || "停车信息待现场确认"}</em></div>
     </div>`;
   }).join("");
   window.requestAnimationFrame(() => {

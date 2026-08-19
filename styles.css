@@ -437,6 +437,7 @@ input[type="range"]::-webkit-slider-thumb { width: 18px; height: 18px; appearanc
 .altitude-level h4 { margin: 34px 0 12px; font-family: var(--serif); font-size: 22px; }
 .altitude-symptoms { min-height: 72px; margin: 0; color: rgba(255,255,255,.72); font-size: 11px; line-height: 1.8; }
 .altitude-symptoms strong { display: block; margin-bottom: 4px; color: rgba(255,255,255,.42); font: 700 10px/1 var(--mono); letter-spacing: .1em; }
+.altitude-action-label { margin: 18px 0 0; color: var(--gold); font: 800 10px/1 var(--mono); letter-spacing: .12em; }
 .altitude-level ul { display: grid; gap: 10px; margin: 22px 0 0; padding: 18px 0 0 17px; border-top: 1px solid rgba(255,255,255,.14); color: rgba(255,255,255,.67); font-size: 11px; line-height: 1.75; }
 .altitude-level li::marker { color: var(--gold); }
 .altitude-foot { display: block; margin-top: 22px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.14); color: #f0c87c; font-size: 10px; font-weight: 800; line-height: 1.55; }

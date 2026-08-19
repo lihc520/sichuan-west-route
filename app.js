@@ -599,6 +599,17 @@ const spots = [
   { name: "卧龙中华大熊猫苑", region: "卧龙", level: "core", tag: "推荐", time: "约 2h", cost: "票价现场核验", altitude: "约 1,700m", rule: "提前核验预约，排队过长直接跳过", note: "从四姑娘山下撤都江堰的顺路体验，让全程不只围绕雪山和观景台。" }
 ];
 
+const spotOrderByRoute = {
+  balanced: ["小金县城", "猫鼻梁观景台", "四姑娘山双桥沟", "甲居或中路藏寨", "牦牛谷", "墨石公园", "塔公草原 / 塔公寺", "木雅金塔", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "S434 红海子", "康定折多河老城", "康定木格措", "泸定桥 / 泸定县城", "卧龙中华大熊猫苑", "都江堰"],
+  clockwise: ["泸定桥 / 泸定县城", "康定折多河老城", "康定机场路观景段", "S434 红海子", "塔公草原 / 塔公寺", "木雅金塔", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "墨石公园", "牦牛谷", "甲居或中路藏寨", "小金县城", "猫鼻梁观景台", "四姑娘山双桥沟", "卧龙中华大熊猫苑", "都江堰"],
+  snow: ["泸定桥 / 泸定县城", "康定折多河老城", "康定机场路观景段", "S434 红海子", "塔公草原 / 塔公寺", "木雅金塔", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "墨石公园", "牦牛谷", "甲居或中路藏寨", "小金县城", "猫鼻梁观景台", "四姑娘山双桥沟", "四姑娘山长坪沟", "卧龙中华大熊猫苑", "都江堰"]
+};
+
+function spotsForRoute() {
+  const rank = new Map((spotOrderByRoute[activePlan] || []).map((name, index) => [name, index]));
+  return [...spots].sort((a, b) => (rank.get(a.name) ?? 999) - (rank.get(b.name) ?? 999));
+}
+
 const spotDetails = {
   "康定折多河老城": { image: "assets/spots/01-kangding.jpg", imageLabel: "康定实景", credit: "File:Kangding, Garze, Sichuan, China - panoramio.jpg", xhs: "康定老城 国庆 停车 夜景", photo: "傍晚沿折多河拍河岸灯光与山城层次；只带一支轻便镜头。", access: "车停酒店后步行。国庆不要开进老城核心找车位，也不为夜景延长到太晚。" },
   "S434 红海子": { image: "assets/spots/02-honghaizi.jpg", imageLabel: "贡嘎方向参考", credit: "File:Minya Konka Northwest Ridge.JPG", xhs: "S434 红海子 贡嘎 停车 路况", photo: "优先拍湖面、道路与远处雪峰的关系；风大无倒影就不等待。", access: "只进现有正规停车区，停留 20–30 分钟；结冰、浓雾和横风任一出现就取消。" },
@@ -784,6 +795,7 @@ function selectPlan(planId) {
   renderDay();
   renderRoadbook();
   renderStays();
+  renderSpots();
   if (window.lucide) window.lucide.createIcons();
 }
 
@@ -864,7 +876,8 @@ function renderSpotFilters() {
 }
 
 function renderSpots() {
-  const visible = activeSpotLevel === "all" ? spots : spots.filter(spot => spot.level === activeSpotLevel);
+  const orderedSpots = spotsForRoute();
+  const visible = activeSpotLevel === "all" ? orderedSpots : orderedSpots.filter(spot => spot.level === activeSpotLevel);
   const labels = { all: "全部沿线点", core: "必须保留", along: "有余量再停", backup: "替换使用", skip: "本次明确放弃" };
   document.querySelector("[data-spot-summary]").innerHTML = `<strong>${labels[activeSpotLevel]}</strong><span>共 ${visible.length} 个</span><p>页面中的费用和时间用于取舍，现场开放状态与票价仍以当天官方信息为准。</p>`;
   document.querySelector("[data-spot-grid]").innerHTML = visible.map((spot, index) => `

@@ -16,9 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2.0" />
+    <link rel="stylesheet" href="styles.css?v=17.0" />
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="app.js?v=17.0" defer></script>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -42,8 +42,33 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/siguniang.jpg" alt="四姑娘山雪峰与高原山谷" />
+      <section class="hero" aria-labelledby="hero-title" data-hero-carousel>
+        <div class="hero-slides" data-hero-slides>
+          <div class="hero-slide active" data-slide="0">
+            <img class="hero-image" src="assets/siguniang.jpg" alt="四姑娘山雪峰与高原山谷" />
+            <span class="hero-slide-tag">四姑娘山 · 双桥沟与幺妹峰</span>
+          </div>
+          <div class="hero-slide" data-slide="1">
+            <img class="hero-image" src="assets/tagong.jpg" alt="塔公草原与雅拉雪山" />
+            <span class="hero-slide-tag">塔公草原 · 雅拉神山与金顶佛寺</span>
+          </div>
+          <div class="hero-slide" data-slide="2">
+            <img class="hero-image" src="assets/danba.jpg" alt="丹巴甲居藏寨山谷" />
+            <span class="hero-slide-tag">丹巴藏寨 · 嘉绒千碉之国</span>
+          </div>
+          <div class="hero-slide" data-slide="3">
+            <img class="hero-image" src="assets/kangding.jpg" alt="康定古城与折多河" />
+            <span class="hero-slide-tag">康定山城 · 溜溜城与折多河谷</span>
+          </div>
+          <div class="hero-slide" data-slide="4">
+            <img class="hero-image" src="assets/hero/06-moshi.jpg" alt="墨石公园变质岩石林全景" />
+            <span class="hero-slide-tag">异域星球 · 墨石公园变质岩石林</span>
+          </div>
+          <div class="hero-slide" data-slide="5">
+            <img class="hero-image" src="assets/spots/02-honghaizi.jpg" alt="S434 红海子高山湖泊雪山" />
+            <span class="hero-slide-tag">高原明镜 · S434 红海子与贡嘎群峰</span>
+          </div>
+        </div>
         <div class="hero-shade"></div>
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-content">
@@ -62,6 +87,15 @@
               <i data-lucide="copy"></i>复制行程摘要
             </button>
           </div>
+        </div>
+        <div class="hero-carousel-controls" aria-label="封面轮播控制">
+          <button class="hero-carousel-btn prev" type="button" data-hero-prev aria-label="上一张封面">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <div class="hero-carousel-dots" data-hero-dots></div>
+          <button class="hero-carousel-btn next" type="button" data-hero-next aria-label="下一张封面">
+            <i data-lucide="chevron-right"></i>
+          </button>
         </div>
         <div class="hero-note">
           <span class="note-index">01</span>
@@ -178,11 +212,41 @@
             <p>10 月初参考日出约 07:10、日落约 19:00，实际以出发前一周的当地天气应用为准。日照金山只在晴朗且西侧低云较少时出现。</p>
           </div>
           <div class="snow-window-grid">
-            <article><span>WINDOW 01 · S434 路段</span><strong>贡嘎雪山群</strong><h3>红海子 / 机场路正规停车区</h3><p>只在能见度好、路面干燥时停车；浓雾、结冰或临时管制时直接通过。</p><em>奖励窗口，不等待</em></article>
-            <article><span>WINDOW 02 · 塔公路段</span><strong>雅拉雪山</strong><h3>塔公草原、姑弄村或木雅金塔</h3><p>三个位置按所选路线和停车条件择一，不需要为了同一座山重复进入多个收费点。</p><em>核心窗口</em></article>
-            <article><span>WINDOW 03 · 新都桥清晨</span><strong>贡嘎雪山群</strong><h3>酒店附近 / 瓦泽正规观景点</h3><p>前一晚确认可见方向。若云层厚且没有变化，等待 20–30 分钟后离开。</p><em>天气决定</em></article>
-            <article><span>WINDOW 04 · 四姑娘山镇</span><strong>四姑娘山全景</strong><h3>猫鼻梁观景台</h3><p>顺路且停车稳定时短停；停车已满、山体被云遮或到达太晚时直接回酒店。</p><em>完整四峰轮廓</em></article>
-            <article><span>WINDOW 05 · 双桥沟整日</span><strong>双桥沟雪峰群</strong><h3>红杉林 → 布达拉峰 → 四姑娜措</h3><p>乘观光车到高处后逐站向下，一天内完成近距离雪峰、公路和倒影三类画面。</p><em>所有路线共同核心</em></article>
+            <article class="snow-card">
+              <div class="snow-card-top"><span>WINDOW 01</span><em class="snow-badge bonus">奖励窗口</em></div>
+              <strong class="snow-peak-name">贡嘎雪山群</strong>
+              <h3>红海子 / 机场路正规停车区</h3>
+              <p>只在能见度好、路面干燥时停车；浓雾、结冰或临时管制时直接通过。</p>
+              <div class="snow-card-foot"><i data-lucide="cloud-sun"></i><span>S434 路段 · 不等待</span></div>
+            </article>
+            <article class="snow-card">
+              <div class="snow-card-top"><span>WINDOW 02</span><em class="snow-badge core">核心主窗</em></div>
+              <strong class="snow-peak-name">雅拉神山皇冠顶</strong>
+              <h3>塔公草原 / 姑弄村 / 金塔</h3>
+              <p>三个位置按所选路线和停车条件择一，不需要为了同一座山重复进入多个收费点。</p>
+              <div class="snow-card-foot"><i data-lucide="crown"></i><span>塔公路段 · 侧逆光出片</span></div>
+            </article>
+            <article class="snow-card">
+              <div class="snow-card-top"><span>WINDOW 03</span><em class="snow-badge weather">天气决定</em></div>
+              <strong class="snow-peak-name">贡嘎雪山群晨光</strong>
+              <h3>瓦泽观景点 / 酒店附近</h3>
+              <p>前一晚确认可见方向。清晨 07:10 到点，若云层厚且没有变化，等待 20–30 分钟后离开。</p>
+              <div class="snow-card-foot"><i data-lucide="sunrise"></i><span>新都桥清晨 · 把握云开</span></div>
+            </article>
+            <article class="snow-card">
+              <div class="snow-card-top"><span>WINDOW 04</span><em class="snow-badge core">全景主窗</em></div>
+              <strong class="snow-peak-name">四姑娘山完整四峰</strong>
+              <h3>猫鼻梁观景台</h3>
+              <p>顺路且停车稳定时短停；16:30 前抵达，停车已满或山体被云遮时直接回酒店。</p>
+              <div class="snow-card-foot"><i data-lucide="mountain-snow"></i><span>四姑娘山镇 · 幺妹金山</span></div>
+            </article>
+            <article class="snow-card">
+              <div class="snow-card-top"><span>WINDOW 05</span><em class="snow-badge prime">全线焦点</em></div>
+              <strong class="snow-peak-name">双桥沟雪峰冰川群</strong>
+              <h3>红杉林 → 布达拉峰 → 湖泊</h3>
+              <p>乘观光车到 3840m 高处后逐站向下，一天内完成近距离雪峰、公路和倒影三类画面。</p>
+              <div class="snow-card-foot"><i data-lucide="sparkles"></i><span>双桥沟全天 · 核心景观</span></div>
+            </article>
           </div>
           <div class="snow-protocol">
             <div><span>前一晚 20:30</span><strong>看低云、降水和道路预警</strong><p>天气预报只决定是否等待，不决定是否冒险上支线。</p></div>
@@ -239,19 +303,23 @@
         <div class="photo-ribbon">
           <figure class="photo-panel tall">
             <img src="assets/kangding.jpg" alt="康定山谷与城市" loading="lazy" />
-            <figcaption><span>01</span><strong>康定</strong><small>先适应海拔，再翻山</small></figcaption>
+            <span class="photo-panel-alt">海拔 2,560m · 川西门户</span>
+            <figcaption><span>01</span><strong>康定山城</strong><small>先适应海拔，再翻折多山</small></figcaption>
           </figure>
           <figure class="photo-panel">
             <img src="assets/tagong.jpg" alt="塔公草原与群山" loading="lazy" />
-            <figcaption><span>02</span><strong>塔公</strong><small>草原、寺院与雅拉雪山</small></figcaption>
+            <span class="photo-panel-alt">海拔 3,730m · 康巴神山</span>
+            <figcaption><span>02</span><strong>塔公草原</strong><small>草甸、寺院与雅拉神山</small></figcaption>
           </figure>
           <figure class="photo-panel tall">
             <img src="assets/danba.jpg" alt="丹巴山谷与藏寨" loading="lazy" />
-            <figcaption><span>03</span><strong>丹巴</strong><small>回到低海拔睡一晚</small></figcaption>
+            <span class="photo-panel-alt">海拔 1,800m · 嘉绒千碉</span>
+            <figcaption><span>03</span><strong>丹巴藏寨</strong><small>回到低海拔舒适睡一晚</small></figcaption>
           </figure>
           <figure class="photo-panel">
             <img src="assets/siguniang.jpg" alt="四姑娘山景区雪峰" loading="lazy" />
-            <figcaption><span>04</span><strong>四姑娘山</strong><small>用完整一天看双桥沟</small></figcaption>
+            <span class="photo-panel-alt">最高 3,840m · 东方圣山</span>
+            <figcaption><span>04</span><strong>四姑娘山</strong><small>用完整一天看双桥沟雪峰</small></figcaption>
           </figure>
         </div>
       </section>
@@ -336,11 +404,51 @@
           <p>出发前分工，避免司机一边开车一边找酒店、看路况、接电话。角色可以兼任，但每项必须有明确负责人。</p>
         </div>
         <div class="role-grid">
-          <article><span>01</span><i data-lucide="circle-gauge"></i><h3>主驾驶</h3><p>负责复杂山路与清晨路段；前一晚不饮酒，连续驾驶不超过 2 小时。</p></article>
-          <article><span>02</span><i data-lucide="repeat-2"></i><h3>副驾驶员</h3><p>接管高速和疲劳时段；同样登记租车驾驶人，不能临时换未登记司机。</p></article>
-          <article><span>03</span><i data-lucide="map-pinned"></i><h3>领航员</h3><p>只负责导航、路况、停车区和加油点，不让驾驶员操作手机。</p></article>
-          <article><span>04</span><i data-lucide="receipt-text"></i><h3>财务员</h3><p>管理团队公款、油费、停车票和押金，隔天在群内公布一次余额。</p></article>
-          <article><span>05</span><i data-lucide="heart-pulse"></i><h3>健康员</h3><p>每天早晚询问头痛、恶心、睡眠和血氧趋势，必要时提出停止上升。</p></article>
+          <article class="role-card role-driver">
+            <div class="role-card-header">
+              <span class="role-num">01</span>
+              <div class="role-icon-box"><i data-lucide="circle-gauge"></i></div>
+            </div>
+            <span class="role-tag">核心驾驶</span>
+            <h3>主驾驶</h3>
+            <p>负责复杂山路与清晨路段；前一晚不饮酒，连续驾驶不超过 2 小时。</p>
+          </article>
+          <article class="role-card role-copilot">
+            <div class="role-card-header">
+              <span class="role-num">02</span>
+              <div class="role-icon-box"><i data-lucide="repeat-2"></i></div>
+            </div>
+            <span class="role-tag">高速轮换</span>
+            <h3>副驾驶员</h3>
+            <p>接管高速和平缓时段；同样登记租车驾驶人，不能临时换未登记司机。</p>
+          </article>
+          <article class="role-card role-navigator">
+            <div class="role-card-header">
+              <span class="role-num">03</span>
+              <div class="role-icon-box"><i data-lucide="map-pinned"></i></div>
+            </div>
+            <span class="role-tag">路线信息</span>
+            <h3>领航员</h3>
+            <p>只负责导航、路况、停车区和加油点，不让驾驶员在行车时操作手机。</p>
+          </article>
+          <article class="role-card role-finance">
+            <div class="role-card-header">
+              <span class="role-num">04</span>
+              <div class="role-icon-box"><i data-lucide="receipt-text"></i></div>
+            </div>
+            <span class="role-tag">公共账目</span>
+            <h3>财务员</h3>
+            <p>管理团队公款、油费、停车票和押金，隔天在群内公布一次清晰账目。</p>
+          </article>
+          <article class="role-card role-medic">
+            <div class="role-card-header">
+              <span class="role-num">05</span>
+              <div class="role-icon-box"><i data-lucide="heart-pulse"></i></div>
+            </div>
+            <span class="role-tag">全员健康</span>
+            <h3>健康员</h3>
+            <p>每天早晚询问头痛、恶心、睡眠和血氧趋势，必要时果断提出停止上升。</p>
+          </article>
         </div>
       </section>
 
@@ -536,6 +644,17 @@
       <button class="primary-button inverse" type="button" data-print><i data-lucide="printer"></i>打印 / 导出 PDF</button>
     </footer>
 
+    <div class="image-lightbox" data-lightbox aria-hidden="true" role="dialog" aria-label="图片大图预览">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="关闭预览"><i data-lucide="x"></i></button>
+      <div class="lightbox-content">
+        <img class="lightbox-img" data-lightbox-img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="大图预览" />
+        <p class="lightbox-caption" data-lightbox-caption></p>
+      </div>
+    </div>
+
+    <button class="back-to-top" type="button" data-back-top aria-label="返回顶部" title="返回顶部">
+      <i data-lucide="arrow-up"></i>
+    </button>
     <div class="toast" role="status" aria-live="polite" data-toast></div>
   </body>
 </html>

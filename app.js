@@ -214,7 +214,10 @@ const planOptions = [
       ["10.4", "塔公", "八美 / 墨石"], ["10.5", "新都桥", "姑弄村 / 草原"], ["10.6", "雅安", "红海子 / 康定"], ["10.7", "广州", "成都机场返航"]
     ],
     verdict: "最适合第一次走川西小环线。缺点是 10 月 1 日直接升到四姑娘山镇约 3,200 米，需要全员慢走并严格观察高反。",
-    routeLinks: [{ href: "https://www.xiaohongshu.com/search_result/694ba775000000000d03ee44?xsec_token=ABaP71OfZe9r0GJcnQJcJ7T7x8o9_mycKd6ytbJWsmDI0=&xsec_source=", title: "深圳出发，国庆川西自驾游路线分享（完整版）", author: "走着咯" }, { href: "https://www.xiaohongshu.com/search_result/68f47a4b0000000004013489?xsec_token=ABOsrGfY3i7x9FNe1mfvFGF3mDhM3DIgj5HMjVgirBGrI=&xsec_source=", title: "川西7日自驾游天花板攻略！直接抄作业！", author: "oni77" }]
+    routeLinks: [
+      { title: "川西小环线7日自驾天花板攻略", author: "小红书爆款", query: "川西小环线 7日自驾 路线 逆时针 攻略" },
+      { title: "国庆川西小环线自驾避坑实测", author: "实测攻略", query: "国庆 川西自驾 路线 避坑 逆时针" }
+    ]
   },
   {
     id: "clockwise",
@@ -228,7 +231,10 @@ const planOptions = [
       ["10.4", "四姑娘山", "藏寨 / 小金"], ["10.5", "四姑娘山", "双桥沟"], ["10.6", "都江堰", "卧龙 / 映秀"], ["10.7", "广州", "都江堰 / 返航"]
     ],
     verdict: "海拔适应更温和，但塔公—新都桥路段会有少量折返。适合更担心高反、可以接受少走一点经典顺序的人。",
-    routeLinks: [{ href: "https://www.xiaohongshu.com/search_result/6a64dd2c0000000011013e22?xsec_token=ABLRuTMw66UN3rOo1fr7IEIiE5KXDEEVZiVZw0iIvcSOw=&xsec_source=", title: "国庆川西自驾-保姆级，七天两路线怎么选？", author: "嗷嗷叫一声" }, { href: "https://www.xiaohongshu.com/search_result/6a2288760000000036001818?xsec_token=ABEiiEl1U4dECwOEVPiXdohezH4HcHXHYrESIcLyEOdnw=&xsec_source=", title: "反向自驾川西小环线，亲测精华路线", author: "吴蕉儿" }]
+    routeLinks: [
+      { title: "顺时针反向自驾川西精华路线", author: "小红书爆款", query: "川西自驾 顺时针 反向小环线 攻略" },
+      { title: "国庆川西自驾保姆级两路线怎么选", author: "路线对比", query: "国庆 川西自驾 顺时针 康定进 攻略" }
+    ]
   },
   {
     id: "snow",
@@ -242,7 +248,10 @@ const planOptions = [
       ["10.4", "四姑娘山", "藏寨 / 小金"], ["10.5", "四姑娘山", "双桥沟"], ["10.6", "四姑娘山", "长坪沟"], ["10.7", "广州", "凌晨出山返航"]
     ],
     verdict: "只适合 10.7 仍有充足返程余量、两位司机都有山路经验且 10.6 天气道路稳定的队伍。默认不执行。",
-    routeLinks: [{ href: "https://www.xiaohongshu.com/search_result/6a841f7f000000003302fb47?xsec_token=ABvC7ITRCjm61qdmBRFhXZ9q56cEwViW_hdalHz8q_tb8=&xsec_source=", title: "国庆川西自驾｜甘孜4-7天自由行", author: "王元宝的生活" }, { href: "https://www.xiaohongshu.com/search_result/68e23e520000000007015e48?xsec_token=AB9cdP-8-HzgZ34_eItkjMlT6qqH-qu5IPGYYtZlerELg=&xsec_source=", title: "国庆不堵车的川西小环线，运气爆棚", author: "来都来了" }]
+    routeLinks: [
+      { title: "川西自驾甘孜4-7天自由行", author: "雪山路线", query: "川西自驾 四姑娘山 长坪沟 路线" },
+      { title: "国庆不堵车的小环线运气大片", author: "长假实测", query: "国庆 川西自驾 长坪沟 双桥沟 攻略" }
+    ]
   }
 ];
 
@@ -265,15 +274,68 @@ const roadSegments = [
 ];
 
 const stays = [
-  { date: "9.30", city: "成都天府机场 / 简阳", alt: "约 500m", target: "¥450–800 / 间（待复核）", rooms: "2 间，停车优先", area: "天府机场 10–30 km、简阳城区或成资大道方向", must: "24 小时前台、免费停车、早餐可打包、机场接驳", avoid: "春熙路核心区、无停车老楼", link: "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E5%A4%A9%E5%BA%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA%E9%85%92%E5%BA%97", guide: "成都天府机场 简阳 酒店 停车 接送", xhsLinks: [{ id: "tianfu-search", href: "https://www.xiaohongshu.com/search_result/?keyword=%E5%A4%A9%E5%BA%9C%E6%9C%BA%E5%9C%BA%20%E9%85%92%E5%BA%97%20%E5%81%9C%E8%BD%A6", title: "天府机场住宿与停车检索", author: "小红书检索" }] },
-  { date: "10.1", city: "康定", alt: "约 2,560m", target: "¥600–1,000 / 间", rooms: "2 间，可免费取消", area: "康定新城、榆林新区或有独立停车场的老城边缘", must: "供暖、热水稳定、停车位、低楼层/电梯", avoid: "步梯高楼、酒吧楼上、只能路边停车", link: "https://uri.amap.com/search?keyword=%E5%BA%B7%E5%AE%9A%E6%96%B0%E5%9F%8E%E9%85%92%E5%BA%97", guide: "康定酒店 国庆 停车 供暖", xhsLinks: [{ id: "68c78a6b000000001d000a1c", href: "https://www.xiaohongshu.com/search_result/68c78a6b000000001d000a1c?xsec_token=ABHGXKoeq-HnbI4lZQxQ_GJrowVGrcLj-FR-0zqL7tVEk=&xsec_source=", title: "国庆川西旅游～提前订酒店吗？", author: "🌟是谁的星啊" }, { id: "6a6cd5510000000033013daa", href: "https://www.xiaohongshu.com/search_result/6a6cd5510000000033013daa?xsec_token=AB1dHAjfLhhAPn4Z8PcXLVu_EUJKhwYKpZ3Ui2WEs0J_0=&xsec_source=", title: "自驾住康定酒店万万没想到会遇到的事！", author: "干了这碗冰" }] },
-  { date: "10.2", city: "新都桥", alt: "约 3,460m", target: "¥650–1,100 / 间", rooms: "2 间，供暖优先", area: "镇中心或 G318 主路旁，步行可吃饭", must: "弥散供氧可选、地暖、正规停车场", avoid: "偏远山坡网红民宿、最后一段土路", link: "https://uri.amap.com/search?keyword=%E6%96%B0%E9%83%BD%E6%A1%A5%E9%95%87%E4%BE%9B%E6%B0%A7%E9%85%92%E5%BA%97", guide: "新都桥酒店 供氧 停车 国庆", xhsLinks: [{ id: "6a700c2c000000003301e052", href: "https://www.xiaohongshu.com/search_result/6a700c2c000000003301e052?xsec_token=ABTJ5MHjEpdBWZBSH6pswMDC4DdD2zAZulEp4Hytxvfz0=&xsec_source=", title: "新都桥住宿~金屿时光", author: "小红薯5EAA0A08" }, { id: "67293e77000000001901a2c4", href: "https://www.xiaohongshu.com/search_result/67293e77000000001901a2c4?xsec_token=AB7IOOjm5_sjSRHemRKiO1TO7e8JnbEer0CumTZXn4eHs=&xsec_source=", title: "新都桥冷死了", author: "小红薯momo" }] },
-  { date: "10.3", city: "丹巴", alt: "约 1,800m", target: "¥450–750 / 间", rooms: "2 间，恢复睡眠", area: "丹巴县城优先；想看晨景可住中路入口", must: "安静、停车、附近有早餐和药店", avoid: "狭窄藏寨深处、需要夜开村道", link: "https://uri.amap.com/search?keyword=%E4%B8%B9%E5%B7%B4%E5%8E%BF%E5%81%9C%E8%BD%A6%E9%85%92%E5%BA%97", guide: "丹巴住宿 停车 甲居 中路 国庆", xhsLinks: [{ id: "6a55a479000000001503f9cc", href: "https://www.xiaohongshu.com/search_result/6a55a479000000001503f9cc?xsec_token=AB057FF-3glAcFPAUaed_9heYSZPpFun1ZpyvTl-CcNcg=&xsec_source=", title: "在丹巴，我躲开了甲居的人潮，去了中路藏寨", author: "颜水棒冰" }, { id: "6a76f87d0000000026037fef", href: "https://www.xiaohongshu.com/search_result/6a76f87d0000000026037fef?xsec_token=ABTIFYF4Odn597gk1GKLAL-Mn89_isxynlmjBmXPwAoeI=&xsec_source=", title: "走完川西甘孜，把住过的民宿酒店整理出来了", author: "飞飞FLY不迷路" }] },
-  { date: "10.4", city: "四姑娘山镇", alt: "约 3,200m", target: "¥800–1,400 / 间", rooms: "连住 2 晚", area: "双桥沟口节省排队时间；镇中心餐饮更方便", must: "连续两晚同房、供暖、停车、可早起退房", avoid: "每天换酒店、无供暖低价房", link: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%E5%8F%8C%E6%A1%A5%E6%B2%9F%E9%85%92%E5%BA%97", guide: "四姑娘山 双桥沟 酒店 停车 供暖", xhsLinks: [{ id: "68e2375f0000000005013273", href: "https://www.xiaohongshu.com/search_result/68e2375f0000000005013273?xsec_token=AB9cdP-8-HzgZ34_eItkjMldlg7A2aOKteb-nWTPnj4vI=&xsec_source=", title: "四姑娘山自驾攻略（路线住宿篇）", author: "予予予_" }, { id: "6a50debe000000002201693b", href: "https://www.xiaohongshu.com/search_result/6a50debe000000002201693b?xsec_token=ABsGQ4iNzAOAPLQRNgHB5M3dmH--yeh5oi_NhYjw4m1kw=&xsec_source=", title: "在四姑娘山的吃住体验，有推荐有踩雷", author: "十月Oct." }] },
-  { date: "10.6", city: "都江堰", alt: "约 700m", target: "¥500–900 / 间", rooms: "2 间，停车优先", area: "灌县古城外围或去高速方便的城区", must: "独立停车位、早餐方便、次日可快速上高速", avoid: "南桥核心步行区内无停车民宿", link: "https://uri.amap.com/search?keyword=%E9%83%BD%E6%B1%9F%E5%A0%B0%E5%81%9C%E8%BD%A6%E9%85%92%E5%BA%97", guide: "都江堰酒店 停车 国庆 灌县古城", xhsLinks: [{ id: "6a631b9c0000000001001fbf", href: "https://www.xiaohongshu.com/search_result/6a631b9c0000000001001fbf?xsec_token=ABkTsSlXxS_SzZiuJbD_y2dTj4iS5wdvNjvSuAENmM2MY=&xsec_source=", title: "来都江堰住哪儿？本地人把整个城区按路划分", author: "老甯在都江堰" }, { id: "6a816c870000000008011b81", href: "https://www.xiaohongshu.com/search_result/6a816c870000000008011b81?xsec_token=ABPLj-12OGSqGUJmlmIdkWJhO8AkPJZlSbvwIcK2PLoWg=&xsec_source=", title: "重庆自驾都江堰｜1.5日实测攻略｜含酒店", author: "侧耳倾听" }] }
+  {
+    date: "9.30", city: "成都天府机场 / 简阳", alt: "约 500m", target: "¥450–800 / 间（待复核）", rooms: "2 间，停车优先",
+    area: "天府机场 10–30 km、简阳城区或成资大道方向", must: "24 小时前台、免费停车、早餐可打包、机场接驳",
+    avoid: "春熙路核心区、无停车老楼", link: "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E5%A4%A9%E5%BA%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA%E9%85%92%E5%BA%97",
+    guide: "成都天府机场 简阳 酒店 免费停车 接送",
+    xhsLinks: [
+      { title: "天府机场接送停车实测", query: "天府机场 酒店 免费接送 停车" },
+      { title: "机场周边隔音与红黑榜", query: "天府机场附近 酒店 避坑 隔音" }
+    ]
+  },
+  {
+    date: "10.1", city: "康定", alt: "约 2,560m", target: "¥600–1,000 / 间", rooms: "2 间，可免费取消",
+    area: "康定新城、榆林新区或有独立停车场的老城边缘", must: "供暖、热水稳定、停车位、低楼层/电梯",
+    avoid: "步梯高楼、酒吧楼上、只能路边停车", link: "https://uri.amap.com/search?keyword=%E5%BA%B7%E5%AE%9A%E6%96%B0%E5%9F%8E%E9%85%92%E5%BA%97",
+    guide: "康定酒店 国庆 停车 供暖 避坑",
+    xhsLinks: [
+      { title: "康定新城供暖停车实测", query: "康定新城 酒店 供暖 独立停车" },
+      { title: "自驾康定住宿避坑指南", query: "康定自驾 住宿避坑 老城 停车" }
+    ]
+  },
+  {
+    date: "10.2", city: "新都桥", alt: "约 3,460m", target: "¥650–1,100 / 间", rooms: "2 间，供暖优先",
+    area: "镇中心或 G318 主路旁，步行可吃饭", must: "弥散供氧可选、地暖、正规停车场",
+    avoid: "偏远山坡网红民宿、最后一段土路", link: "https://uri.amap.com/search?keyword=%E6%96%B0%E9%83%BD%E6%A1%A5%E9%95%87%E4%BE%9B%E6%B0%A7%E9%85%92%E5%BA%97",
+    guide: "新都桥酒店 供氧 地暖 停车 国庆",
+    xhsLinks: [
+      { title: "新都桥供暖供氧实测", query: "新都桥 供氧酒店 地暖 实测" },
+      { title: "高海拔住宿防高反避坑", query: "新都桥 住宿 避坑 弥散供氧" }
+    ]
+  },
+  {
+    date: "10.3", city: "丹巴", alt: "约 1,800m", target: "¥450–750 / 间", rooms: "2 间，恢复睡眠",
+    area: "丹巴县城优先；想看晨景可住中路入口", must: "安静、停车、附近有早餐和药店",
+    avoid: "狭窄藏寨深处、需要夜开村道", link: "https://uri.amap.com/search?keyword=%E4%B8%B9%E5%B7%B4%E5%8E%BF%E5%81%9C%E8%BD%A6%E9%85%92%E5%BA%97",
+    guide: "丹巴住宿 停车 甲居 中路 国庆",
+    xhsLinks: [
+      { title: "丹巴县城补给住宿实测", query: "丹巴 县城 酒店 停车 推荐" },
+      { title: "中路与甲居民宿对比", query: "中路藏寨 甲居 景观民宿 避坑" }
+    ]
+  },
+  {
+    date: "10.4", city: "四姑娘山镇", alt: "约 3,200m", target: "¥800–1,400 / 间", rooms: "连住 2 晚",
+    area: "双桥沟口节省排队时间；镇中心餐饮更方便", must: "连续两晚同房、供暖、停车、可早起退房",
+    avoid: "每天换酒店、无供暖低价房", link: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%E5%8F%8C%E6%A1%A5%E6%B2%9F%E9%85%92%E5%BA%97",
+    guide: "四姑娘山 双桥沟 酒店 停车 供暖",
+    xhsLinks: [
+      { title: "双桥沟口近景区住宿", query: "四姑娘山 双桥沟口 酒店 推荐" },
+      { title: "四姑娘山连住供暖避坑", query: "四姑娘山镇 民宿 供暖 避坑" }
+    ]
+  },
+  {
+    date: "10.6", city: "都江堰", alt: "约 700m", target: "¥500–900 / 间", rooms: "2 间，停车优先",
+    area: "灌县古城外围或去高速方便的城区", must: "独立停车位、早餐方便、次日可快速上高速",
+    avoid: "南桥核心步行区内无停车民宿", link: "https://uri.amap.com/search?keyword=%E9%83%BD%E6%B1%9F%E5%A0%B0%E5%81%9C%E8%BD%A6%E9%85%92%E5%BA%97",
+    guide: "都江堰酒店 停车 国庆 灌县古城",
+    xhsLinks: [
+      { title: "都江堰古城外围停车酒店", query: "都江堰 酒店 停车 灌县古城" },
+      { title: "返程上高速便利住宿", query: "都江堰 住宿 避坑 高速入口" }
+    ]
+  }
 ];
 
-// 携程动态列表快照：仅用于预算和筛选参考，不代表锁定房价或库存。
 const ctripPriceSnapshot = {
   fetchedAt: "2026-08-19",
   guests: "5 成人 / 2 间",
@@ -570,9 +632,27 @@ const balancedStays = [
   stays[0],
   { ...stays[4], date: "10.1–2", rooms: "连住 2 晚，不换房" },
   { ...stays[3], date: "10.3" },
-  { date: "10.4", city: "塔公 / 八美", alt: "约 3,500–3,730m", target: "¥600–1,000 / 间", rooms: "2 间，可免费取消", area: "塔公镇看雅拉方便；担心高反可住八美", must: "供暖、停车、热水、可提供早餐", avoid: "草原深处无铺装路民宿", link: "https://uri.amap.com/search?keyword=%E5%A1%94%E5%85%AC%E9%95%87%E5%81%9C%E8%BD%A6%E9%85%92%E5%BA%97" },
+  {
+    date: "10.4", city: "塔公 / 八美", alt: "约 3,500–3,730m", target: "¥600–1,000 / 间", rooms: "2 间，可免费取消",
+    area: "塔公镇看雅拉方便；担心高反可住八美", must: "供暖、停车、热水、可提供早餐", avoid: "草原深处无铺装路民宿",
+    link: "https://uri.amap.com/search?keyword=%E5%A1%94%E5%85%AC%E9%95%87%E5%81%9C%E8%BD%A6%E9%85%92%E5%BA%97",
+    guide: "八美 塔公 酒店 供暖 停车 国庆",
+    xhsLinks: [
+      { title: "八美镇中心住宿实测", query: "八美镇 酒店 供暖 停车 推荐" },
+      { title: "塔公草原雅拉景观房实测", query: "塔公草原 姑弄村 民宿 避坑" }
+    ]
+  },
   { ...stays[2], date: "10.5" },
-  { date: "10.6", city: "雅安", alt: "约 600m", target: "¥400–700 / 间", rooms: "2 间，机场转场优先", area: "成雅高速入口附近或停车方便城区", must: "停车、早餐、可早退房", avoid: "古城步行区内无停车酒店", link: "https://uri.amap.com/search?keyword=%E9%9B%85%E5%AE%89%E9%AB%98%E9%80%9F%E5%85%A5%E5%8F%A3%E9%85%92%E5%BA%97" }
+  {
+    date: "10.6", city: "雅安", alt: "约 600m", target: "¥400–700 / 间", rooms: "2 间，机场转场优先",
+    area: "成雅高速入口附近或停车方便城区", must: "停车、早餐、可早退房", avoid: "古城步行区内无停车酒店",
+    link: "https://uri.amap.com/search?keyword=%E9%9B%85%E5%AE%89%E9%AB%98%E9%80%9F%E5%85%A5%E5%8F%A3%E9%85%92%E5%BA%97",
+    guide: "雅安酒店 高速 停车 返程",
+    xhsLinks: [
+      { title: "成雅高速入口停车酒店", query: "雅安 酒店 成雅高速 免费停车" },
+      { title: "返程天府机场中转住宿", query: "雅安 雨城区 住宿 早退房 早餐" }
+    ]
+  }
 ];
 
 const clockwiseStays = [
@@ -1594,8 +1674,8 @@ function xiaohongshuSearchUrl(query) {
 }
 
 function xiaohongshuNoteUrl(note) {
-  const id = note.id || note.href?.match(/([0-9a-f]{24})/)?.[1];
-  return id ? `https://www.xiaohongshu.com/explore/${id}` : xiaohongshuSearchUrl(note.title || "川西攻略");
+  const query = note.query || note.title || note.keyword || "川西住宿攻略";
+  return xiaohongshuSearchUrl(query);
 }
 
 function amapSearchUrl(query) {
@@ -1771,7 +1851,7 @@ function renderStays() {
         </div>
         <footer class="stay-links">
           <a href="${stay.link}" target="_blank" rel="noreferrer">区域酒店地图 ${icon("map")}</a>
-          ${(stay.xhsLinks || []).map((note, noteIndex) => `<a href="${xiaohongshuNoteUrl(note)}" target="_blank" rel="noreferrer" title="${note.title}｜${note.author}">住宿实测 ${noteIndex + 1} ${icon("external-link")}</a>`).join("")}
+          ${(stay.xhsLinks || []).map((note) => `<a href="${xiaohongshuNoteUrl(note)}" target="_blank" rel="noreferrer" title="${note.title}">📕 ${note.title} ${icon("external-link")}</a>`).join("")}
           <a href="${xiaohongshuSearchUrl(stay.guide)}" target="_blank" rel="noreferrer">最新攻略 ${icon("search")}</a>
         </footer>
       </div>

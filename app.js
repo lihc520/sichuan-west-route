@@ -9,7 +9,7 @@ const itinerary = [
     drive: "0.5–1.5h",
     sleep: "成都天府机场 / 简阳",
     mapDay: 0,
-    navigation: "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E5%8F%8C%E6%B5%81%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA",
+    navigation: "https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E5%A4%A9%E5%BA%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA",
     schedule: [
       ["17:00", "广州白云机场集合", "优先选择 17:00–20:00 起飞、22:30 前落地的航班。五人提前分配行李额度，驾驶员不要在飞机上饮酒。"],
       ["21:30", "成都取车", "同机场取还。拍摄车身、轮毂、玻璃、油表和里程；核对第二驾驶员、保险、道路救援和防滑链规格。"],
@@ -32,7 +32,7 @@ const itinerary = [
     drive: "6–9h",
     sleep: "康定 2,560m",
     mapDay: 1,
-    navigation: "https://uri.amap.com/navigation?from=103.947,30.574&to=101.957,30.050&mode=car&policy=1",
+    navigation: "https://uri.amap.com/navigation?from=104.444,30.315&to=101.957,30.050&mode=car&policy=1",
     schedule: [
       ["05:30", "退房出发", "早餐提前打包。油箱加满，避开 08:00 后成都出城车流。"],
       ["08:00", "雅安服务区短休", "驾驶员轮换，停留控制在 20 分钟。不要在服务区排长队吃正餐。"],
@@ -131,7 +131,7 @@ const itinerary = [
     drive: "观光车为主",
     sleep: "四姑娘山镇 3,200m",
     mapDay: 4,
-    navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%B1%B1%E5%8F%8C%E6%A1%A5%E6%B2%9F%E6%99%AF%E5%8C%BA",
+    navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%E5%8F%8C%E6%A1%A5%E6%B2%9F%E6%99%AF%E5%8C%BA",
     schedule: [
       ["06:30", "起床与早餐", "国庆入园时间可能提前到 07:30，以 9 月底官方通告为准。提前到入口排队。"],
       ["07:30", "刷身份证入园", "门票 ¥80 + 观光车 ¥70/人。先乘车到红杉林，不在前段站点急着下车。"],
@@ -184,7 +184,7 @@ const itinerary = [
     drive: "正常 1.5–2.5h / 国庆按 3–4h",
     sleep: "回家",
     mapDay: 0,
-    navigation: "https://uri.amap.com/navigation?from=103.647,30.989&to=103.947,30.574&mode=car&policy=1",
+    navigation: "https://uri.amap.com/navigation?from=103.647,30.989&to=104.444,30.315&mode=car&policy=1",
     schedule: [
       ["07:30", "早餐与退房", "检查全员状态、行李和租车资料；不安排都江堰景区。"],
       ["08:30–09:00", "都江堰出发去天府", "国庆返程按 3–4.5 小时预留，途中只在正规服务区轮换司机。"],
@@ -538,7 +538,7 @@ const balancedItinerary = [
   itinerary[0],
   {
     label: "D1", date: "10.1", weekday: "周四", title: "成都 → 四姑娘山", subtitle: "传统逆时针第一天直接进四姑娘山，重点是早出发、慢升海拔，不在都江堰和卧龙增加长停。", distance: "约 220 km", drive: "6–9h", sleep: "四姑娘山镇 3,200m", mapDay: 4,
-    navigation: "https://uri.amap.com/navigation?from=103.947,30.574&to=102.838,31.002&mode=car&policy=1",
+    navigation: "https://uri.amap.com/navigation?from=104.444,30.315&to=102.838,31.002&mode=car&policy=1",
     schedule: [
       ["05:00–05:30", "天府机场 / 简阳出发", "早餐打包、油箱加满，直接走高速前往都江堰—卧龙方向。"],
       ["08:00", "映秀 / 耿达短休", "只停车 15–20 分钟轮换司机，不进入景区。导航若已严重拥堵，午餐改在卧龙解决。"],
@@ -551,7 +551,7 @@ const balancedItinerary = [
   },
   {
     label: "D2", date: "10.2", weekday: "周五", title: "双桥沟完整一日", subtitle: "用观光车降低体力消耗，完成雪峰、公路和倒影三类画面。", distance: "景区内 40km+", drive: "观光车为主", sleep: "四姑娘山镇 3,200m", mapDay: 4,
-    navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%B1%B1%E5%8F%8C%E6%A1%A5%E6%B2%9F%E6%99%AF%E5%8C%BA",
+    navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%E5%8F%8C%E6%A1%A5%E6%B2%9F%E6%99%AF%E5%8C%BA",
     schedule: itinerary[5].schedule,
     notes: itinerary[5].notes
   },
@@ -605,7 +605,7 @@ const balancedItinerary = [
   },
   {
     label: "返程", date: "10.7", weekday: "周三", title: "雅安 → 天府机场 → 广州", subtitle: "18:00 左右天府航班：雅安早晨短逛后出发，下午完成还车和值机。", distance: "至天府约 180–220 km", drive: "正常 2.5–3.5h / 国庆按 4–5h", sleep: "回家", mapDay: 0,
-    navigation: "https://uri.amap.com/navigation?from=103.013,29.980&to=103.947,30.574&mode=car&policy=1",
+    navigation: "https://uri.amap.com/navigation?from=103.013,29.980&to=104.444,30.315&mode=car&policy=1",
     schedule: [
       ["07:30", "早餐与雅安短逛", "青衣江边或雅州廊桥停留 45–60 分钟，不安排完整景区。"],
       ["09:00", "雅安出发去天府", "国庆返程按 3–4.5 小时预留，中途只在服务区短休和轮换司机。"],
@@ -668,13 +668,13 @@ const snowItinerary = [
   ...itinerary.slice(0, 6),
   {
     label: "D6", date: "10.6", weekday: "周二", title: "长坪沟轻徒步 + 四姑娘山补拍", subtitle: "增加第六次雪山窗口，但必须早收队、早睡觉，为次日凌晨出山保存体力。", distance: "徒步 6–12 km", drive: "观光车 + 徒步", sleep: "四姑娘山镇 3,200m", mapDay: 4,
-    navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%B1%B1%E9%95%BF%E5%9D%AA%E6%B2%9F%E6%99%AF%E5%8C%BA",
+    navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%E9%95%BF%E5%9D%AA%E6%B2%9F%E6%99%AF%E5%8C%BA",
     schedule: [["06:40", "确认天气和次日道路", "雨雪、结冰或明确管制时取消长坪沟，直接下撤都江堰。"], ["07:30", "长坪沟入园", "乘观光车后步行，只走枯树滩、下干海子一带轻量路线。"], ["10:30", "森林与雪峰窗口", "每 40–50 分钟统一休息，不允许成员单独冲前。"], ["12:00", "自带简餐", "快速补充热量，任何明显高反都立即返程。"], ["14:00", "硬性折返点", "无论走到哪里都返回，15:30 前离园。"], ["16:00", "加油、装车和早餐采购", "提前结清房费，确认车辆凌晨可出库。"], ["18:00", "晚餐并于 20:30 前休息", "两位司机都必须保证睡眠，不安排夜景和饮酒。"]],
     notes: [["航班", "10.7 18:00 天府航班仅作高强度备选", "10.6 天气、道路或全员状态不稳时取消长坪沟并提前下撤。"], ["体力", "不以木骡子为目标", "连续高海拔第 3 天只走轻量版。"], ["退路", "天气异常当天就下撤", "不要把道路风险留到航班日。"]]
   },
   {
     label: "返程", date: "10.7", weekday: "周三", title: "四姑娘山 → 天府机场 → 广州", subtitle: "凌晨出山，只返程、加油、还车和值机。", distance: "约 220–285 km", drive: "国庆按 8–10h", sleep: "回家", mapDay: 0,
-    navigation: "https://uri.amap.com/navigation?from=102.838,31.002&to=103.947,30.574&mode=car&policy=1",
+    navigation: "https://uri.amap.com/navigation?from=102.838,31.002&to=104.444,30.315&mode=car&policy=1",
     schedule: [["04:20", "起床检查驾驶员状态", "两位司机任一疲劳都要调整分工，两人都不合格时不能硬开。"], ["04:50", "四姑娘山镇出发", "早餐装车，不等猫鼻梁日出。"], ["07:00", "卧龙 / 耿达轮换司机", "停车 15 分钟并检查轮胎、刹车气味。"], ["09:30", "映秀进度检查", "仍未到映秀时立即重算机场时间并通知租车门店。"], ["航班前 4h", "机场外围加油还车", "预留 45–60 分钟验车和接驳。"], ["航班前 3h", "进入航站楼", "完成值机、托运和安检。"]],
     notes: [["风险", "航班与山区道路绑定", "这是本线路不作为默认推荐的核心原因。"], ["机场", "天府返程余量有限", "10.7 需凌晨出山，途中必须持续轮换司机。"], ["止损", "10.6 可提前下撤", "天气或路况不理想就改住都江堰。"]]
   }

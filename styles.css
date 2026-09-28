@@ -285,7 +285,7 @@ svg {
   height: 100%;
   object-fit: cover;
   object-position: center 38%;
-  filter: brightness(0.92) contrast(1.04);
+  filter: brightness(0.98) contrast(1.05) saturate(1.05);
   animation: heroZoom 2.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -293,8 +293,8 @@ svg {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 25% 45%, rgba(13, 22, 18, 0.72) 0%, rgba(13, 22, 18, 0.4) 50%, transparent 100%),
-    linear-gradient(180deg, rgba(13, 22, 18, 0.5) 0%, rgba(13, 22, 18, 0.25) 40%, rgba(13, 22, 18, 0.85) 100%);
+    radial-gradient(ellipse at 28% 52%, rgba(13, 22, 18, 0.68) 0%, rgba(13, 22, 18, 0.32) 42%, transparent 72%),
+    linear-gradient(180deg, rgba(13, 22, 18, 0.45) 0%, rgba(13, 22, 18, 0.06) 38%, rgba(13, 22, 18, 0.12) 62%, rgba(13, 22, 18, 0.8) 100%);
 }
 
 .hero-grid {
@@ -4671,6 +4671,50 @@ p {
 .decision-band .section-kicker {
   justify-self: start;
   width: fit-content;
+}
+
+.spot-live-photo {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: var(--radius-full);
+  background: #ff2442;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(255, 36, 66, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spot-live-photo:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 14px 30px rgba(255, 36, 66, 0.45);
+}
+
+.spot-live-photo svg {
+  width: 15px;
+  height: 15px;
+}
+
+.card-media-slider .slider-dots {
+  top: 12px;
+  bottom: auto;
+}
+
+.card-slide figcaption {
+  left: 10px;
+  max-width: max-content;
+  margin-left: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .hero-note a {

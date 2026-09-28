@@ -1284,10 +1284,11 @@ const spotDetails = {
     image: "assets/spots/03-tagong.jpg",
     imageLabel: "塔公草原实景",
     images: [
+      { src: "assets/spots/31-lhagang-gonba.jpg", caption: "塔公寺 · Marym1718 / CC BY 4.0" },
       { src: "assets/spots/03-tagong.jpg", caption: "塔公草甸与雅拉雪山" },
       { src: "assets/tagong.jpg", caption: "辽阔牧场与藏式经幡" }
     ],
-    credit: "File:Grasslands in Tagong county, Sichuan, China (41077322430).jpg",
+    credit: "File:Lhagang Gönba.jpg",
     xhs: "塔公草原 雅拉雪山 国庆 停车",
     photo: "草原低机位拍经幡、寺院与雅拉同框；下午侧光通常比正午更有层次。",
     access: "草原与寺院只选一个主入口，预计 60–90 分钟；先问清骑马与停车收费。",
@@ -1302,10 +1303,11 @@ const spotDetails = {
     image: "assets/spots/04-jiaju.jpg",
     imageLabel: "甲居藏寨实景",
     images: [
-      { src: "assets/spots/04-jiaju.jpg", caption: "甲居藏寨层叠红白藏房" },
+      { src: "assets/spots/35-jiaju-hillside.jpg", caption: "甲居藏寨山坡村落 · 爵士鼓手 / CC BY 3.0" },
+      { src: "assets/spots/04-jiaju.jpg", caption: "丹巴河谷与村落" },
       { src: "assets/danba.jpg", caption: "丹巴大金川河谷与梨树丛" }
     ],
-    credit: "File:四川 丹巴-甲居-藏寨 - panoramio.jpg",
+    credit: "File:甲居藏寨1-爵士鼓手 - panoramio.jpg",
     xhs: "甲居藏寨 中路藏寨 国庆 自驾 停车",
     photo: "观景台拍山坡村落全景，不在民居门口长时间摆拍。",
     access: "A 线就住在甲居寨内：10.3 夜里用民宿定位进村，10.4 早上 07:00 出门就是观景点，07:50 回来退房。",
@@ -1317,10 +1319,10 @@ const spotDetails = {
     }
   },
   "四姑娘山双桥沟": {
-    image: "assets/spots/05-shuangqiao.jpg",
+    image: "assets/spots/32-shuangqiao-snow.jpg",
     imageLabel: "双桥沟实景",
     images: [
-      { src: "assets/spots/05-shuangqiao.jpg", caption: "双桥沟雪峰与高山谷地" },
+      { src: "assets/spots/32-shuangqiao-snow.jpg", caption: "双桥沟雪峰与高山谷地 · Polyphys / CC BY-SA 4.0" },
       { src: "assets/siguniang.jpg", caption: "四姑娘山金秋雪山倒影" }
     ],
     credit: "File:四姑娘山双桥沟.jpg",
@@ -1389,7 +1391,8 @@ const spotDetails = {
     image: "assets/spots/09-xinduqiao.jpg",
     imageLabel: "新都桥实景",
     images: [
-      { src: "assets/spots/09-xinduqiao.jpg", caption: "新都桥光影杨林与藏居" }
+      { src: "assets/spots/09-xinduqiao.jpg", caption: "新都桥光影杨林与藏居" },
+      { src: "assets/spots/29-gongga-cloud.jpg", caption: "贡嘎主峰云中现身 · Toni Wöhrl / CC BY-SA 4.0" }
     ],
     credit: "File:新都桥 2016 刘祖赛 稻城亚丁 - panoramio (1).jpg",
     xhs: "新都桥 瓦泽 贡嘎 日出 正规观景台",
@@ -1403,13 +1406,13 @@ const spotDetails = {
     }
   },
   "墨石公园": {
-    image: "assets/spots/10-moshi.jpg",
-    imageLabel: "墨石公园变质岩石林实景",
+    image: "assets/spots/34-huiyuan.jpg",
+    imageLabel: "备选惠远寺实景",
     images: [
-      { src: "assets/spots/10-moshi.jpg", caption: "异域星球黑石林地貌" },
-      { src: "assets/hero/06-moshi.jpg", caption: "八美变质岩石林全景" }
+      { src: "assets/spots/34-huiyuan.jpg", caption: "墨石暂无开放授权实拍图 · 此为备选惠远寺（墨池山下的小屋 / CC BY-SA 3.0）" }
     ],
-    credit: "File:Yalamountain.jpg",
+    credit: "File:甘孜州道孚县惠远寺 - panoramio.jpg",
+    livePhoto: { label: "看墨石公园小红书最新实拍", query: "墨石公园 实拍 2026" },
     xhs: "墨石公园 国庆 排队 观光车",
     photo: "阴天可强化黑灰石林质感；晴天不要为了拍照牺牲贡嘎、雅拉窗口。",
     access: "停车等待超过 30 分钟就改去离八美约 10km 的惠远寺；进入的话控制在 2 小时，以观光车和核心石林为主。",
@@ -1458,9 +1461,10 @@ const spotDetails = {
     image: "assets/spots/13-maobiliang.jpg",
     imageLabel: "猫鼻梁观景台实景",
     images: [
+      { src: "assets/spots/25-siguniang-ridge.jpg", caption: "四姑娘山群峰全景 · George N / CC BY 2.0" },
       { src: "assets/spots/13-maobiliang.jpg", caption: "四姑娘山四峰同框全景" }
     ],
-    credit: "File:Mount Siguniang.jpg",
+    credit: "File:四姑娘山景区 Mount Siguniang Scenic Area 41.jpg",
     xhs: "猫鼻梁 四姑娘山 日落 停车 国庆",
     photo: "中长焦拍完整四峰轮廓，广角保留山谷环境；日照金山只当奖励。",
     access: "A 线 10.2 傍晚、B 线 10.4 下午顺光时段到正规停车区。停车满、云遮山或道路拥堵时直接回酒店。",
@@ -1523,12 +1527,13 @@ const spotDetails = {
     }
   },
   "四姑娘山长坪沟": {
-    image: "assets/spots/17-changping.jpg",
+    image: "assets/spots/26-changping-kushutan.jpg",
     imageLabel: "长坪沟徒步实景",
     images: [
-      { src: "assets/spots/17-changping.jpg", caption: "枯树滩原始森林与溪流" }
+      { src: "assets/spots/26-changping-kushutan.jpg", caption: "长坪沟枯树滩 · George N / CC BY 2.0" },
+      { src: "assets/spots/27-changping-yak.jpg", caption: "沟内牦牛与雪峰 · George N / CC BY 2.0" }
     ],
-    credit: "File:四姑娘山景区 Mount Siguniang Scenic Area 17.jpg",
+    credit: "File:四姑娘山景区 Mount Siguniang Scenic Area 29.jpg",
     xhs: "长坪沟 国庆 枯树滩 下干海子 徒步",
     photo: "用森林、枯木和河谷作为前景拍幺妹峰方向；与双桥沟的公路和湖泊画面形成区别。",
     access: "民宿就在沟口。阿坝旅游实名购票，门票+观光车约 ¥90/人；观光车到喇嘛寺后走栈道到枯树滩，14:30 前回民宿。",
@@ -1557,13 +1562,13 @@ const spotDetails = {
     }
   },
   "鱼子西空中花园": {
-    image: "assets/spots/19-yuzixi.jpg",
+    image: "assets/spots/28-gongga-golden.jpg",
     imageLabel: "鱼子西贡嘎日落实景",
     images: [
-      { src: "assets/spots/21-lenggacuo.jpg", caption: "贡嘎主峰（鱼子西可远眺，参考图）" },
-      { src: "assets/spots/19-yuzixi.jpg", caption: "贡嘎西侧历史黑白照片" }
+      { src: "assets/spots/28-gongga-golden.jpg", caption: "贡嘎日照金山与云海 · rheins / CC BY 3.0" },
+      { src: "assets/spots/21-lenggacuo.jpg", caption: "贡嘎主峰（参考图）" }
     ],
-    credit: "File:Minya Konka, from the west..jpg",
+    credit: "File:金色贡嘎 - Golden Mountains - 2012.10 - panoramio.jpg",
     xhs: "鱼子西 国庆 堵车 路况 日落",
     photo: "优势是贡嘎日落，但机位价值建立在晴天、道路和返程余量同时满足。",
     access: "新都桥出发约 1 小时，三村上山、二村下山；“鱼子西旅游管理”小程序预约，19:00 后停止进入。日落后慢速下山。",
@@ -1646,7 +1651,8 @@ const spotDetails = {
     image: "assets/spots/24-panda.jpg",
     imageLabel: "卧龙大熊猫实景",
     images: [
-      { src: "assets/spots/24-panda.jpg", caption: "耿达基地大熊猫萌态" }
+      { src: "assets/spots/33-panda-bamboo.jpg", caption: "大熊猫吃竹子（参考图）· MspreilsCN / CC BY 4.0" },
+      { src: "assets/spots/24-panda.jpg", caption: "卧龙大熊猫" }
     ],
     credit: "File:Pandas!! (GIANT PANDA-WOLONG-SICHUAN-CHINA) (2150600169).jpg",
     xhs: "卧龙中华大熊猫苑 国庆 预约 停车",
@@ -1967,6 +1973,7 @@ function renderSpots() {
           </div>
           <span class="slider-count" data-slider-count>1 / ${images.length}</span>
         ` : ""}
+        ${spot.livePhoto ? `<a class="spot-live-photo" href="${xiaohongshuSearchUrl(spot.livePhoto.query)}" target="_blank" rel="noreferrer">${icon("images")}${spot.livePhoto.label}${icon("arrow-up-right")}</a>` : ""}
       </div>
       <div class="spot-body">
         <div class="spot-top"><span>${String(index + 1).padStart(2, "0")}</span><em>${spot.tag}</em></div>

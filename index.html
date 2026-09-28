@@ -16,9 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=34.0" />
+    <link rel="stylesheet" href="styles.css?v=43.0" />
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-    <script src="app.js?v=34.0" defer></script>
+    <script src="app.js?v=43.0" defer></script>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -30,6 +30,7 @@
         <a href="#route">路线</a>
         <a href="#spots">景点</a>
         <a href="#days">日程</a>
+        <a href="#weather">天气</a>
         <a href="#roadbook">路况</a>
         <a href="#snow">雪山</a>
         <a href="#vehicle">用车</a>
@@ -200,6 +201,24 @@
 
           <div class="day-tabs" role="tablist" aria-label="每日行程" data-day-tabs></div>
           <article class="day-detail" data-day-detail aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="weather-section content-width" id="weather">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">WEATHER / 02</p>
+            <h2>此刻天气与全程走势</h2>
+          </div>
+          <p>天气图按每天白天主要去处画出气温和降水；下方卡片补充当晚住处。垭口、观景台（巴朗山、红海子、鱼子西、折多山）比表中再冷 5–8°C，早晚可能到 0°C 以下。</p>
+        </div>
+        <div class="weather-now" data-weather-now></div>
+        <div class="weather-chart" data-weather-chart></div>
+        <p class="weather-detail-title">每天两地明细</p>
+        <div class="weather-grid" data-weather-grid></div>
+        <div class="weather-foot">
+          <p data-weather-meta>正在获取天气预报…</p>
+          <button type="button" class="weather-refresh" data-weather-refresh><i data-lucide="refresh-cw"></i>刷新天气</button>
         </div>
       </section>
 
@@ -393,9 +412,9 @@
           <p>以下按 2026-09-28 查到的官方通报整理，针对 A 线传统逆时针。路况每天会变，10.1 凌晨出发前再看一次阿坝州路况和 12122。</p>
         </div>
         <div class="booking-grid">
-          <article class="booking-item urgent">
-            <div class="booking-date">必须在手</div>
-            <div><span>A 线 10.2 / 10.3</span><h3>双桥沟改 10.3，长坪沟抢 10.2</h3><p>双桥沟 10.2 已售罄，锁定 10.3 实名票；10.2 住处就在长坪沟口，有票就去，没票就休息适应。景区每天 17:00 公布次日余票，捡到 10.2 双桥沟就退 10.3。不买黄牛票。</p></div>
+          <article class="booking-item ok">
+            <div class="booking-date">已买</div>
+            <div><span>A 线 10.3</span><h3>双桥沟门票 + 观光车</h3><p>10.3 当天 07:30 带身份证入园即可。其余景点不用提前抢：长坪沟 10.1 晚上在阿坝旅游买，鱼子西 10.4 晚上在小程序约，熊猫基地、墨石、塔公寺等现场买。</p></div>
           </article>
           <article class="booking-item urgent">
             <div class="booking-date">取车必问</div>
@@ -406,8 +425,8 @@
             <div><span>A 线 10.1</span><h3>G350 映秀—卧龙—巴朗山</h3><p>8 月 18 日关门沟、观音庙泥石流断道，现已抢通；阿坝州 9.18 通报映秀至小金交界“道路畅通”。山体仍松动，白天通过、灾害点不停车；遇临时管制原地等放行。</p></div>
           </article>
           <article class="booking-item">
-            <div class="booking-date">提前买</div>
-            <div><span>A 线 10.1</span><h3>卧龙熊猫基地门票</h3><p>卧龙中华大熊猫苑神树坪基地（耿达镇），9:00—17:00 开放、16:30 停止入园。提前一天网上买 ¥85，现场 ¥90；网上买的凭身份证在售票中心取票。福宝在熊猫幼儿园 2 号馆，上午最活跃。</p></div>
+            <div class="booking-date">现场买</div>
+            <div><span>A 线 10.1</span><h3>卧龙熊猫基地门票</h3><p>卧龙中华大熊猫苑神树坪基地（耿达镇），9:00—17:00 开放、16:30 停止入园。现场 ¥90；想省 ¥5、少排一次队可前一天网上买 ¥85，凭身份证在售票中心取票。福宝在熊猫幼儿园 2 号馆，上午最活跃。</p></div>
           </article>
           <article class="booking-item">
             <div class="booking-date">夜路</div>
@@ -504,7 +523,6 @@
                 <tr><td><strong>多人出现明显高反</strong><small>头痛、恶心或失眠持续加重</small></td><td>停止继续上升</td><td>取消新都桥、墨石和高海拔观景点</td><td>下撤康定或丹巴，必要时就医</td><td>症状充分缓解且专业意见允许</td></tr>
                 <tr><td><strong>S434 雨雪 / 结冰 / 浓雾</strong><small>交警分流或能见度明显下降</small></td><td>服从管制，切换主路</td><td>取消红海子、机场路所有停车</td><td>按导航走 G318 或留宿康定</td><td>官方解除管制且白天能见度良好</td></tr>
                 <tr><td><strong>B 线 10.3 比计划晚 2 小时</strong><small>14:00 仍未离开八美</small></td><td>直接前往丹巴</td><td>取消墨石公园或塔公重复停留</td><td>保持丹巴县城住宿不变</td><td>不恢复，当天留出天黑前余量</td></tr>
-                <tr><td><strong>10.3 双桥沟也没票</strong><small>官方渠道确认售罄</small></td><td>不购买黄牛票</td><td>取消对应景区日</td><td>先查长坪沟余票；再不行换沃日官寨、猫鼻梁低强度替换</td><td>有官方退票余量再恢复</td></tr>
                 <tr><td><strong>传统逆时针首日多人高反</strong><small>到卧龙后症状持续加重</small></td><td>停止继续升高</td><td>取消当晚四姑娘山住宿</td><td>留宿卧龙，次日重新评估</td><td>症状充分缓解且道路正常</td></tr>
                 <tr><td><strong>传统线 10.6 进度落后</strong><small>16:00 仍未离开康定</small></td><td>取消泸定桥和雅安目标</td><td>不再增加任何景点</td><td>当晚住泸定，10.7 更早出发</td><td>不恢复，当天避免夜间疲劳驾驶</td></tr>
                 <tr><td><strong>雪山加量版道路转差</strong><small>降雪、管制或次日预计到天府超过 8 小时</small></td><td>10.6 取消长坪沟并下撤</td><td>取消四姑娘山第 3 晚</td><td>当晚住都江堰，次日直达天府机场</td><td>不恢复，航班安全优先</td></tr>

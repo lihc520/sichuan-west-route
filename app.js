@@ -558,9 +558,9 @@ const balancedItinerary = [
       ["11:15", "耿达 / 卧龙午饭", "热食为主，控制在 45 分钟。出发前看一眼巴朗山方向天气。"],
       ["12:15", "翻巴朗山隧道进四姑娘山", "约 95km，隧道口近 3,900m。开始明显升高后减少说话和走动，任何人持续头痛或恶心，考虑退回卧龙过夜。"],
       ["15:00", "抵达四姑娘山镇，入住松涧", "预计剩 35–50% 电量。办理入住后只休息，不进景区。问民宿能否充电；不能就明天去长坪村国网充电站。"],
-      ["18:00", "早吃晚饭，早睡", "少油少辣、不饮酒，22:00 前休息。再确认 10.2 长坪沟、10.3 双桥沟的实名订单。"]
+      ["18:00", "早吃晚饭，早睡", "少油少辣、不饮酒，22:00 前休息。今晚在阿坝旅游买好 10.2 长坪沟票（双桥沟 10.3 已买）。"]
     ],
-    notes: [["熊猫", "门票 ¥85 起，9:00 开园", "提前一天网上买 ¥85，现场 ¥90；网上买的要凭身份证去售票中心取票。16:30 停止入园。国庆人多，前一天买好。"], ["高反", "10.1 晚直接到 3,200 米", "这是传统逆时针进山首晚的主要代价。当天不洗长时间热水澡，不靠吸氧掩盖持续加重症状。"], ["住宿", "已订：半山·白（长坪村）", "10.1 住松涧、10.2 住听涧，两晚房型不同，10.2 要换房；确认听涧能睡下 5 人或已加床。"]]
+    notes: [["熊猫", "门票 ¥85 起，9:00 开园", "提前一天网上买 ¥85，现场 ¥90；网上买的要凭身份证去售票中心取票。16:30 停止入园。不用提前抢，现场买也行；前一天网上买能省 ¥5、少排一次队。"], ["高反", "10.1 晚直接到 3,200 米", "这是传统逆时针进山首晚的主要代价。当天不洗长时间热水澡，不靠吸氧掩盖持续加重症状。"], ["住宿", "已订：半山·白（长坪村）", "10.1 住松涧、10.2 住听涧，两晚房型不同，10.2 要换房；确认听涧能睡下 5 人或已加床。"]]
   },
   {
     label: "D2", date: "10.2", weekday: "周五", title: "长坪沟 / 高原适应日", subtitle: "双桥沟 10.2 已售罄，改到 10.3。今天住处就在长坪沟口：有票就轻走长坪沟看幺妹峰，没票就休息适应；傍晚都去猫鼻梁看四姑娘山全景。", distance: "景区内 / 镇周边", drive: "观光车 + 栈道", sleep: "四姑娘山镇 3,200m", mapDay: 4,
@@ -574,14 +574,14 @@ const balancedItinerary = [
       ["16:30", "猫鼻梁看四姑娘山四峰", "从镇上开车约 10 分钟。下午顺光，停 30–40 分钟，晴天有机会等到日照金山。车位满就先走，明天傍晚去小金还会路过一次。"],
       ["18:30", "晚餐与 10.3 准备", "确认双桥沟 10.3 订单和身份证；电量不到 80% 晚上再补一次；早睡。"]
     ],
-    notes: [["门票", "长坪沟也要实名预约", "约 ¥90/人（门票+观光车），三沟共用每天 2 万人上限，售罄即止；截止时间各页面说法不一，出发前就买好。没票不买黄牛票，休息适应同样有价值。"], ["捡漏", "继续盯 10.2 双桥沟退票", "景区每天 17:00 公布次日余票。若捡到 10.2 双桥沟，就把 10.3 的票退掉，10.3 恢复白天下丹巴。"], ["住宿", "今天要换房", "10.2 住听涧（2.0+1.5 双床），5 人需确认加床或第二间房。"]]
+    notes: [["门票", "长坪沟也要实名预约", "约 ¥90/人（门票+观光车），三沟共用每天 2 万人上限，售罄即止；一般比双桥沟好买，10.1 晚上在阿坝旅游买就行。没票不买黄牛票，休息适应同样有价值。"], ["双桥沟", "10.3 已买", "双桥沟门票 + 观光车已订 10.3，今天不用再管；明早 07:30 带身份证入园。"], ["住宿", "今天要换房", "10.2 住听涧（2.0+1.5 双床），5 人需确认加床或第二间房。"]]
   },
   {
     label: "D3", date: "10.3", weekday: "周六", title: "双桥沟完整一日 → 夜下丹巴甲居", subtitle: "白天玩完整个双桥沟，15:30 出园，经小金吃晚饭，天黑后走 G350 河谷路到甲居。这是全程唯一计划内的夜间山路，按下方注意事项执行。", distance: "景区内 40km+ / 约 135 km", drive: "观光车 + 夜路 3.5–4.5h", sleep: "丹巴甲居 约 2,000m", mapDay: 3,
     navigation: "https://uri.amap.com/search?keyword=%E4%B8%B9%E5%B7%B4%E5%8E%BF%E7%94%B2%E5%B1%85%E9%95%87%E5%96%80%E5%92%94%E6%9D%91",
     schedule: [
       ["06:30", "退房装车", "行李全部上车，贵重物品收进后备箱不外露。早餐打包，热水装满。"],
-      ["07:30", "双桥沟刷身份证入园", "门票 ¥80 + 观光车 ¥70/人。先坐车到最上面的红杉林，前段站点下午回程再看。"],
+      ["07:30", "双桥沟刷身份证入园", "票已买（门票 ¥80 + 观光车 ¥70/人）。先坐车到最上面的红杉林，前段站点下午回程再看。"],
       ...itinerary[5].schedule.slice(2, 7),
       ["15:30", "出园（最晚 16:00）", "晚上开夜路的司机在景区里少走路，下午在观光车上补觉。猫鼻梁 10.2 已看过，今天路过不停，除非昨天没看到。"],
       ["17:00", "小金吃晚饭", "天黑前最后一个稳定补给点：热饭、上厕所。今天以下坡为主，到丹巴只耗约 15–20% 电，电量 ≥50% 就不用在小金充。换精神最好的老司机开夜路，副驾全程陪聊、盯路。"],
@@ -824,7 +824,7 @@ const spots = [
   { name: "S434 红海子", region: "康定—塔公", level: "core", tag: "核心", time: "20–30min", cost: "可能有清洁费", altitude: "约 4,000m", rule: "只在正规停车区，雨雪立即取消", note: "高山湖泊与雪山公路场景，停留必须短。" },
   { name: "塔公草原 / 塔公寺", region: "塔公", level: "core", tag: "核心", time: "1.5–2h", cost: "寺院票价现场核验", altitude: "约 3,730m", rule: "草原和寺院择一深度游", note: "雅拉雪山、人文和草原在同一停留点完成。" },
   { name: "甲居或中路藏寨", region: "丹巴", level: "core", tag: "核心", time: "1–1.5h", cost: "甲居约 ¥50", altitude: "约 2,000m", rule: "两者只选一个，控制在 1–1.5 小时", note: "A 线住在甲居：10.3 夜里到，10.4 早上出门看晨景；B 线 10.4 上午短停。" },
-  { name: "四姑娘山双桥沟", region: "四姑娘山", level: "core", tag: "核心", time: "7–8h", cost: "¥150 / 人", altitude: "3,200–3,800m", rule: "国庆售罄即止，出发前确认实名订单", note: "全程唯一完整景区日，以观光车串联雪峰、公路和湖泊。" },
+  { name: "四姑娘山双桥沟", region: "四姑娘山", level: "core", tag: "核心", time: "7–8h", cost: "¥150 / 人", altitude: "3,200–3,800m", rule: "A 线 10.3 已买，带身份证入园", note: "全程唯一完整景区日，以观光车串联雪峰、公路和湖泊。" },
   { name: "泸定桥 / 泸定县城", region: "泸定", level: "along", tag: "顺路", time: "30–60min", cost: "现场核验", altitude: "约 1,330m", rule: "D1 通畅且停车容易才去", note: "适合午餐和低海拔休息，不值得为排队拖延。" },
   { name: "康定机场路观景段", region: "S434", level: "along", tag: "顺路", time: "15min", cost: "免费", altitude: "4,000m+", rule: "不在车道和弯道拍照", note: "公路视野开阔，但停车条件决定能否停留。" },
   { name: "木雅金塔", region: "塔公", level: "along", tag: "顺路", time: "30min", cost: "现场核验", altitude: "约 3,700m", rule: "塔公寺拥堵时替换", note: "建筑与雪山同框，时间成本低。" },
@@ -1841,6 +1841,7 @@ function selectPlan(planId) {
   renderRoadbook();
   renderStays();
   renderSpots();
+  renderWeather();
   if (window.lucide) window.lucide.createIcons();
 }
 
@@ -2096,6 +2097,7 @@ function renderDay() {
           <div><span>驾驶</span><strong>${day.drive}</strong></div>
           <div><span>住宿</span><strong>${day.sleep}</strong></div>
         </div>
+        <div class="day-weather" data-day-weather="${day.date}"></div>
         <div class="day-actions">
           <a href="${day.navigation}" target="_blank" rel="noreferrer">${icon("navigation")}高德打开</a>
           <a href="#safety">${icon("shield-alert")}查看风险</a>
@@ -2112,6 +2114,8 @@ function renderDay() {
     const days = node.dataset.mapDays.split(",").filter(Boolean).map(Number);
     node.classList.toggle("active", days.includes(activeDay));
   });
+  const dayWeather = root.querySelector("[data-day-weather]");
+  if (dayWeather) dayWeather.innerHTML = (weatherPlan[day.date] || []).map(key => weatherRowHTML(key, day.date)).join("") + weatherAdvice(day.date);
   if (window.lucide) window.lucide.createIcons();
 }
 
@@ -2343,7 +2347,355 @@ function renderHeroNote() {
   }
   const now = new Date();
   const daysLeft = Math.round((new Date(2026, 8, 30) - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
-  if (daysLeft > 0) note.innerHTML = `<strong>距出发还有 ${daysLeft} 天：</strong>先买好熊猫基地、长坪沟、双桥沟门票，约好鱼子西，再下载四川离线地图。`;
+  if (daysLeft > 0) note.innerHTML = `<strong>距出发还有 ${daysLeft} 天：</strong>双桥沟 10.3 已买；长坪沟 10.1 晚上买、鱼子西 10.4 晚上约，其余现场买。出发前下载四川离线地图。`;
+}
+
+const weatherPlaces = {
+  tianfu: { name: "成都天府", lat: 30.314, lon: 104.444 },
+  siguniang: { name: "四姑娘山镇", lat: 31.002, lon: 102.838 },
+  danba: { name: "丹巴甲居", lat: 30.9, lon: 101.9 },
+  tagong: { name: "塔公", lat: 30.318, lon: 101.524 },
+  xinduqiao: { name: "新都桥", lat: 30.036, lon: 101.494 },
+  kangding: { name: "康定", lat: 30.05, lon: 101.957 },
+  yaan: { name: "雅安", lat: 29.98, lon: 103.013 }
+};
+
+const weatherPlan = {
+  "9.30": ["tianfu"], "10.1": ["siguniang"], "10.2": ["siguniang"], "10.3": ["siguniang", "danba"],
+  "10.4": ["tagong"], "10.5": ["tagong", "xinduqiao"], "10.6": ["kangding", "yaan"], "10.7": ["yaan", "tianfu"]
+};
+
+const weatherCacheKey = "chuanxi-weather";
+let weatherCache = JSON.parse(localStorage.getItem(weatherCacheKey) || "null");
+
+function isoFromLabel(label) {
+  const [month, day] = label.split(".");
+  return `2026-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+}
+
+function weatherKind(code) {
+  if (code === 0) return ["晴", "sun"];
+  if (code <= 2) return ["多云", "cloud-sun"];
+  if (code === 3) return ["阴", "cloud"];
+  if (code <= 48) return ["雾", "cloud-fog"];
+  if (code <= 57) return ["小雨", "cloud-drizzle"];
+  if (code <= 67 || (code >= 80 && code <= 82)) return [code === 65 || code === 82 ? "大雨" : "雨", "cloud-rain"];
+  if (code <= 77 || code === 85 || code === 86) return ["雪", "cloud-snow"];
+  return ["雷雨", "cloud-lightning"];
+}
+
+async function loadWeather() {
+  const fresh = weatherCache && Date.now() - weatherCache.fetchedAt < 3 * 3600 * 1000;
+  if (fresh) return;
+  const keys = Object.keys(weatherPlaces);
+  const params = new URLSearchParams({
+    latitude: keys.map(key => weatherPlaces[key].lat).join(","),
+    longitude: keys.map(key => weatherPlaces[key].lon).join(","),
+    daily: "weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max",
+    timezone: "Asia/Shanghai",
+    forecast_days: "16"
+  });
+  try {
+    const response = await fetch(`https://api.open-meteo.com/v1/forecast?${params}`);
+    if (!response.ok) throw new Error(response.status);
+    const results = await response.json();
+    const data = {};
+    const elevation = {};
+    keys.forEach((key, index) => {
+      const daily = results[index].daily;
+      elevation[key] = results[index].elevation;
+      data[key] = Object.fromEntries(daily.time.map((date, i) => [date, {
+        code: daily.weather_code[i], max: daily.temperature_2m_max[i], min: daily.temperature_2m_min[i], pop: daily.precipitation_probability_max[i]
+      }]));
+    });
+    weatherCache = { fetchedAt: Date.now(), data, elevation };
+    localStorage.setItem(weatherCacheKey, JSON.stringify(weatherCache));
+  } catch {
+    if (!weatherCache) weatherCache = { fetchedAt: 0, data: null, failed: true };
+  }
+}
+
+function weatherFor(key, label) {
+  return weatherCache?.data?.[key]?.[isoFromLabel(label)] || null;
+}
+
+function weatherRowHTML(key, label) {
+  const place = weatherPlaces[key];
+  const w = weatherFor(key, label);
+  if (!w) return `<div class="weather-row empty"><span class="weather-place">${place.name}</span><span class="weather-na">暂无预报</span></div>`;
+  const [text, iconName] = weatherKind(w.code);
+  return `<div class="weather-row ${iconName === "cloud-snow" ? "snow" : ""}">
+    <span class="weather-icon">${icon(iconName)}</span>
+    <span class="weather-place">${place.name}<small>${text}</small></span>
+    <span class="weather-temp">${Math.round(w.min)}° / ${Math.round(w.max)}°</span>
+    <span class="weather-pop">${icon("umbrella")}${w.pop ?? "–"}%</span>
+  </div>`;
+}
+
+function weatherAdvice(label) {
+  const list = (weatherPlan[label] || []).map(key => weatherFor(key, label)).filter(Boolean);
+  if (!list.length) return "";
+  if (list.some(w => weatherKind(w.code)[1] === "cloud-snow" || w.min <= 0)) return `<em class="weather-tip snow">可能下雪或结冰：带防滑链、羽绒服，看交警通告</em>`;
+  if (list.some(w => (w.pop ?? 0) >= 60)) return `<em class="weather-tip rain">降水概率高：带雨具，雪山窗口可能被云挡</em>`;
+  if (list.some(w => w.code <= 2 && (w.pop ?? 0) < 30)) return `<em class="weather-tip sun">大概率晴好：留意日照金山窗口，注意防晒</em>`;
+  return "";
+}
+
+function smoothPath(points) {
+  if (points.length < 2) return points.length ? `M ${points[0][0]} ${points[0][1]}` : "";
+  let d = `M ${points[0][0]} ${points[0][1]}`;
+  for (let i = 0; i < points.length - 1; i += 1) {
+    const p0 = points[i - 1] || points[i];
+    const p1 = points[i];
+    const p2 = points[i + 1];
+    const p3 = points[i + 2] || p2;
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += ` C ${c1[0]} ${c1[1]}, ${c2[0]} ${c2[1]}, ${p2[0]} ${p2[1]}`;
+  }
+  return d;
+}
+
+function renderWeatherChart() {
+  const root = document.querySelector("[data-weather-chart]");
+  if (!root) return;
+  const today = todayLabel();
+  const days = currentRoute().itinerary.map(day => {
+    const key = (weatherPlan[day.date] || [])[0];
+    return { day, key, w: key ? weatherFor(key, day.date) : null };
+  });
+  const known = days.filter(item => item.w);
+  if (!known.length) {
+    root.innerHTML = `<p class="wx-empty">${weatherCache?.failed ? "天气暂时获取失败，联网后点“刷新天气”。" : "正在获取天气预报…"}</p>`;
+    return;
+  }
+  const coldest = known.reduce((a, b) => (b.w.min < a.w.min ? b : a));
+  const warmest = known.reduce((a, b) => (b.w.max > a.w.max ? b : a));
+  const wetDays = known.filter(item => ["cloud-rain", "cloud-drizzle", "cloud-snow", "cloud-lightning"].includes(weatherKind(item.w.code)[1])).length;
+  const snowDays = known.filter(item => weatherKind(item.w.code)[1] === "cloud-snow").map(item => item.day.date);
+  const lo = Math.floor(Math.min(0, ...known.map(item => item.w.min)) / 5) * 5 - 3;
+  const hi = Math.ceil(Math.max(...known.map(item => item.w.max)) / 5) * 5 + 3;
+  const count = days.length;
+  const x = index => ((index + 0.5) / count) * 100;
+  const y = temp => ((hi - temp) / (hi - lo)) * 100;
+  const points = days.map((item, index) => item.w ? { index, max: item.w.max, min: item.w.min } : null).filter(Boolean);
+  const maxPts = points.map(pt => [x(pt.index), y(pt.max)]);
+  const minPts = points.map(pt => [x(pt.index), y(pt.min)]);
+  const maxPath = smoothPath(maxPts);
+  const minPath = smoothPath(minPts);
+  const bandPath = `${maxPath} L ${minPts[minPts.length - 1][0]} ${minPts[minPts.length - 1][1]} ${smoothPath([...minPts].reverse()).replace(/^M [^C]+/, "")} Z`;
+  const zeroY = y(0);
+  root.innerHTML = `
+    <div class="wx-head">
+      <div><p class="mono-label">FORECAST · 9.30—10.7</p><h3>全程天气走势</h3></div>
+      <div class="wx-chips">
+        <span class="wx-chip cold">${icon("thermometer-snowflake")}最冷 ${Math.round(coldest.w.min)}° · ${coldest.day.date} ${weatherPlaces[coldest.key].name}</span>
+        <span class="wx-chip warm">${icon("thermometer-sun")}最暖 ${Math.round(warmest.w.max)}° · ${warmest.day.date} ${weatherPlaces[warmest.key].name}</span>
+        <span class="wx-chip wet">${icon("umbrella")}雨雪 ${wetDays} 天${snowDays.length ? ` · 雪 ${snowDays.join("、")}` : ""}</span>
+      </div>
+    </div>
+    <div class="wx-scroll"><div class="wx-inner" style="--wx-cols:${count}">
+      <div class="wx-bg">${days.map(({ day, w }) => {
+        const kind = w ? weatherKind(w.code)[1] : "";
+        return `<span class="${day.date === today ? "is-today" : ""} ${kind === "cloud-snow" ? "snow" : ["cloud-rain", "cloud-drizzle", "cloud-lightning"].includes(kind) ? "rain" : kind === "sun" || kind === "cloud-sun" ? "sun" : ""}"></span>`;
+      }).join("")}</div>
+      <div class="wx-cols wx-top">${days.map(({ day, w }) => {
+        const [text, iconName] = w ? weatherKind(w.code) : ["暂无", "circle-help"];
+        return `<div class="wx-col">
+          <span class="wx-date">${day.date === today ? `<em>今天</em>` : ""}${day.date}<small>${day.label} · ${day.weekday}</small></span>
+          <span class="wx-icon ${iconName}">${icon(iconName)}</span>
+          <span class="wx-text">${text}</span>
+        </div>`;
+      }).join("")}</div>
+      <div class="wx-plot">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="wx-band-fill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f5a35c" stop-opacity="0.38" />
+              <stop offset="100%" stop-color="#8cc8dd" stop-opacity="0.22" />
+            </linearGradient>
+          </defs>
+          ${zeroY > 0 && zeroY < 100 ? `<rect class="wx-freeze-zone" x="0" y="${zeroY}" width="100" height="${100 - zeroY}" /><line class="wx-zero" x1="0" x2="100" y1="${zeroY}" y2="${zeroY}" />` : ""}
+          <path class="wx-band" d="${bandPath}" />
+          <path class="wx-max" d="${maxPath}" />
+          <path class="wx-min" d="${minPath}" />
+        </svg>
+        ${zeroY > 0 && zeroY < 100 ? `<span class="wx-zero-label" style="top:${zeroY}%">0°C</span>` : ""}
+        ${points.map(pt => `
+          <span class="wx-dot max" style="left:${x(pt.index)}%;top:${y(pt.max)}%"></span>
+          <span class="wx-dot min ${pt.min <= 0 ? "freeze" : ""}" style="left:${x(pt.index)}%;top:${y(pt.min)}%"></span>
+          <span class="wx-label max" style="left:${x(pt.index)}%;top:${y(pt.max)}%">${Math.round(pt.max)}°</span>
+          <span class="wx-label min ${pt.min <= 0 ? "freeze" : ""}" style="left:${x(pt.index)}%;top:${y(pt.min)}%">${Math.round(pt.min)}°</span>`).join("")}
+      </div>
+      <div class="wx-cols wx-bottom">${days.map(({ key, w }) => {
+        const pop = w?.pop ?? 0;
+        const elev = weatherCache?.elevation?.[key];
+        return `<div class="wx-col">
+          <span class="wx-rain ${pop >= 70 ? "high" : ""}"><i style="height:${Math.max(pop, 4)}%"></i></span>
+          <span class="wx-pop">${icon("droplet")}${w ? `${pop}%` : "–"}</span>
+          <span class="wx-place">${key ? weatherPlaces[key].name : ""}${elev ? `<small>${money(elev)}m</small>` : ""}</span>
+        </div>`;
+      }).join("")}</div>
+    </div></div>
+    <div class="wx-legend"><span><i class="max"></i>最高气温</span><span><i class="min"></i>最低气温</span><span><i class="rain"></i>降水概率</span><span><i class="zero"></i>0°C 以下可能结冰</span><span class="wx-swipe">左右滑动看全部日期</span></div>`;
+}
+
+const nowCacheKey = "chuanxi-weather-now";
+let nowWeather = JSON.parse(localStorage.getItem(nowCacheKey) || "null");
+
+function distanceKm(lat1, lon1, lat2, lon2) {
+  const rad = deg => (deg * Math.PI) / 180;
+  const a = Math.sin(rad(lat2 - lat1) / 2) ** 2 + Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(rad(lon2 - lon1) / 2) ** 2;
+  return 6371 * 2 * Math.asin(Math.sqrt(a));
+}
+
+function nearestWeatherPlace(lat, lon) {
+  return Object.entries(weatherPlaces)
+    .map(([key, place]) => ({ key, ...place, km: distanceKm(lat, lon, place.lat, place.lon) }))
+    .sort((a, b) => a.km - b.km)[0];
+}
+
+function planNowTarget() {
+  const label = todayLabel();
+  const key = (label && (weatherPlan[label] || [])[0]) || "tianfu";
+  return { lat: weatherPlaces[key].lat, lon: weatherPlaces[key].lon, source: "plan" };
+}
+
+async function loadNowWeather(target) {
+  const params = new URLSearchParams({
+    latitude: target.lat, longitude: target.lon,
+    current: "temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m",
+    hourly: "temperature_2m,weather_code,precipitation_probability",
+    daily: "sunrise,sunset,temperature_2m_max,temperature_2m_min",
+    timezone: "Asia/Shanghai", forecast_days: "2"
+  });
+  try {
+    const response = await fetch(`https://api.open-meteo.com/v1/forecast?${params}`);
+    if (!response.ok) throw new Error(response.status);
+    const r = await response.json();
+    const startHour = r.current.time.slice(0, 13);
+    const first = Math.max(0, r.hourly.time.findIndex(time => time.slice(0, 13) === startHour));
+    const hours = [];
+    for (let i = first + 1; i < r.hourly.time.length && hours.length < 8; i += 2) {
+      hours.push({ time: r.hourly.time[i].slice(11, 16), temp: r.hourly.temperature_2m[i], code: r.hourly.weather_code[i], pop: r.hourly.precipitation_probability[i] });
+    }
+    nowWeather = {
+      fetchedAt: Date.now(), source: target.source, lat: target.lat, lon: target.lon, elevation: r.elevation,
+      current: r.current, hours,
+      today: { sunrise: r.daily.sunrise[0].slice(11), sunset: r.daily.sunset[0].slice(11), max: r.daily.temperature_2m_max[0], min: r.daily.temperature_2m_min[0] }
+    };
+    localStorage.setItem(nowCacheKey, JSON.stringify(nowWeather));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function locateNowWeather(silent = false) {
+  if (!navigator.geolocation) {
+    if (!silent) showToast("这个浏览器不支持定位");
+    return;
+  }
+  const root = document.querySelector("[data-weather-now]");
+  root?.classList.add("loading");
+  navigator.geolocation.getCurrentPosition(async position => {
+    localStorage.setItem("chuanxi-geo-ok", "1");
+    const ok = await loadNowWeather({ lat: position.coords.latitude, lon: position.coords.longitude, source: "gps" });
+    root?.classList.remove("loading");
+    renderNowWeather();
+    if (!silent) showToast(ok ? "已更新你所在位置的天气" : "天气获取失败，请检查网络");
+  }, async () => {
+    localStorage.removeItem("chuanxi-geo-ok");
+    await loadNowWeather(planNowTarget());
+    root?.classList.remove("loading");
+    renderNowWeather();
+    if (!silent) showToast("没拿到定位，先显示今天行程地点的天气");
+  }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 });
+}
+
+function renderNowWeather() {
+  const root = document.querySelector("[data-weather-now]");
+  if (!root) return;
+  if (!nowWeather) {
+    root.innerHTML = `<div class="wn-empty">${icon("loader")}正在获取此刻天气…</div>`;
+    if (window.lucide) window.lucide.createIcons();
+    return;
+  }
+  const { current, hours, today, source, lat, lon, elevation } = nowWeather;
+  const near = nearestWeatherPlace(lat, lon);
+  const [text, iconName] = weatherKind(current.weather_code);
+  const title = source === "gps" ? (near.km < 15 ? `${near.name}附近` : "你现在的位置") : near.name;
+  const sub = source === "gps" ? (near.km < 15 ? `距 ${near.name} 约 ${Math.max(1, Math.round(near.km))} km` : `离行程最近的是 ${near.name}，约 ${Math.round(near.km)} km`) : (todayLabel() ? "今天行程的主要地点 · 可改用你的定位" : "出发前默认显示成都天府 · 可改用你的定位");
+  const icy = iconName === "cloud-snow" || current.temperature_2m <= 2 || today.min <= 0;
+  root.innerHTML = `
+    <div class="wn-main ${iconName}">
+      <div class="wn-top">
+        <span class="wn-badge">${icon(source === "gps" ? "locate-fixed" : "map-pin")}${source === "gps" ? "此刻 · 你的位置" : "此刻 · 行程地点"}</span>
+        <button type="button" class="wn-locate" data-now-locate>${icon("locate")}${source === "gps" ? "重新定位" : "用我的定位"}</button>
+      </div>
+      <h3>${title}</h3>
+      <p class="wn-sub">${sub}${elevation ? ` · 海拔 ${money(elevation)}m` : ""}</p>
+      <div class="wn-temp">
+        <span class="wn-icon">${icon(iconName)}</span>
+        <b>${Math.round(current.temperature_2m)}°</b>
+        <div><strong>${text}</strong><small>体感 ${Math.round(current.apparent_temperature)}° · 今天 ${Math.round(today.min)}° / ${Math.round(today.max)}°</small></div>
+      </div>
+      <div class="wn-stats">
+        <span>${icon("wind")}风 ${Math.round(current.wind_speed_10m)} km/h</span>
+        <span>${icon("droplets")}湿度 ${current.relative_humidity_2m}%</span>
+        <span>${icon("sunrise")}日出 ${today.sunrise}</span>
+        <span>${icon("sunset")}日落 ${today.sunset}</span>
+      </div>
+      ${icy ? `<p class="wn-alert">${icon("triangle-alert")}气温接近或低于 0°C：注意路面结冰，垭口不停车，确认防滑链</p>` : ""}
+    </div>
+    <div class="wn-hours">
+      <p class="mono-label">接下来 16 小时</p>
+      <div class="wn-hour-list">${hours.map(h => {
+        const [hText, hIcon] = weatherKind(h.code);
+        return `<div class="wn-hour" title="${hText}"><span>${h.time}</span>${icon(hIcon)}<b>${Math.round(h.temp)}°</b><small>${icon("droplet")}${h.pop ?? 0}%</small></div>`;
+      }).join("")}</div>
+      <p class="wn-updated">更新于 ${new Date(nowWeather.fetchedAt).toLocaleString("zh-CN", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" })} · 没网时显示最后一次结果</p>
+    </div>`;
+  if (window.lucide) window.lucide.createIcons();
+}
+
+async function initNowWeather() {
+  renderNowWeather();
+  document.querySelector("[data-weather-now]")?.addEventListener("click", event => {
+    if (event.target.closest("[data-now-locate]")) locateNowWeather();
+  });
+  if (nowWeather && Date.now() - nowWeather.fetchedAt < 20 * 60 * 1000) return;
+  if (localStorage.getItem("chuanxi-geo-ok")) {
+    locateNowWeather(true);
+    return;
+  }
+  await loadNowWeather(planNowTarget());
+  renderNowWeather();
+}
+
+function renderWeather() {
+  renderWeatherChart();
+  const grid = document.querySelector("[data-weather-grid]");
+  const meta = document.querySelector("[data-weather-meta]");
+  if (!grid) return;
+  const itinerary = currentRoute().itinerary;
+  const today = todayLabel();
+  grid.innerHTML = itinerary.map(day => `
+    <article class="weather-card ${day.date === today ? "is-today" : ""}">
+      <header><span>${day.label}</span><strong>${day.date}</strong><small>${day.weekday}</small>${day.date === today ? `<em class="day-today-chip">今天</em>` : ""}</header>
+      ${(weatherPlan[day.date] || []).map(key => weatherRowHTML(key, day.date)).join("")}
+      ${weatherAdvice(day.date)}
+    </article>`).join("");
+  if (meta) {
+    meta.textContent = weatherCache?.fetchedAt
+      ? `数据来自 Open-Meteo，已按各地海拔修正；更新于 ${new Date(weatherCache.fetchedAt).toLocaleString("zh-CN", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" })}。没网时显示最后一次的预报。`
+      : "天气数据暂时获取失败，联网后刷新页面再试。";
+  }
+  document.querySelectorAll("[data-day-weather]").forEach(node => {
+    const label = node.dataset.dayWeather;
+    node.innerHTML = (weatherPlan[label] || []).map(key => weatherRowHTML(key, label)).join("") + weatherAdvice(label);
+  });
+  if (window.lucide) window.lucide.createIcons();
 }
 
 function setupMobileDock() {
@@ -2375,5 +2727,14 @@ document.addEventListener("DOMContentLoaded", () => {
   setupActions();
   setupMobileDock();
   renderHeroNote();
+  renderWeather();
+  loadWeather().then(renderWeather);
+  initNowWeather();
+  document.querySelector("[data-weather-refresh]")?.addEventListener("click", async () => {
+    weatherCache = weatherCache ? { ...weatherCache, fetchedAt: 0 } : null;
+    await loadWeather();
+    renderWeather();
+    showToast(weatherCache?.data ? "天气已更新" : "天气获取失败，请检查网络");
+  });
   if (window.lucide) window.lucide.createIcons();
 });

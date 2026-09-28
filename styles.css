@@ -6068,6 +6068,238 @@ p {
 }
 
 /* ==========================================================================
+   小红书攻略折叠 & 手机端整体压缩 (Mobile Density Pass)
+   ========================================================================== */
+
+summary.xhs-guide-header {
+  cursor: pointer;
+  list-style: none;
+}
+
+summary.xhs-guide-header::-webkit-details-marker {
+  display: none;
+}
+
+.spot-xhs-guide:not([open]) .xhs-guide-header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.xhs-toggle {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 36, 66, 0.1);
+  color: #ff2442;
+  transition: transform 0.25s ease;
+}
+
+.xhs-toggle svg {
+  width: 15px;
+  height: 15px;
+}
+
+.spot-xhs-guide[open] .xhs-toggle {
+  transform: rotate(180deg);
+}
+
+.spot-xhs-guide > .xhs-direct-link {
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  main > section:not(.hero):not(.decision-band) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  main > section.scenery-section {
+    padding-bottom: 0;
+  }
+
+  .section-heading {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .section-heading h2 {
+    font-size: 26px;
+  }
+
+  .section-heading > p {
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+
+  .back-to-top {
+    display: none !important;
+  }
+
+  .content-width {
+    width: calc(100% - 32px);
+  }
+
+  /* 每日行程 */
+  .day-metrics div {
+    padding: 10px 12px;
+  }
+
+  .day-metrics strong {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .day-title h3 {
+    font-size: 26px;
+  }
+
+  /* 景点卡片 */
+  .spot-grid {
+    gap: 16px;
+  }
+
+  .spot-body {
+    padding: 18px;
+  }
+
+  .spot-xhs-guide {
+    padding: 12px 14px;
+  }
+
+  .xhs-topic-tag {
+    display: none;
+  }
+
+  /* 横向滑动的卡片组 */
+  .snow-window-grid,
+  .risk-grid,
+  .safety-playbook-grid {
+    display: flex;
+    gap: 12px;
+    margin-inline: -16px;
+    padding: 4px 16px 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .snow-window-grid::-webkit-scrollbar,
+  .risk-grid::-webkit-scrollbar,
+  .safety-playbook-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .snow-window-grid > *,
+  .risk-grid > *,
+  .safety-playbook-grid > * {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+  }
+
+  /* 团队分工两列 */
+  .role-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .role-card {
+    padding: 16px;
+  }
+
+  .role-card h3 {
+    font-size: 17px;
+  }
+
+  .role-card p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .role-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* 天气图压缩 */
+  .wx-inner {
+    min-width: 560px;
+  }
+
+  .wx-head h3 {
+    font-size: 19px;
+  }
+
+  .wx-chip {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .wx-col {
+    padding: 10px 2px;
+    gap: 4px;
+  }
+
+  .wx-date {
+    font-size: 15px;
+  }
+
+  .wx-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .wx-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .wx-text {
+    font-size: 11px;
+  }
+
+  .wx-plot {
+    height: 150px;
+    margin: 14px 0 10px;
+  }
+
+  .wx-label {
+    font-size: 11px;
+    padding: 0 5px;
+  }
+
+  .wx-rain {
+    height: 36px;
+  }
+
+  .wx-place {
+    font-size: 10px;
+  }
+
+  .weather-card {
+    padding: 14px;
+  }
+
+  .altitude-response-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .altitude-response-heading h3,
+  .safety-playbook-heading h3 {
+    font-size: 21px;
+  }
+
+  .altitude-response {
+    padding: 20px 16px;
+  }
+}
+
+/* ==========================================================================
    打印与导出 PDF 模式 (Print Stylesheet)
    ========================================================================== */
 

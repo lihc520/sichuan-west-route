@@ -1951,6 +1951,7 @@ function renderSpots() {
   const labels = { all: "全部沿线点", core: "必须保留", along: "有余量再停", backup: "替换使用", skip: "本次明确放弃" };
   document.querySelector("[data-spot-summary]").innerHTML = `<strong>${labels[activeSpotLevel]}</strong><span>共 ${visible.length} 个</span><p>点击图片可全屏高清放大。保留原路书实测通行与拍摄指南，并新增小红书热门打卡姿势与滤镜建议。</p>`;
   
+  const spotGuideOpen = !window.matchMedia("(max-width: 768px)").matches;
   document.querySelector("[data-spot-grid]").innerHTML = visible.map((spot, index) => {
     const images = spot.images || [{ src: spot.image, caption: spot.imageLabel }];
     const xhs = xhsGuides[spot.name] || {
@@ -1994,18 +1995,15 @@ function renderSpots() {
         <div class="spot-field"><span>怎么停 / 怎么进</span><p>${spot.access}</p></div>
         <strong class="spot-rule">${spot.rule}</strong>
         <!-- 小红书独家爆款打卡攻略卡片 -->
-        <div class="spot-xhs-guide">
-          <div class="xhs-guide-header">
+        <details class="spot-xhs-guide" ${spotGuideOpen ? "open" : ""}>
+          <summary class="xhs-guide-header">
             <div class="xhs-badge-title">
               <span class="xhs-red-icon">📕</span>
               <strong>小红书打卡攻略</strong>
               <span class="xhs-topic-tag">${xhs.title}</span>
             </div>
-            <a href="${xiaohongshuSearchUrl(xhs.xhsSearch)}" target="_blank" rel="noreferrer" class="xhs-direct-link" title="在小红书查看实测笔记">
-              <span>小红书原帖</span>
-              ${icon("external-link")}
-            </a>
-          </div>
+            <span class="xhs-toggle">${icon("chevron-down")}</span>
+          </summary>
 
           <div class="xhs-tags-cloud">
             ${xhs.hotTags.map(tag => `<a href="${xiaohongshuSearchUrl(tag)}" target="_blank" rel="noreferrer" class="xhs-chip">#${tag}</a>`).join("")}
@@ -2060,7 +2058,11 @@ function renderSpots() {
               <p class="xhs-row-text">${xhs.avoid}</p>
             </div>
           </div>
-        </div>
+          <a href="${xiaohongshuSearchUrl(xhs.xhsSearch)}" target="_blank" rel="noreferrer" class="xhs-direct-link" title="在小红书查看实测笔记">
+            <span>看小红书原帖</span>
+            ${icon("external-link")}
+          </a>
+        </details>
 
         <div class="spot-links">
           <a href="${xiaohongshuSearchUrl(spot.xhs)}" target="_blank" rel="noreferrer">小红书检索：${spot.xhs} ${icon("search")}</a>

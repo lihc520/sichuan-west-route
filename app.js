@@ -210,7 +210,7 @@ const planOptions = [
     summary: "成都经都江堰方向进入四姑娘山，再走丹巴、八美、墨石、塔公、新都桥、康定和雅安。雪山、藏寨、草原、石林与城市都有。",
     stats: [["方向", "逆时针"], ["雪山窗口", "4–5 次"], ["体验类型", "最均衡"], ["航班风险", "低"]],
     timeline: [
-      ["9.30", "成都", "落地取车"], ["10.1", "四姑娘山", "卧龙熊猫 / 进山"], ["10.2", "四姑娘山", "长坪沟 / 猫鼻梁"], ["10.3", "甲居", "双桥沟 / 夜下丹巴"],
+      ["9.30", "成都", "落地取车"], ["10.1", "四姑娘山", "直达 / 猫鼻梁日落"], ["10.2", "四姑娘山", "长坪沟 / 适应"], ["10.3", "甲居", "双桥沟 / 夜下丹巴"],
       ["10.4", "塔公", "八美 / 墨石"], ["10.5", "新都桥", "红海子 / 鱼子西日落"], ["10.6", "雅安", "折多山 / 康定"], ["10.7", "广州", "成都机场返航"]
     ],
     verdict: "最适合第一次走川西小环线。缺点是 10 月 1 日直接升到四姑娘山镇约 3,200 米，需要全员慢走并严格观察高反。",
@@ -539,7 +539,7 @@ const balancedItinerary = [
     ...itinerary[0],
     schedule: [
       ...itinerary[0].schedule.slice(0, 3),
-      ["23:30", "团队碰头 10 分钟", "确认次日 04:30 起床、05:00 出发、司机轮换、导航收藏和应急联系人，不安排夜宵局。"]
+      ["23:30", "团队碰头 10 分钟", "确认次日 05:30 起床、06:00 出发、司机轮换、导航收藏和应急联系人，不安排夜宵局。"]
     ],
     notes: [
       itinerary[0].notes[0],
@@ -548,30 +548,32 @@ const balancedItinerary = [
     ]
   },
   {
-    label: "D1", date: "10.1", weekday: "周四", title: "成都 → 卧龙看熊猫 → 巴朗山 → 四姑娘山", subtitle: "上午在卧龙神树坪看大熊猫（福宝在这里），午饭后翻巴朗山进四姑娘山。熊猫基地海拔约 1,700m，正好给身体一个缓冲。", distance: "约 290 km", drive: "6–8h", sleep: "四姑娘山镇 3,200m", mapDay: 4,
-    navigation: "https://uri.amap.com/search?keyword=%E5%8D%A7%E9%BE%99%E4%B8%AD%E5%8D%8E%E5%A4%A7%E7%86%8A%E7%8C%AB%E8%8B%91%E7%A5%9E%E6%A0%91%E5%9D%AA%E5%9F%BA%E5%9C%B0",
+    label: "D1", date: "10.1", weekday: "周四", title: "成都 → 四姑娘山 · 猫鼻梁日落", subtitle: "不在卧龙停留，一早直达四姑娘山，赶在进山车流前过巴朗山。下午在镇上和长坪村附近慢慢逛、充电、适应海拔，傍晚去猫鼻梁看四姑娘山日落。", distance: "约 270 km", drive: "纯开车约 4h · 国庆 5–6h", sleep: "四姑娘山镇 3,200m", mapDay: 4,
+    navigation: "https://uri.amap.com/navigation?from=104.444,30.315&to=102.838,31.002&mode=car&policy=1",
     schedule: [
-      ["05:30", "天府机场出发", "早餐打包，出发电量 ≥90%。走绕城转都汶高速。"],
-      ["07:00", "都江堰蔚来换电站 / 快充补满", "约 120km 处顺路补到 90% 以上再进山：后面巴朗山一路爬到约 3,900m，耗电会明显变快。先在乐道 App 看排队。"],
-      ["08:40", "到耿达镇熊猫基地", "卧龙关门沟、观音庙是 8 月泥石流点，经过时不停车、不拍照。车可直接开到检票口旁停车场，售票处到检票口约 1.3km。"],
-      ["09:00", "卧龙中华大熊猫苑神树坪基地", "开园就进，9:00—11:00 熊猫最活跃。福宝在熊猫幼儿园 2 号馆，先去排；排队限时约 5 分钟。游览约 2 小时。"],
-      ["11:15", "耿达 / 卧龙午饭", "热食为主，控制在 45 分钟。出发前看一眼巴朗山方向天气。"],
-      ["12:15", "翻巴朗山隧道进四姑娘山", "约 95km，隧道口近 3,900m。开始明显升高后减少说话和走动，任何人持续头痛或恶心，考虑退回卧龙过夜。"],
-      ["15:00", "抵达四姑娘山镇，入住松涧", "预计剩 35–50% 电量。办理入住后只休息，不进景区。问民宿能否充电；不能就明天去长坪村国网充电站。"],
-      ["18:00", "早吃晚饭，早睡", "少油少辣、不饮酒，22:00 前休息。今晚在阿坝旅游买好 10.2 长坪沟票（双桥沟 10.3 已买）。"]
+      ["06:00", "天府机场出发", "05:30 起床，保证司机睡够 5–6 小时。早餐打包，出发电量 ≥90%；07:15 左右过绕城和成灌高速，正好在出城高峰边上。"],
+      ["07:30", "都江堰蔚来换电站 / 快充", "约 127km 处补到 90% 以上再进山：后面巴朗山一路爬到约 3,900m，耗电会明显变快。换电先在乐道 App 看排队，快充约 20 分钟。"],
+      ["08:30", "映秀 → 卧龙，只过境不停", "卧龙关门沟、观音庙是 8 月泥石流点，经过时不停车、不拍照。需要休息就在卧龙镇正规停车区停 10 分钟轮换司机。"],
+      ["10:00", "翻巴朗山隧道", "隧道口近 3,900m，开始明显升高后减少说话和走动。晴天出隧道后能看到四姑娘山，只在正规停车区短停。"],
+      ["11:30", "抵达四姑娘山镇", "先到半山·白寄存行李（入住一般 14:00 后）；任何人持续头痛或恶心，今天就只休息。"],
+      ["12:00", "镇上午饭", "热食为主，少油少辣。吃完就近把车开到长坪村旅游中心国网充电站充到 90% 以上。"],
+      ["13:30", "镇上和长坪村附近慢慢逛", "日隆镇老街、长坪村藏寨一带平路慢走，不进景区、不爬坡。高原第一天走 1 小时就回去，不追求多走。"],
+      ["15:00", "入住松涧、补觉", "躺下休息 1.5 小时左右，多喝温水。起来后看一眼猫鼻梁方向的云量。"],
+      ["17:30", "猫鼻梁看四姑娘山日落", "从镇上开车约 10 分钟。10 月初日落约 18:55，日照金山出现在日落前后十几分钟；提前到正规停车区占位，山顶风大穿羽绒服。云厚看不到就早点回，10.2 傍晚还能再来。"],
+      ["19:15", "晚饭，早睡", "少油少辣、不饮酒，22:00 前休息。今晚在阿坝旅游买好 10.2 长坪沟票（双桥沟 10.3 已买）。"]
     ],
-    notes: [["熊猫", "门票 ¥85 起，9:00 开园", "提前一天网上买 ¥85，现场 ¥90；网上买的要凭身份证去售票中心取票。16:30 停止入园。不用提前抢，现场买也行；前一天网上买能省 ¥5、少排一次队。"], ["高反", "10.1 晚直接到 3,200 米", "这是传统逆时针进山首晚的主要代价。当天不洗长时间热水澡，不靠吸氧掩盖持续加重症状。"], ["住宿", "已订：半山·白（长坪村）", "10.1 住松涧、10.2 住听涧，两晚房型不同，10.2 要换房；确认听涧能睡下 5 人或已加床。"]]
+    notes: [["节奏", "上午赶路，下午放松", "不去熊猫基地换来一早过巴朗山、中午到镇上：避开进山高峰，下午还能休息适应海拔。"], ["高反", "10.1 晚直接到 3,200 米", "这是传统逆时针进山首晚的主要代价。下午别逛太久，当天不洗长时间热水澡，不靠吸氧掩盖持续加重症状。"], ["住宿", "已订：半山·白（长坪村）", "10.1 住松涧、10.2 住听涧，两晚房型不同，10.2 要换房；确认听涧能睡下 5 人或已加床。"]]
   },
   {
-    label: "D2", date: "10.2", weekday: "周五", title: "长坪沟 / 高原适应日", subtitle: "双桥沟 10.2 已售罄，改到 10.3。今天住处就在长坪沟口：有票就轻走长坪沟看幺妹峰，没票就休息适应；傍晚都去猫鼻梁看四姑娘山全景。", distance: "景区内 / 镇周边", drive: "观光车 + 栈道", sleep: "四姑娘山镇 3,200m", mapDay: 4,
+    label: "D2", date: "10.2", weekday: "周五", title: "长坪沟 / 高原适应日", subtitle: "双桥沟在 10.3。今天住处就在长坪沟口：有票就轻走长坪沟看幺妹峰，没票就休息适应；10.1 猫鼻梁没看到日落，今天傍晚再去。", distance: "景区内 / 镇周边", drive: "观光车 + 栈道", sleep: "四姑娘山镇 3,200m", mapDay: 4,
     navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%E9%95%BF%E5%9D%AA%E6%B2%9F%E6%99%AF%E5%8C%BA",
     schedule: [
       ["07:30", "早餐，判断全员状态", "进山第二天先看睡眠和头痛情况。有人明显不适就全队休息，不进景区。"],
       ["08:00", "长坪沟入园（有票才去）", "民宿就在长坪沟口。需在阿坝旅游提前实名购票，门票+观光车约 ¥90/人（以页面为准），与双桥沟分开下单；假日入园一般 07:30—15:00。"],
       ["08:30", "观光车到喇嘛寺，栈道慢走到枯树滩", "幺妹峰正面窗口在沟里，边走边看。高原第二天不追木骡子，每 40 分钟统一休息。"],
       ["12:30", "景区内简餐后返程", "自带热水和轻便午餐。云层变厚或有人体力下降就提前出园。"],
-      ["14:30", "回民宿换房、充电、休息", "松涧 → 听涧。把车开到长坪村旅游中心国网充电站充到 90% 以上（离民宿很近）；下午补觉，给明天长时间游览和夜路留体力。"],
-      ["16:30", "猫鼻梁看四姑娘山四峰", "从镇上开车约 10 分钟。下午顺光，停 30–40 分钟，晴天有机会等到日照金山。车位满就先走，明天傍晚去小金还会路过一次。"],
+      ["14:30", "回民宿换房、休息", "松涧 → 听涧，行李一次搬完。电量不到 80% 就再去长坪村国网充电站补一次；下午补觉，给明天长时间游览和夜路留体力。"],
+      ["17:30", "猫鼻梁（10.1 没看到再去）", "10.1 已经看到日落就不用再去，在镇上散步吃饭。没看到就再来一次，日落约 18:55；明天傍晚去小金还会路过一次。"],
       ["18:30", "晚餐与 10.3 准备", "确认双桥沟 10.3 订单和身份证；电量不到 80% 晚上再补一次；早睡。"]
     ],
     notes: [["门票", "长坪沟也要实名预约", "约 ¥90/人（门票+观光车），三沟共用每天 2 万人上限，售罄即止；一般比双桥沟好买，10.1 晚上在阿坝旅游买就行。没票不买黄牛票，休息适应同样有价值。"], ["双桥沟", "10.3 已买", "双桥沟门票 + 观光车已订 10.3，今天不用再管；明早 07:30 带身份证入园。"], ["住宿", "今天要换房", "10.2 住听涧（2.0+1.5 双床），5 人需确认加床或第二间房。"]]
@@ -650,8 +652,8 @@ const balancedItinerary = [
 ];
 
 const balancedRoadSegments = [
-  ["10.1", "天府机场 → 都江堰 → 映秀 → 耿达熊猫基地", "约 190 km", "绕城 + 都汶高速转 G350，缓慢升高", "都江堰蔚来换电站 / 快充、熊猫基地停车场", "出城拥堵、8 月泥石流点零星落石", "05:30 出发，灾害点不停车；遇管制原地等官方放行，不抄村道"],
-  ["10.1", "耿达 → 卧龙 → 巴朗山隧道 → 四姑娘山镇", "约 95 km", "山路升至 3,200m，隧道口近 3,900m", "卧龙、巴朗山正规停车区", "高反、落石、雾、雨夹雪", "多人不适时留宿卧龙，不强行上升"],
+  ["10.1", "天府机场 → 都江堰 → 映秀 → 卧龙", "约 190 km", "绕城 + 都汶高速转 G350，缓慢升高", "都江堰蔚来换电站 / 快充", "出城拥堵、8 月泥石流点零星落石", "06:00 出发，卧龙只过境；灾害点不停车；遇管制原地等官方放行，不抄村道"],
+  ["10.1", "卧龙 → 巴朗山隧道 → 四姑娘山镇", "约 80 km", "山路升至 3,200m，隧道口近 3,900m", "卧龙、巴朗山正规停车区", "高反、落石、雾、雨夹雪", "多人不适时留宿卧龙，不强行上升"],
   ["10.3", "双桥沟 → 猫鼻梁 → 小金", "约 60 km", "G350 下坡，天黑前完成", "猫鼻梁正规停车区、小金县城", "景区出口车流、连续下坡", "15:30 出园；小金吃饭、换夜路司机；下坡开强能量回收"],
   ["10.3", "小金 → 丹巴 → 甲居（夜间）", "约 75 km", "G350 河谷路 + 最后约 8km 盘山村道", "丹巴甲居 G248 蔚来换电站", "夜间弯道、大车、落石、半扇门施工单边放行", "近光会车、急弯鸣笛；困了就在丹巴县城停下；用民宿定位进村"],
   ["10.4", "甲居 → 丹巴 → 八美 / 塔公", "约 160 km", "村道下山 + G350 高原河谷", "甲居换电站换满、牦牛谷、八美镇", "落石、景区车流", "08:00 出村；墨石排队超 30 分钟直接跳过"],
@@ -779,8 +781,8 @@ const routeMapConfigs = {
     main: ["chengdu", "dujiangyan", "yingxiu", "wolong", "siguniang", "xiaojin", "danba", "yak", "bamei", "tagong", "xinduqiao", "zheduo", "kangding", "luding", "yaan", "airport"],
     branches: [["siguniang", "changping"], ["siguniang", "shuangqiao"], ["siguniang", "maobiliang"], ["danba", "jiaju"], ["bamei", "moshi"], ["tagong", "gunong"], ["tagong", "muya"], ["tagong", "honghaizi"], ["xinduqiao", "yuzixi"], ["kangding", "mugecuo"]],
     sequence: [
-      ["chengdu", "9.30", "取车住宿"], ["dujiangyan", "10.1", "高速过境"], ["yingxiu", "10.1", "下高速转 G350"], ["wolong", "10.1", "看大熊猫 2 小时", false, "scenic"],
-      ["siguniang", "10.1–2", "长坪村连住两晚"], ["changping", "10.2", "有票就去", true, "scenic"], ["maobiliang", "10.2", "傍晚看四峰", false, "scenic"], ["shuangqiao", "10.3", "整日核心", false, "scenic"],
+      ["chengdu", "9.30", "取车住宿"], ["dujiangyan", "10.1", "高速过境"], ["yingxiu", "10.1", "下高速转 G350"], ["wolong", "10.1", "只过境"],
+      ["siguniang", "10.1–2", "长坪村连住两晚"], ["changping", "10.2", "有票就去", true, "scenic"], ["maobiliang", "10.1–2", "10.1 日落", false, "scenic"], ["shuangqiao", "10.3", "整日核心", false, "scenic"],
       ["xiaojin", "10.3", "晚饭"], ["danba", "10.3", "夜间经过"], ["jiaju", "10.3–4", "住甲居 / 晨景", false, "scenic"], ["yak", "10.4", "沿途短停"], ["bamei", "10.4", "午餐"],
       ["moshi", "10.4", "排队就换惠远寺", true], ["tagong", "10.4–5", "雅拉窗口", false, "scenic"], ["gunong", "10.5", "草原机位", false, "scenic"], ["muya", "10.4–5", "塔公替换点", true],
       ["honghaizi", "10.5", "上午往返看贡嘎", false, "scenic"], ["xinduqiao", "10.5–6", "住瓦泽 / 贡嘎"], ["yuzixi", "10.5", "日落金山", false, "scenic"], ["zheduo", "10.6", "垭口打卡", false, "scenic"], ["kangding", "10.6", "午餐下撤"],
@@ -843,11 +845,11 @@ const spots = [
   { name: "冷噶措", region: "贡嘎西坡", level: "skip", tag: "下次", time: "完整 1 天", cost: "接驳另计", altitude: "4,500m 左右", rule: "单独做贡嘎线", note: "距离、路况和体力需求均超出本次小环线。" },
   { name: "党岭 / 葫芦海", region: "丹巴北线", level: "skip", tag: "下次", time: "增加 2 天", cost: "马帮 / 住宿另计", altitude: "4,000m+", rule: "单独留夜", note: "不能把党岭当作丹巴顺路半日景点。" },
   { name: "海子沟", region: "四姑娘山", level: "skip", tag: "下次", time: "完整 1 天", cost: "票价现场核验", altitude: "高海拔徒步", rule: "本次取消", note: "体力要求最高，不适合首次高原团队临时加入。" },
-  { name: "卧龙中华大熊猫苑", region: "卧龙", level: "core", tag: "推荐", time: "约 2h", cost: "¥85 网购 / ¥90 现场", altitude: "约 1,700m", rule: "9:00 开园就进，16:30 停止入园", note: "A 线 10.1 上午看熊猫（福宝在幼儿园 2 号馆），9:00—11:00 最活跃；B 线 10.6 下撤时顺路。" }
+  { name: "卧龙中华大熊猫苑", region: "卧龙", level: "core", tag: "推荐", time: "约 2h", cost: "¥85 网购 / ¥90 现场", altitude: "约 1,700m", rule: "9:00 开园就进，16:30 停止入园", note: "A 线 10.1 直达四姑娘山，不在这里停；B 线 10.6 下撤时顺路。" }
 ];
 
 const spotOrderByRoute = {
-  balanced: ["卧龙中华大熊猫苑", "四姑娘山长坪沟", "猫鼻梁观景台", "四姑娘山双桥沟", "小金县城", "甲居或中路藏寨", "牦牛谷", "墨石公园", "塔公草原 / 塔公寺", "木雅金塔", "S434 红海子", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "康定折多河老城", "康定木格措", "泸定桥 / 泸定县城", "都江堰"],
+  balanced: ["猫鼻梁观景台", "四姑娘山长坪沟", "四姑娘山双桥沟", "小金县城", "甲居或中路藏寨", "牦牛谷", "墨石公园", "塔公草原 / 塔公寺", "木雅金塔", "S434 红海子", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "康定折多河老城", "康定木格措", "泸定桥 / 泸定县城", "卧龙中华大熊猫苑", "都江堰"],
   clockwise: ["泸定桥 / 泸定县城", "康定折多河老城", "康定机场路观景段", "S434 红海子", "塔公草原 / 塔公寺", "木雅金塔", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "墨石公园", "牦牛谷", "甲居或中路藏寨", "小金县城", "猫鼻梁观景台", "四姑娘山双桥沟", "卧龙中华大熊猫苑", "都江堰"],
   snow: ["泸定桥 / 泸定县城", "康定折多河老城", "康定机场路观景段", "S434 红海子", "塔公草原 / 塔公寺", "木雅金塔", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "墨石公园", "牦牛谷", "甲居或中路藏寨", "小金县城", "猫鼻梁观景台", "四姑娘山双桥沟", "四姑娘山长坪沟", "卧龙中华大熊猫苑", "都江堰"]
 };
@@ -1468,7 +1470,7 @@ const spotDetails = {
     credit: "File:四姑娘山景区 Mount Siguniang Scenic Area 41.jpg",
     xhs: "猫鼻梁 四姑娘山 日落 停车 国庆",
     photo: "中长焦拍完整四峰轮廓，广角保留山谷环境；日照金山只当奖励。",
-    access: "A 线 10.2 傍晚、B 线 10.4 下午顺光时段到正规停车区。停车满、云遮山或道路拥堵时直接回酒店。",
+    access: "A 线 10.1 傍晚看日落（没看到 10.2 再去），B 线 10.4 下午顺光时段到正规停车区。停车满、云遮山或道路拥堵时直接回酒店。",
     photoGuide: {
       spot: "观景台最右侧无遮挡护栏处、公路停车带开阔台阶",
       time: "傍晚 17:30–18:30 日落余晖金山（四峰自西向东渐次染金）",
@@ -2591,6 +2593,31 @@ async function loadNowWeather(target) {
   }
 }
 
+async function reverseGeocode(lat, lon) {
+  try {
+    const params = new URLSearchParams({ lat, lon, format: "jsonv2", "accept-language": "zh-CN", zoom: "14" });
+    const response = await fetch(`https://nominatim.openstreetmap.org/reverse?${params}`);
+    if (!response.ok) throw new Error(response.status);
+    const a = (await response.json()).address || {};
+    const local = a.town || a.village || a.suburb || a.township || a.city_district || a.hamlet || "";
+    const county = a.county || a.district || a.city || "";
+    const region = [a.region || a.state_district || a.city || "", a.state || ""].filter((item, index, list) => item && list.indexOf(item) === index && item !== county).join(" · ");
+    const name = [local, county].filter(Boolean).join(" · ");
+    if (name) return { name, region };
+    throw new Error("empty");
+  } catch {
+    try {
+      const params = new URLSearchParams({ latitude: lat, longitude: lon, localityLanguage: "zh" });
+      const response = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?${params}`);
+      const d = await response.json();
+      const name = [d.locality, d.city].filter(Boolean).join(" · ");
+      return name ? { name, region: d.principalSubdivision || "" } : null;
+    } catch {
+      return null;
+    }
+  }
+}
+
 function locateNowWeather(silent = false) {
   if (!navigator.geolocation) {
     if (!silent) showToast("这个浏览器不支持定位");
@@ -2600,7 +2627,12 @@ function locateNowWeather(silent = false) {
   root?.classList.add("loading");
   navigator.geolocation.getCurrentPosition(async position => {
     localStorage.setItem("chuanxi-geo-ok", "1");
-    const ok = await loadNowWeather({ lat: position.coords.latitude, lon: position.coords.longitude, source: "gps" });
+    const { latitude, longitude } = position.coords;
+    const [ok, place] = await Promise.all([loadNowWeather({ lat: latitude, lon: longitude, source: "gps" }), reverseGeocode(latitude, longitude)]);
+    if (ok && place) {
+      nowWeather = { ...nowWeather, placeName: place.name, placeRegion: place.region };
+      localStorage.setItem(nowCacheKey, JSON.stringify(nowWeather));
+    }
     root?.classList.remove("loading");
     renderNowWeather();
     if (!silent) showToast(ok ? "已更新你所在位置的天气" : "天气获取失败，请检查网络");
@@ -2621,11 +2653,12 @@ function renderNowWeather() {
     if (window.lucide) window.lucide.createIcons();
     return;
   }
-  const { current, hours, today, source, lat, lon, elevation } = nowWeather;
+  const { current, hours, today, source, lat, lon, elevation, placeName, placeRegion } = nowWeather;
   const near = nearestWeatherPlace(lat, lon);
   const [text, iconName] = weatherKind(current.weather_code);
-  const title = source === "gps" ? (near.km < 15 ? `${near.name}附近` : "你现在的位置") : near.name;
-  const sub = source === "gps" ? (near.km < 15 ? `距 ${near.name} 约 ${Math.max(1, Math.round(near.km))} km` : `离行程最近的是 ${near.name}，约 ${Math.round(near.km)} km`) : (todayLabel() ? "今天行程的主要地点 · 可改用你的定位" : "出发前默认显示成都天府 · 可改用你的定位");
+  const title = source === "gps" ? (placeName || (near.km < 15 ? `${near.name}附近` : "你现在的位置")) : near.name;
+  const nearText = near.km < 15 ? `距 ${near.name} 约 ${Math.max(1, Math.round(near.km))} km` : `离行程最近的是 ${near.name}，约 ${Math.round(near.km)} km`;
+  const sub = source === "gps" ? [placeRegion, placeName && near.km < 3 ? "" : nearText].filter(Boolean).join(" · ") : (todayLabel() ? "今天行程的主要地点 · 可改用你的定位" : "出发前默认显示成都天府 · 可改用你的定位");
   const icy = iconName === "cloud-snow" || current.temperature_2m <= 2 || today.min <= 0;
   root.innerHTML = `
     <div class="wn-main ${iconName}">

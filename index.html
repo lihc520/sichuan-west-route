@@ -16,9 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=55.0" />
+    <link rel="stylesheet" href="styles.css?v=56.0" />
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-    <script src="app.js?v=55.0" defer></script>
+    <script src="app.js?v=56.0" defer></script>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -708,11 +708,19 @@
     </div>
 
     <nav class="mobile-dock" aria-label="快捷导航">
-      <a href="#days" data-dock-link><i data-lucide="calendar-clock"></i><span data-dock-today>日程</span></a>
-      <a href="#route" data-dock-link><i data-lucide="map"></i><span>路线</span></a>
-      <a href="#stays" data-dock-link><i data-lucide="bed-double"></i><span>住宿</span></a>
-      <a href="#roadbook" data-dock-link><i data-lucide="traffic-cone"></i><span>路况</span></a>
-      <a href="#safety" data-dock-link><i data-lucide="shield-plus"></i><span>安全</span></a>
+      <div class="mobile-dock-track" data-dock-track>
+        <a href="#days" data-dock-link><i data-lucide="calendar-clock"></i><span data-dock-today>日程</span></a>
+        <a href="#weather" data-dock-link><i data-lucide="cloud-sun"></i><span>天气</span></a>
+        <a href="#route" data-dock-link><i data-lucide="map"></i><span>路线</span></a>
+        <a href="#spots" data-dock-link><i data-lucide="camera"></i><span>景点</span></a>
+        <a href="#stays" data-dock-link><i data-lucide="bed-double"></i><span>住宿</span></a>
+        <a href="#roadbook" data-dock-link><i data-lucide="traffic-cone"></i><span>路况</span></a>
+        <a href="#snow" data-dock-link><i data-lucide="mountain-snow"></i><span>雪山</span></a>
+        <a href="#vehicle" data-dock-link><i data-lucide="battery-charging"></i><span>用车</span></a>
+        <a href="#budget" data-dock-link><i data-lucide="wallet"></i><span>预算</span></a>
+        <a href="#booking" data-dock-link><i data-lucide="clipboard-check"></i><span>核查</span></a>
+        <a href="#safety" data-dock-link><i data-lucide="shield-plus"></i><span>安全</span></a>
+      </div>
     </nav>
 
     <button class="back-to-top" type="button" data-back-top aria-label="返回顶部" title="返回顶部">

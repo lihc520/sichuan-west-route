@@ -2741,9 +2741,12 @@ function setupMobileDock() {
   const links = [...document.querySelectorAll("[data-dock-link]")];
   if (todayIndex() !== null) document.querySelector("[data-dock-today]").textContent = "今天";
   const sections = document.querySelectorAll("main > section");
+  const track = document.querySelector("[data-dock-track]");
   const observer = new IntersectionObserver(entries => {
     entries.filter(entry => entry.isIntersecting).forEach(entry => {
       links.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`));
+      const active = links.find(link => link.classList.contains("active"));
+      if (active && track) track.scrollTo({ left: active.offsetLeft - (track.clientWidth - active.offsetWidth) / 2, behavior: "smooth" });
     });
   }, { rootMargin: "-45% 0px -50% 0px" });
   sections.forEach(section => observer.observe(section));

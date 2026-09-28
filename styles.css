@@ -5870,19 +5870,35 @@ p {
     left: 12px;
     right: 12px;
     bottom: calc(10px + env(safe-area-inset-bottom));
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2px;
-    padding: 6px;
+    display: block;
+    padding: 6px 0;
     border-radius: 22px;
-    background: rgba(18, 30, 24, 0.84);
+    background: rgba(18, 30, 24, 0.86);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.14);
     box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+  }
+
+  .mobile-dock-track {
+    display: flex;
+    gap: 2px;
+    padding: 0 6px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+  }
+
+  .mobile-dock-track::-webkit-scrollbar {
+    display: none;
   }
 
   .mobile-dock a {
+    flex: 0 0 62px;
     display: grid;
     justify-items: center;
     gap: 3px;
@@ -5891,6 +5907,7 @@ p {
     color: rgba(255, 255, 255, 0.62);
     font-size: 10.5px;
     font-weight: 700;
+    scroll-snap-align: center;
     transition: background 0.25s ease, color 0.25s ease;
   }
 

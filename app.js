@@ -133,8 +133,8 @@ const itinerary = [
     mapDay: 4,
     navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%E5%8F%8C%E6%A1%A5%E6%B2%9F%E6%99%AF%E5%8C%BA",
     schedule: [
-      ["06:30", "起床与早餐", "国庆入园时间可能提前到 07:30，以 9 月底官方通告为准。提前到入口排队。"],
-      ["07:30", "刷身份证入园", "门票 ¥80 + 观光车 ¥70/人。先乘车到红杉林，不在前段站点急着下车。"],
+      ["06:30", "起床与早餐", "往年国庆假日入园时间为 07:30 起、15:00 左右截止，以景区国庆通告为准。提前到入口排队。"],
+      ["07:30", "刷身份证入园", "门票 ¥80 + 观光车 ¥70/人，国庆售罄即止、不办当日退票。先乘车到红杉林，不在前段站点急着下车。"],
       ["09:00", "红杉林：先看近距离雪峰", "高海拔慢走，先完成雪峰主画面。身体不适者不要硬走，直接乘观光车下行。"],
       ["10:30", "布达拉峰：拍雪山公路", "在观景区域完成公路与雪峰构图，严禁进入车道；人多时先观察车辆节奏再拍。"],
       ["12:00", "景区内简餐", "自带热水、巧克力和轻便午餐，垃圾全部带走。不要边走边大口进食。"],
@@ -210,8 +210,8 @@ const planOptions = [
     summary: "成都经都江堰方向进入四姑娘山，再走丹巴、八美、墨石、塔公、新都桥、康定和雅安。雪山、藏寨、草原、石林与城市都有。",
     stats: [["方向", "逆时针"], ["雪山窗口", "4–5 次"], ["体验类型", "最均衡"], ["航班风险", "低"]],
     timeline: [
-      ["9.30", "成都", "落地取车"], ["10.1", "四姑娘山", "卧龙方向进山"], ["10.2", "四姑娘山", "双桥沟"], ["10.3", "丹巴", "小金 / 藏寨"],
-      ["10.4", "塔公", "八美 / 墨石"], ["10.5", "新都桥", "姑弄村 / 草原"], ["10.6", "雅安", "红海子 / 康定"], ["10.7", "广州", "成都机场返航"]
+      ["9.30", "成都", "落地取车"], ["10.1", "四姑娘山", "卧龙熊猫 / 进山"], ["10.2", "四姑娘山", "长坪沟 / 猫鼻梁"], ["10.3", "甲居", "双桥沟 / 夜下丹巴"],
+      ["10.4", "塔公", "八美 / 墨石"], ["10.5", "新都桥", "红海子 / 鱼子西日落"], ["10.6", "雅安", "折多山 / 康定"], ["10.7", "广州", "成都机场返航"]
     ],
     verdict: "最适合第一次走川西小环线。缺点是 10 月 1 日直接升到四姑娘山镇约 3,200 米，需要全员慢走并严格观察高反。",
     routeLinks: [
@@ -535,79 +535,110 @@ const stayRecommendations = [
 ];
 
 const balancedItinerary = [
-  itinerary[0],
   {
-    label: "D1", date: "10.1", weekday: "周四", title: "成都 → 四姑娘山", subtitle: "传统逆时针第一天直接进四姑娘山，重点是早出发、慢升海拔，不在都江堰和卧龙增加长停。", distance: "约 220 km", drive: "6–9h", sleep: "四姑娘山镇 3,200m", mapDay: 4,
-    navigation: "https://uri.amap.com/navigation?from=104.444,30.315&to=102.838,31.002&mode=car&policy=1",
+    ...itinerary[0],
     schedule: [
-      ["05:00–05:30", "天府机场 / 简阳出发", "早餐打包、油箱加满，直接走高速前往都江堰—卧龙方向。"],
-      ["08:00", "映秀 / 耿达短休", "只停车 15–20 分钟轮换司机，不进入景区。导航若已严重拥堵，午餐改在卧龙解决。"],
-      ["11:30", "卧龙或巴朗山沿线午餐", "控制在 45 分钟，开始明显升高后减少剧烈活动。任何人持续头痛或恶心，立即评估是否留宿卧龙。"],
-      ["15:30", "抵达四姑娘山镇", "办理入住后只休息和取票，不进入长坪沟、海子沟。目标最迟 18:00 到店。"],
-      ["16:40", "猫鼻梁奖励窗口", "仅在道路通畅、天气晴朗、停车位明确时短停 20 分钟；否则直接回酒店。"],
-      ["18:00", "早晚餐与适应", "少油少辣、不饮酒，22:00 前休息。确认双桥沟实名预约和次日入园时间。"]
+      ...itinerary[0].schedule.slice(0, 3),
+      ["23:30", "团队碰头 10 分钟", "确认次日 04:30 起床、05:00 出发、司机轮换、导航收藏和应急联系人，不安排夜宵局。"]
     ],
-    notes: [["高反", "10.1 晚直接到 3,200 米", "这是传统逆时针进山首晚的主要代价。当天不洗长时间热水澡，不靠吸氧掩盖持续加重症状。"], ["取舍", "映秀和卧龙不游览", "10.1 白天余量全部留给国庆拥堵和海拔适应。"], ["住宿", "双桥沟口或镇中心", "必须有供暖、停车位和稳定热水，步梯高楼直接排除。"]]
+    notes: [
+      itinerary[0].notes[0],
+      ["住宿", "停车方便优先", "不必住春熙路。选择可停车、早餐可打包的机场酒店；次日清晨走绕城转都汶高速，避开早高峰。"],
+      itinerary[0].notes[2]
+    ]
   },
   {
-    label: "D2", date: "10.2", weekday: "周五", title: "双桥沟完整一日", subtitle: "用观光车降低体力消耗，完成雪峰、公路和倒影三类画面。", distance: "景区内 40km+", drive: "观光车为主", sleep: "四姑娘山镇 3,200m", mapDay: 4,
-    navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%E5%8F%8C%E6%A1%A5%E6%B2%9F%E6%99%AF%E5%8C%BA",
-    schedule: itinerary[5].schedule,
-    notes: itinerary[5].notes
-  },
-  {
-    label: "D3", date: "10.3", weekday: "周六", title: "四姑娘山 → 小金 → 丹巴藏寨", subtitle: "从雪山下撤到嘉绒藏寨，下午只选甲居或中路一个区域。", distance: "约 125 km", drive: "4–6h", sleep: "丹巴 1,800m", mapDay: 3,
-    navigation: "https://uri.amap.com/navigation?from=102.838,31.002&to=101.8905,30.8786&mode=car&policy=1",
+    label: "D1", date: "10.1", weekday: "周四", title: "成都 → 卧龙看熊猫 → 巴朗山 → 四姑娘山", subtitle: "上午在卧龙神树坪看大熊猫（福宝在这里），午饭后翻巴朗山进四姑娘山。熊猫基地海拔约 1,700m，正好给身体一个缓冲。", distance: "约 290 km", drive: "6–8h", sleep: "四姑娘山镇 3,200m", mapDay: 4,
+    navigation: "https://uri.amap.com/search?keyword=%E5%8D%A7%E9%BE%99%E4%B8%AD%E5%8D%8E%E5%A4%A7%E7%86%8A%E7%8C%AB%E8%8B%91%E7%A5%9E%E6%A0%91%E5%9D%AA%E5%9F%BA%E5%9C%B0",
     schedule: [
-      ["07:30", "四姑娘山镇出发", "早餐后沿 G350 前往小金，连续下坡保持车距，不为补拍猫鼻梁折返。"],
-      ["09:30", "小金县补给", "加油、采购饮用水和简餐，停留控制在 30–45 分钟。"],
-      ["12:30", "丹巴县城午餐并入住", "优先先放行李再进入藏寨，避免车内长期放贵重物品。"],
-      ["14:30", "甲居或中路藏寨二选一", "只走一个正规开放区域，完成观景台、碉楼和村落层次即可。"],
-      ["17:30", "返回住宿", "不在狭窄村道追日落。今晚低海拔恢复睡眠，为次日八美方向长路做准备。"]
+      ["05:30", "天府机场出发", "早餐打包、油箱加满，走绕城转都汶高速，映秀下高速转 G350。"],
+      ["08:30", "到耿达镇熊猫基地", "卧龙关门沟、观音庙是 8 月泥石流点，经过时不停车、不拍照。车可直接开到检票口旁停车场，售票处到检票口约 1.3km。"],
+      ["09:00", "卧龙中华大熊猫苑神树坪基地", "开园就进，9:00—11:00 熊猫最活跃。福宝在熊猫幼儿园 2 号馆，先去排；排队限时约 5 分钟。游览约 2 小时。"],
+      ["11:15", "耿达 / 卧龙午饭", "热食为主，控制在 45 分钟。出发前看一眼巴朗山方向天气。"],
+      ["12:15", "翻巴朗山隧道进四姑娘山", "约 95km，隧道口近 3,900m。开始明显升高后减少说话和走动，任何人持续头痛或恶心，考虑退回卧龙过夜。"],
+      ["15:00", "抵达四姑娘山镇，入住松涧", "办理入住后只休息，不进景区。猫鼻梁留到 10.2 傍晚。"],
+      ["18:00", "早吃晚饭，早睡", "少油少辣、不饮酒，22:00 前休息。再确认 10.2 长坪沟、10.3 双桥沟的实名订单。"]
     ],
-    notes: [["选择", "甲居成熟 / 中路生活感", "甲居设施和主视角稳定；中路游客相对少，但停车与村道要提前问住宿方。"], ["节奏", "藏寨不超过 2.5 小时", "次日还有墨石和塔公，今天不要在民宿写真上消耗半天。"], ["住宿", "丹巴县城最稳定", "吃饭、加油和药店齐全；住藏寨必须确认停车和次日出村时间。"]]
+    notes: [["熊猫", "门票 ¥85 起，9:00 开园", "提前一天网上买 ¥85，现场 ¥90；网上买的要凭身份证去售票中心取票。16:30 停止入园。国庆人多，前一天买好。"], ["高反", "10.1 晚直接到 3,200 米", "这是传统逆时针进山首晚的主要代价。当天不洗长时间热水澡，不靠吸氧掩盖持续加重症状。"], ["住宿", "已订：半山·白（长坪村）", "10.1 住松涧、10.2 住听涧，两晚房型不同，10.2 要换房；确认听涧能睡下 5 人或已加床。"]]
   },
   {
-    label: "D4", date: "10.4", weekday: "周日", title: "丹巴 → 八美 → 墨石公园 → 塔公", subtitle: "从河谷回到高原，把墨石地貌和塔公草原放在同一天，晴天优先保证雅拉窗口。", distance: "约 150 km", drive: "5–7h", sleep: "塔公 / 八美 3,500m+", mapDay: 3,
-    navigation: "https://uri.amap.com/navigation?from=101.8905,30.8786&to=101.524,30.318&mode=car&policy=1",
+    label: "D2", date: "10.2", weekday: "周五", title: "长坪沟 / 高原适应日", subtitle: "双桥沟 10.2 已售罄，改到 10.3。今天住处就在长坪沟口：有票就轻走长坪沟看幺妹峰，没票就休息适应；傍晚都去猫鼻梁看四姑娘山全景。", distance: "景区内 / 镇周边", drive: "观光车 + 栈道", sleep: "四姑娘山镇 3,200m", mapDay: 4,
+    navigation: "https://uri.amap.com/search?keyword=%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%E9%95%BF%E5%9D%AA%E6%B2%9F%E6%99%AF%E5%8C%BA",
     schedule: [
-      ["07:00", "丹巴出发走 G350", "离开前加满油。牦牛谷只在正规停车区短停，不频繁急刹找机位。"],
-      ["10:30", "八美午餐 / 墨石排队判断", "停车等待超过 30 分钟、景区人流明显失控或雅拉方向天气转好时，直接放弃墨石。"],
-      ["11:30", "墨石公园", "控制在 2–2.5 小时，以观光车和核心石林为主，不走完整边缘路线。"],
+      ["07:30", "早餐，判断全员状态", "进山第二天先看睡眠和头痛情况。有人明显不适就全队休息，不进景区。"],
+      ["08:00", "长坪沟入园（有票才去）", "民宿就在长坪沟口。需在阿坝旅游提前实名购票，门票+观光车约 ¥90/人（以页面为准），与双桥沟分开下单；假日入园一般 07:30—15:00。"],
+      ["08:30", "观光车到喇嘛寺，栈道慢走到枯树滩", "幺妹峰正面窗口在沟里，边走边看。高原第二天不追木骡子，每 40 分钟统一休息。"],
+      ["12:30", "景区内简餐后返程", "自带热水和轻便午餐。云层变厚或有人体力下降就提前出园。"],
+      ["14:30", "回民宿换房、休息", "松涧 → 听涧，行李一次搬完。下午补觉，给明天长时间游览和夜路留体力。"],
+      ["16:30", "猫鼻梁看四姑娘山四峰", "从镇上开车约 10 分钟。下午顺光，停 30–40 分钟，晴天有机会等到日照金山。车位满就先走，明天傍晚去小金还会路过一次。"],
+      ["18:30", "晚餐与 10.3 准备", "确认双桥沟 10.3 订单和身份证；油量不足半箱就在镇上补满；早睡。"]
+    ],
+    notes: [["门票", "长坪沟也要实名预约", "约 ¥90/人（门票+观光车），三沟共用每天 2 万人上限，售罄即止；截止时间各页面说法不一，出发前就买好。没票不买黄牛票，休息适应同样有价值。"], ["捡漏", "继续盯 10.2 双桥沟退票", "景区每天 17:00 公布次日余票。若捡到 10.2 双桥沟，就把 10.3 的票退掉，10.3 恢复白天下丹巴。"], ["住宿", "今天要换房", "10.2 住听涧（2.0+1.5 双床），5 人需确认加床或第二间房。"]]
+  },
+  {
+    label: "D3", date: "10.3", weekday: "周六", title: "双桥沟完整一日 → 夜下丹巴甲居", subtitle: "白天玩完整个双桥沟，15:30 出园，经小金吃饭加油，天黑后走 G350 河谷路到甲居。这是全程唯一计划内的夜间山路，按下方注意事项执行。", distance: "景区内 40km+ / 约 135 km", drive: "观光车 + 夜路 3.5–4.5h", sleep: "丹巴甲居 约 2,000m", mapDay: 3,
+    navigation: "https://uri.amap.com/search?keyword=%E4%B8%B9%E5%B7%B4%E5%8E%BF%E7%94%B2%E5%B1%85%E9%95%87%E5%96%80%E5%92%94%E6%9D%91",
+    schedule: [
+      ["06:30", "退房装车", "行李全部上车，贵重物品收进后备箱不外露。早餐打包，热水装满。"],
+      ["07:30", "双桥沟刷身份证入园", "门票 ¥80 + 观光车 ¥70/人。先坐车到最上面的红杉林，前段站点下午回程再看。"],
+      ...itinerary[5].schedule.slice(2, 7),
+      ["15:30", "出园（最晚 16:00）", "晚上开夜路的司机在景区里少走路，下午在观光车上补觉。猫鼻梁 10.2 已看过，今天路过不停，除非昨天没看到。"],
+      ["17:00", "小金吃晚饭、加满油", "天黑前最后一个稳定补给点：热饭、加满油、上厕所。换精神最好的老司机开夜路，副驾全程陪聊、盯路。"],
+      ["18:00", "小金 → 丹巴", "约 60km 河谷路，前半段还有天光，后半段天黑。连续弯道、有大车和落石；半扇门施工段注意锥桶和无灯施工车，听现场指挥放行。"],
+      ["19:30", "丹巴县城 → 甲居村道", "最后约 8km 盘山村道，窄、急弯多。提前让民宿老板发定位，必要时在路口接。"],
+      ["20:00–20:30", "入住甲居", "简单洗漱早睡。藏寨明早出门就能看。"]
+    ],
+    notes: [["夜路", "开车注意", "会车及时切近光；急弯前鸣笛减速；不跟大车太近，不超视线外的车；落石段不停车；困了就在丹巴县城停下，不硬撑最后 8km。"], ["施工", "半扇门单边放行", "G350 丹巴半扇门镇阿娘寨段 9.9—11.30 路基施工，夜间也可能有单边放行或临时围挡。"], ["进村", "导航用民宿定位", "“喀咔村 1 组 46 号”导航可能不准；进村前问清是否要在甲居景区检票口报民宿名，村道会车找宽处停车等。"]]
+  },
+  {
+    label: "D4", date: "10.4", weekday: "周日", title: "甲居 → 八美 → 墨石公园 → 塔公", subtitle: "早上在寨子里看晨景，白天下村道；从河谷回到高原，晴天优先保证塔公雅拉窗口。", distance: "约 160 km", drive: "5–7h", sleep: "塔公 约 3,700m", mapDay: 3,
+    navigation: "https://uri.amap.com/search?keyword=%E5%BA%B7%E5%AE%9A%E5%B8%82%E5%A1%94%E5%85%AC%E9%95%87%E4%B8%8B%E9%A9%AC%E9%BE%99%E6%9D%91",
+    schedule: [
+      ["07:00", "甲居藏寨晨景", "住在寨子里，出门就是观景点。拍完主视角，07:50 回民宿退房。"],
+      ["08:00", "下村道，丹巴县城加油", "白天出村比昨晚轻松。县城加满油后走 G350 牦牛谷，只在正规停车区短停。"],
+      ["11:00", "八美午餐 / 墨石排队判断", "停车等待超过 30 分钟或景区人流明显失控，就改去惠远寺。"],
+      ["12:00", "墨石公园（或惠远寺）", "墨石控制在 2 小时，以观光车和核心石林为主。排队太长就改去离八美约 10km 的惠远寺，金顶寺院很出片，停留约 1 小时。"],
       ["15:00", "前往塔公草原或木雅金塔", "二选一看雅拉雪山。晴天这是当天第一优先级，墨石可以删，雅拉窗口不删。"],
-      ["17:30", "入住塔公或八美", "不临时上八郎生都，不在日落后走陌生支线。晚餐后确认姑弄村道路与停车。"]
+      ["17:30", "入住塔公下马龙村", "不临时上八郎生都，不在日落后走陌生支线。晚餐后确认姑弄村道路与停车。"]
     ],
-    notes: [["晴天", "雅拉优先于墨石", "墨石阴天也有质感，雅拉雪山则依赖能见度。"], ["住宿", "塔公看山更方便", "担心高反可退住八美，第二天再去塔公；全员状态决定。"], ["道路", "只走铺装主路", "不因短视频机位进入未确认牧道或非铺装岔路。"]]
+    notes: [["备选", "墨石排队就换惠远寺", "墨石阴天也有质感；排队超过 30 分钟就去惠远寺，把下午留给塔公雅拉。"], ["海拔", "今天从 2,000m 升到 3,700m", "前面已在 3,200m 住过两晚，身体有基础；到塔公后仍慢走、不饮酒。"], ["道路", "只走铺装主路", "不因短视频机位进入未确认牧道或非铺装岔路。"]]
   },
   {
-    label: "D5", date: "10.5", weekday: "周一", title: "塔公 / 姑弄村 → 新都桥", subtitle: "上午看雅拉与草原人文，下午进入新都桥；鱼子西只作为天气、道路和预约都合适时的可删项。", distance: "约 65–110 km", drive: "2–4h", sleep: "新都桥 3,460m", mapDay: 2,
-    navigation: "https://uri.amap.com/navigation?from=101.524,30.318&to=101.494,30.036&mode=car&policy=1",
+    label: "D5", date: "10.5", weekday: "周一", title: "塔公 → S434 红海子 → 塔公 → 新都桥 → 鱼子西日落", subtitle: "上午从塔公往返 S434 看红海子和贡嘎，中午到新都桥补觉；傍晚上鱼子西 360° 观景台看贡嘎、雅拉日落金山。", distance: "约 165 km + 鱼子西往返约 60 km", drive: "6–7h", sleep: "新都桥瓦泽 约 3,400m", mapDay: 2,
+    navigation: "https://uri.amap.com/search?keyword=%E7%BA%A2%E6%B5%B7%E5%AD%90%20%E5%BA%B7%E5%AE%9A",
     schedule: [
-      ["07:00", "塔公 / 姑弄村雅拉窗口", "优先使用正规停车区或住宿附近视野，不把车辆开进牧民草场。云层厚时 08:00 前离开。"],
-      ["09:30", "塔公寺或木雅金塔补充人文", "昨天已经完成的点不重复购票，控制在 45 分钟。"],
-      ["11:30", "前往新都桥并午餐", "下午拍河谷、杨林和藏式民居，停车必须完全离开行车道。"],
-      ["15:30", "鱼子西执行判断", "仅官方确认开放、道路干燥、往返时间可控且全员无明显高反时考虑；任一条件不满足就留在新都桥。"],
-      ["18:00", "入住新都桥", "鱼子西即使执行也必须在天黑前回到主路。晚餐后确认次日 S434 / G318 路况。"]
+      ["06:40", "住处看雅拉晨光，早餐打包", "塔公住处出门就能看雅拉，拍几张就走。"],
+      ["07:00", "塔公 → S434 → 红海子", "约 65km、1.5 小时，最高约 4,200m。出发前看交警通告：雨雪、结冰、浓雾或管制就取消红海子，直接去新都桥。"],
+      ["08:30", "红海子（约 4,000m）", "上午光线顺，只在正规停车区停 30 分钟，看高山湖和贡嘎群峰。不在弯道、路肩临停，不走进湖边草甸。"],
+      ["09:00", "原路回塔公", "约 1.5 小时，下坡用低挡。"],
+      ["10:30", "塔公寺 / 木雅金塔", "控制在 45 分钟，昨天去过的点不重复。"],
+      ["12:00", "新都桥午饭，先办入住", "午饭后回瓦泽住处放行李、补觉，傍晚上山要留体力。"],
+      ["15:30", "出发去鱼子西", "新都桥到山顶约 1 小时。按指引从鱼子西三村上山、二村下山；山路窄、弯多，会车找宽处停车等。"],
+      ["16:30", "鱼子西观景台（约 4,100m）", "360° 同时看贡嘎、雅拉和群山。山顶风大，日落后温度快速降到 0°C 左右，羽绒服、帽子、手套都带上。"],
+      ["18:30–19:00", "等日落金山", "晴天贡嘎、雅拉会被夕阳染成金色，拍完就收，不要等到完全天黑。"],
+      ["19:15", "下山回瓦泽", "天黑后下山，慢速、近光、低挡；有人高反明显就提前下山，不等日落。约 20:30 回到住处吃晚饭。"]
     ],
-    notes: [["鱼子西", "条件支线", "晴天、道路干燥、官方确认开放、全员无明显高反且 15:30 前能出发时才考虑；否则留在新都桥。"], ["摄影", "姑弄村 + 新都桥已足够", "雅拉、草原、民居和河谷画面已经完整，不需要每个网红机位都复制。"], ["住宿", "供暖和停车优先", "选择主路旁正规酒店，不住最后一段需要走土路的山坡民宿。"]]
+    notes: [["鱼子西", "日落金山，今天的核心", "进入需通过“鱼子西旅游管理”小程序预约；正常天气 07:00—21:00 开放、19:00 后停止进入，雨雪天 10:00—19:00。国庆可能限流或要求换乘，前一晚看小程序公告。"], ["红海子", "从塔公往返，给 10.6 减负", "10.6 是返程高峰，不再绕回塔公走 S434；今天往返约 130km，下午一定要补觉。"], ["高反", "今天两次到 4,000m 以上", "红海子和鱼子西都在 4,000m 左右，慢走、少说话；头痛明显的人留在车里或提前下山。"]]
   },
   {
-    label: "D6", date: "10.6", weekday: "周二", title: "新都桥 → 红海子 / 康定 → 泸定 → 雅安", subtitle: "完成最后一次高原窗口后持续下撤，木格措只作为替换方案，不能和红海子、雅安全部叠加。", distance: "约 300 km", drive: "7–10h", sleep: "雅安约 600m", mapDay: 1,
+    label: "D6", date: "10.6", weekday: "周二", title: "新都桥 → 折多山 → 康定 → 泸定 → 雅安", subtitle: "看完瓦泽贡嘎后走 G318 翻折多山，在垭口打卡，下康定吃饭再上雅康高速。红海子昨天已看，今天不绕路，给返程高峰留余量。", distance: "约 250 km", drive: "6–8h", sleep: "雅安约 600m", mapDay: 1,
     navigation: "https://uri.amap.com/navigation?from=101.494,30.036&to=103.013,29.980&mode=car&policy=1",
     schedule: [
-      ["06:40", "新都桥贡嘎窗口", "在酒店院内或主路正规观景点等待至 07:30，云层稳定无变化就离开。"],
-      ["08:00", "按路况选择 S434 或 G318", "道路干燥、官方允许时走 S434 并短停红海子；雨雪、浓雾或管制时直接走 G318。"],
-      ["11:30", "康定午餐", "木格措需要完整半天，只能在取消红海子并改住康定或泸定时替换，默认不进入。"],
-      ["14:00", "康定继续下撤泸定", "不在折多山和城区追加景点。泸定桥只有停车方便且总进度正常时短停。"],
-      ["18:30", "抵达雅安", "目标最迟 20:00 入住。完成加油、还车资料整理和次日机场路线确认。"]
+      ["06:40", "瓦泽贡嘎窗口", "住处就在瓦泽，先在院内或门口正规停车处看，等到 07:30 云层无变化就离开。"],
+      ["07:40", "G318 翻折多山", "新都桥到康定约 75km。"],
+      ["08:40", "折多山垭口（4,298m）", "在垭口正规停车场停 15–20 分钟，拍“折多山”石碑和经幡。不跑跳，风大注意保暖；雨雪、结冰或浓雾就不停，直接下山。"],
+      ["09:00", "折多山 → 康定", "连续长下坡，用低挡，别一直踩刹车。"],
+      ["10:00", "康定老城 / 早午饭", "折多河边、情歌广场走一圈，吃完就走。木格措需要半天，不进入。"],
+      ["11:30", "康定 → 泸定 → 雅康高速", "泸定桥只有停车方便时短停。国庆返程高峰，雅康高速隧道群可能拥堵，服务区轮换司机。"],
+      ["16:30–17:30", "抵达雅安", "完成加油、还车资料整理和次日机场路线确认；晚上步行去雅州廊桥。"]
     ],
-    notes: [["取舍", "红海子与木格措不叠加", "前者是短停景观线，后者是完整景区，两者同时安排会导致夜间赶往雅安。"], ["住宿", "雅安换航班安全", "10 月 7 日只剩高速和机场还车，不再承担高原道路风险。"], ["泸定", "只作为机动停靠", "堵车或停车困难时直接通过，不为单个景点破坏雅安住宿。"]]
+    notes: [["路线", "G318 折多山，不绕红海子", "红海子已挪到 10.5 上午，今天少开约 70km，早 2 小时左右到雅安。"], ["天气", "垭口雨雪就不停", "折多山垭口雨雪、结冰或浓雾时不停车，直接下山；听交警指挥。"], ["止损", "16:00 仍未离开康定", "改住泸定，10.7 更早出发去天府机场。"]]
   },
   {
     label: "返程", date: "10.7", weekday: "周三", title: "雅安 → 天府机场 → 广州", subtitle: "18:00 左右天府航班：雅安早晨短逛后出发，下午完成还车和值机。", distance: "至天府约 180–220 km", drive: "正常 2.5–3.5h / 国庆按 4–5h", sleep: "回家", mapDay: 0,
     navigation: "https://uri.amap.com/navigation?from=103.013,29.980&to=104.444,30.315&mode=car&policy=1",
     schedule: [
-      ["07:30", "早餐与雅安短逛", "青衣江边或雅州廊桥停留 45–60 分钟，不安排完整景区。"],
+      ["07:30", "早餐与雅安短逛", "住处就在雅州廊桥旁，步行到青衣江边停留 45–60 分钟，不安排完整景区。"],
       ["09:00", "雅安出发去天府", "国庆返程按 3–4.5 小时预留，中途只在服务区短休和轮换司机。"],
       ["12:30–13:30", "机场外围加油并还车", "五人分工检查行李、证件、充电宝、车损记录和租车合同。"],
       ["航班前 3h", "进入航站楼", "完成值机与托运，未使用氧气瓶不得携带上飞机。"],
@@ -618,42 +649,49 @@ const balancedItinerary = [
 ];
 
 const balancedRoadSegments = [
-  ["10.1", "成都 → 映秀 / 卧龙", "约 130 km", "高速转 G350，缓慢升高", "都江堰服务区、映秀", "出城拥堵、事故分流", "05:30 出发，沿官方主路，不抄村道"],
-  ["10.1", "卧龙 → 四姑娘山镇", "约 90 km", "山路升至 3,200m", "卧龙、巴朗山正规停车区", "高反、落石、雾", "多人不适时留宿卧龙，不强行上升"],
-  ["10.3", "四姑娘山 → 丹巴", "约 125 km", "G350 河谷下坡", "小金县、丹巴油站", "连续弯道、村镇行人", "使用发动机制动，藏寨只选一个"],
-  ["10.4", "丹巴 → 八美 / 塔公", "约 150 km", "G350 高原河谷", "牦牛谷、八美镇", "落石、景区车流", "墨石排队超 30 分钟直接跳过"],
-  ["10.5", "塔公 → 新都桥", "约 65 km", "G248 / G318", "塔公镇、新都桥油站", "牛群、临停车", "姑弄村和鱼子西只走确认开放道路"],
-  ["10.6", "新都桥 → 康定", "约 80–120 km", "S434 或 G318", "红海子正规停车区", "暗冰、浓雾、管制", "道路异常立即切 G318，木格措不叠加"],
+  ["10.1", "天府机场 → 都江堰 → 映秀 → 耿达熊猫基地", "约 190 km", "绕城 + 都汶高速转 G350，缓慢升高", "都江堰服务区、熊猫基地检票口停车场", "出城拥堵、8 月泥石流点零星落石", "05:30 出发，灾害点不停车；遇管制原地等官方放行，不抄村道"],
+  ["10.1", "耿达 → 卧龙 → 巴朗山隧道 → 四姑娘山镇", "约 95 km", "山路升至 3,200m，隧道口近 3,900m", "卧龙、巴朗山正规停车区", "高反、落石、雾、雨夹雪", "多人不适时留宿卧龙，不强行上升"],
+  ["10.3", "双桥沟 → 猫鼻梁 → 小金", "约 60 km", "G350 下坡，天黑前完成", "猫鼻梁正规停车区、小金县城", "景区出口车流、连续下坡", "16:30 前出园；小金吃饭、加满油、换夜路司机"],
+  ["10.3", "小金 → 丹巴 → 甲居（夜间）", "约 75 km", "G350 河谷路 + 最后约 8km 盘山村道", "丹巴县城", "夜间弯道、大车、落石、半扇门施工单边放行", "近光会车、急弯鸣笛；困了就在丹巴县城停下；用民宿定位进村"],
+  ["10.4", "甲居 → 丹巴 → 八美 / 塔公", "约 160 km", "村道下山 + G350 高原河谷", "丹巴县城加油、牦牛谷、八美镇", "落石、景区车流", "08:00 出村；墨石排队超 30 分钟直接跳过"],
+  ["10.5", "塔公 ⇄ S434 红海子", "往返约 130 km", "S434，最高约 4,200m", "红海子正规停车区", "暗冰、浓雾、管制、横风", "07:00 出发；雨雪或管制就取消；下坡用低挡"],
+  ["10.5", "塔公 → 新都桥", "约 35 km", "G248 / G318", "塔公镇、新都桥油站", "牛群、临停车", "中午到瓦泽入住，下午补觉"],
+  ["10.5", "新都桥 ⇄ 鱼子西", "往返约 60 km", "窄山路升至约 4,100m", "鱼子西观景台停车区", "会车困难、天黑下山、低温、高反", "三村上、二村下；小程序预约；日落后慢速近光下山"],
+  ["10.6", "新都桥 → 折多山 → 康定", "约 75 km", "G318，垭口 4,298m，长下坡", "折多山垭口正规停车场", "暗冰、浓雾、刹车热衰减", "07:40 出发；垭口雨雪不停车；下坡用低挡"],
   ["10.6", "康定 → 雅安", "约 200 km", "雅康高速长隧道群", "泸定、天全服务区", "返程拥堵、疲劳", "目标 20:00 前到雅安"],
-  ["10.7", "雅安 → 成都机场", "约 140–180 km", "成雅高速 + 城市快速路", "蒲江服务区、机场油站", "返程车流、还车排队", "航班前 4 小时到门店"]
+  ["10.7", "雅安 → 天府机场", "约 180–220 km", "成雅高速 + 绕城 + 机场高速", "蒲江服务区、机场外围油站", "返程车流、还车排队", "09:00 出发，13:30 前完成还车"]
 ];
 
 const balancedStays = [
   stays[0],
-  { ...stays[4], date: "10.1–2", rooms: "连住 2 晚，不换房" },
-  { ...stays[3], date: "10.3" },
   {
-    date: "10.4", city: "塔公 / 八美", alt: "约 3,500–3,730m", target: "¥600–1,000 / 间", rooms: "2 间，可免费取消",
-    area: "塔公镇看雅拉方便；担心高反可住八美", must: "供暖、停车、热水、可提供早餐", avoid: "草原深处无铺装路民宿",
-    link: "https://uri.amap.com/search?keyword=%E5%A1%94%E5%85%AC%E9%95%87%E5%81%9C%E8%BD%A6%E9%85%92%E5%BA%97",
-    guide: "八美 塔公 酒店 供暖 停车 国庆",
-    xhsLinks: [
-      { title: "八美镇中心住宿实测", query: "八美镇 酒店 供暖 停车 推荐" },
-      { title: "塔公草原雅拉景观房实测", query: "塔公草原 姑弄村 民宿 避坑" }
-    ]
+    ...stays[4], date: "10.1–2", target: "已订 · ¥1,488 + ¥1,288", rooms: "10.1 松涧 / 10.2 听涧，第二晚换房",
+    area: "长坪村，步行到长坪沟口；双桥沟口开车约 10 分钟", must: "10.2 换房时间、听涧 5 人床位 / 加床、停车位、供暖", avoid: "10.3 退房后行李不外露放在车里",
+    booked: { name: "半山·白 雪山全景民宿", address: "四姑娘山镇长坪村一组051号", detail: "10.1 松涧【超大露台 榻榻米客厅】· 10.2 听涧【2.0+1.5 双床 花园】" }
   },
-  { ...stays[2], date: "10.5" },
   {
-    date: "10.6", city: "雅安", alt: "约 600m", target: "¥400–700 / 间", rooms: "2 间，机场转场优先",
-    area: "成雅高速入口附近或停车方便城区", must: "停车、早餐、可早退房", avoid: "古城步行区内无停车酒店",
-    link: "https://uri.amap.com/search?keyword=%E9%9B%85%E5%AE%89%E9%AB%98%E9%80%9F%E5%85%A5%E5%8F%A3%E9%85%92%E5%BA%97",
-    guide: "雅安酒店 高速 停车 返程",
-    xhsLinks: [
-      { title: "成雅高速入口停车酒店", query: "雅安 酒店 成雅高速 免费停车" },
-      { title: "返程天府机场中转住宿", query: "雅安 雨城区 住宿 早退房 早餐" }
-    ]
+    ...stays[3], date: "10.3", alt: "约 2,000m", target: "已订", rooms: "当晚约 20:30 到店",
+    area: "甲居藏寨内，距丹巴县城约 8km 盘山村道", must: "告诉老板约 20:30 到、要定位或路口接、甲居检票口怎么报住客、车停哪里", avoid: "按门牌地址盲导航进村",
+    booked: { name: "甲居 · 喀咔村藏寨民宿", address: "丹巴县甲居镇喀咔村1组46号", detail: "10.3 夜间抵达，10.4 早上看藏寨晨景后 08:00 出发" }
+  },
+  {
+    date: "10.4", city: "塔公", alt: "约 3,700m", target: "已订", rooms: "1 晚",
+    area: "塔公镇下马龙村，看雅拉方便", must: "停车位、供暖和热水、早餐时间、到村最后一段是否铺装", avoid: "天黑后走陌生草原支线",
+    guide: "塔公 下马龙村 民宿 雅拉",
+    booked: { name: "塔公 · 下马龙村民宿", address: "康定市塔公镇下马龙村一组53号", detail: "10.5 清晨可在住处附近看雅拉" }
+  },
+  {
+    ...stays[2], date: "10.5", alt: "约 3,400m", target: "已订", rooms: "1 晚",
+    area: "新都桥瓦泽村，G318 旁", must: "停车位、供暖 / 供氧、早餐能否 07:30 前", avoid: "晚上出门找星空机位",
+    booked: { name: "新都桥 · 瓦泽 G318 旁住宿", address: "康定市瓦泽村 318 国道与 215 省道交汇处南 100 米路东", detail: "10.6 清晨贡嘎窗口就在门口" }
+  },
+  {
+    date: "10.6", city: "雅安", alt: "约 600m", target: "已订", rooms: "1 晚",
+    area: "雨城区青衣江路，近雅州廊桥", must: "停车位、早餐时间、次日 09:00 前退房", avoid: "10.6 晚到后再出门开车",
+    guide: "雅安 雅州廊桥 酒店 停车",
+    booked: { name: "雅安 · 雅州廊桥旁酒店", address: "雅安市雨城区青衣江路中段66号（近雅州廊桥）", detail: "10.7 早上步行看青衣江，09:00 出发去天府机场" }
   }
-];
+].map(stay => stay.booked ? { ...stay, link: amapSearchUrl(stay.booked.address), xhsLinks: [] } : stay);
 
 const clockwiseStays = [
   stays[0],
@@ -695,7 +733,7 @@ const snowStays = [
 ];
 
 const routeData = {
-  balanced: { itinerary: balancedItinerary, roadSegments: balancedRoadSegments, stays: balancedStays, summary: "传统逆时针均衡线：成都—四姑娘山—丹巴—八美/墨石—塔公/姑弄村—新都桥—红海子/康定—雅安—成都机场。" },
+  balanced: { itinerary: balancedItinerary, roadSegments: balancedRoadSegments, stays: balancedStays, summary: "A 线逆时针：成都—卧龙熊猫—四姑娘山（长坪沟、猫鼻梁、双桥沟）—丹巴甲居—墨石—塔公—红海子—新都桥·鱼子西—折多山—康定—雅安—成都机场。" },
   clockwise: { itinerary, roadSegments, stays: clockwiseStays, summary: "顺时针渐进海拔线：成都—康定—S434/塔公—新都桥—丹巴—四姑娘山—卧龙/映秀—都江堰—成都机场。" },
   snow: { itinerary: snowItinerary, roadSegments: snowRoadSegments, stays: snowStays, summary: "雪山加量线：顺时针主线基础上增加长坪沟，10 月 7 日凌晨从四姑娘山直奔成都机场。" }
 };
@@ -721,7 +759,8 @@ const routeMapPoints = {
   muya: { name: "木雅金塔", x: 525, y: 390, dx: 15, dy: -12, anchor: "start", parking: "limited" },
   xinduqiao: { name: "新都桥 / 瓦泽", x: 555, y: 495, dx: 13, dy: 27, anchor: "start", parking: "limited" },
   yuzixi: { name: "鱼子西", x: 620, y: 542, dx: 14, dy: 11, anchor: "start", parking: "strict" },
-  honghaizi: { name: "红海子", x: 610, y: 425, dx: 15, dy: 27, anchor: "start", parking: "strict" },
+  zheduo: { name: "折多山垭口", x: 655, y: 440, dx: 14, dy: 18, anchor: "start", parking: "limited" },
+  honghaizi: { name: "红海子", x: 610, y: 425, dx: -14, dy: -12, anchor: "end", parking: "strict" },
   airportRoad: { name: "康定机场路", x: 625, y: 378, dx: -14, dy: -16, anchor: "end", parking: "strict" },
   kangding: { name: "康定", x: 680, y: 365, dx: 15, dy: 5, anchor: "start", parking: "limited" },
   mugecuo: { name: "木格措", x: 735, y: 322, dx: 14, dy: -9, anchor: "start", parking: "easy" },
@@ -735,15 +774,15 @@ const routeMapConfigs = {
   balanced: {
     code: "ROUTE A · 逆时针",
     name: "传统逆时针均衡线",
-    meta: "主线 16 站 · 重点与条件点 8 处 · 返航前住雅安",
-    main: ["chengdu", "dujiangyan", "yingxiu", "wolong", "siguniang", "xiaojin", "danba", "yak", "bamei", "tagong", "xinduqiao", "honghaizi", "kangding", "luding", "yaan", "airport"],
-    branches: [["siguniang", "shuangqiao"], ["siguniang", "maobiliang"], ["danba", "jiaju"], ["bamei", "moshi"], ["tagong", "gunong"], ["tagong", "muya"], ["xinduqiao", "yuzixi"], ["kangding", "mugecuo"]],
+    meta: "主线 16 站 · 卧龙熊猫 · 10.5 红海子 + 鱼子西 · 10.6 折多山",
+    main: ["chengdu", "dujiangyan", "yingxiu", "wolong", "siguniang", "xiaojin", "danba", "yak", "bamei", "tagong", "xinduqiao", "zheduo", "kangding", "luding", "yaan", "airport"],
+    branches: [["siguniang", "changping"], ["siguniang", "shuangqiao"], ["siguniang", "maobiliang"], ["danba", "jiaju"], ["bamei", "moshi"], ["tagong", "gunong"], ["tagong", "muya"], ["tagong", "honghaizi"], ["xinduqiao", "yuzixi"], ["kangding", "mugecuo"]],
     sequence: [
-      ["chengdu", "9.30", "取车住宿"], ["dujiangyan", "10.1", "高速过境"], ["yingxiu", "10.1", "轮换司机"], ["wolong", "10.1", "午餐 / 观察高反"],
-      ["siguniang", "10.1–2", "连住两晚"], ["maobiliang", "10.1", "晴天短停", true], ["shuangqiao", "10.2", "整日核心", false, "scenic"], ["xiaojin", "10.3", "午餐补给"],
-      ["danba", "10.3", "低海拔住宿"], ["jiaju", "10.3", "藏寨二选一", true], ["yak", "10.4", "沿途短停"], ["bamei", "10.4", "午餐加油"],
-      ["moshi", "10.4", "排队可删", true], ["tagong", "10.4–5", "雅拉窗口", false, "scenic"], ["gunong", "10.5", "草原机位", false, "scenic"], ["muya", "10.4–5", "塔公替换点", true],
-      ["xinduqiao", "10.5–6", "贡嘎窗口"], ["yuzixi", "10.5", "条件达标才去", true], ["honghaizi", "10.6", "路况允许才停", true], ["kangding", "10.6", "午餐下撤"],
+      ["chengdu", "9.30", "取车住宿"], ["dujiangyan", "10.1", "高速过境"], ["yingxiu", "10.1", "下高速转 G350"], ["wolong", "10.1", "看大熊猫 2 小时", false, "scenic"],
+      ["siguniang", "10.1–2", "长坪村连住两晚"], ["changping", "10.2", "有票就去", true, "scenic"], ["maobiliang", "10.2", "傍晚看四峰", false, "scenic"], ["shuangqiao", "10.3", "整日核心", false, "scenic"],
+      ["xiaojin", "10.3", "晚饭加油"], ["danba", "10.3", "夜间经过"], ["jiaju", "10.3–4", "住甲居 / 晨景", false, "scenic"], ["yak", "10.4", "沿途短停"], ["bamei", "10.4", "午餐加油"],
+      ["moshi", "10.4", "排队就换惠远寺", true], ["tagong", "10.4–5", "雅拉窗口", false, "scenic"], ["gunong", "10.5", "草原机位", false, "scenic"], ["muya", "10.4–5", "塔公替换点", true],
+      ["honghaizi", "10.5", "上午往返看贡嘎", false, "scenic"], ["xinduqiao", "10.5–6", "住瓦泽 / 贡嘎"], ["yuzixi", "10.5", "日落金山", false, "scenic"], ["zheduo", "10.6", "垭口打卡", false, "scenic"], ["kangding", "10.6", "午餐下撤"],
       ["mugecuo", "10.6", "整日替换方案", true], ["luding", "10.6", "进度正常才停", true], ["yaan", "10.6", "低海拔住宿"], ["airport", "10.7", "还车返航"]
     ]
   },
@@ -759,7 +798,7 @@ const routeMapConfigs = {
       ["xinduqiao", "10.2–3", "住宿 / 贡嘎"], ["yuzixi", "10.2", "条件达标才去", true], ["bamei", "10.3", "午餐加油"], ["moshi", "10.3", "阴天替补", true],
       ["yak", "10.3", "沿途短停"], ["danba", "10.3–4", "低海拔住宿"], ["jiaju", "10.4", "藏寨二选一", true], ["xiaojin", "10.4", "午餐补给"],
       ["maobiliang", "10.4", "晴天核心", true, "scenic"], ["siguniang", "10.4–5", "连住两晚"], ["shuangqiao", "10.5", "整日核心", false, "scenic"], ["wolong", "10.6", "熊猫苑可删"],
-      ["yingxiu", "10.6", "遗址短停"], ["dujiangyan", "10.6–7", "住宿 / 半日"], ["airport", "10.7", "还车返航"]
+      ["yingxiu", "10.6", "遗址短停"], ["dujiangyan", "10.6–7", "住宿 / 南桥夜游"], ["airport", "10.7", "还车返航"]
     ]
   },
   snow: {
@@ -783,31 +822,31 @@ const spots = [
   { name: "康定折多河老城", region: "康定", level: "core", tag: "核心", time: "1–2h", cost: "免费", altitude: "2,560m", rule: "10.1 抵达早才散步，晚到直接休息", note: "进山首晚适应海拔，餐饮和补给最完整。" },
   { name: "S434 红海子", region: "康定—塔公", level: "core", tag: "核心", time: "20–30min", cost: "可能有清洁费", altitude: "约 4,000m", rule: "只在正规停车区，雨雪立即取消", note: "高山湖泊与雪山公路场景，停留必须短。" },
   { name: "塔公草原 / 塔公寺", region: "塔公", level: "core", tag: "核心", time: "1.5–2h", cost: "寺院票价现场核验", altitude: "约 3,730m", rule: "草原和寺院择一深度游", note: "雅拉雪山、人文和草原在同一停留点完成。" },
-  { name: "甲居或中路藏寨", region: "丹巴", level: "core", tag: "核心", time: "1–1.5h", cost: "甲居约 ¥50", altitude: "约 2,000m", rule: "两者只选一个，10:00 左右离开", note: "作为丹巴短停保留；晴天不延长写真和排队时间，下午优先猫鼻梁。" },
-  { name: "四姑娘山双桥沟", region: "四姑娘山", level: "core", tag: "核心", time: "7–8h", cost: "¥150 / 人", altitude: "3,200–3,800m", rule: "提前 14 天实名预约", note: "首个四姑娘山完整景区日，以观光车串联雪峰、公路和湖泊。" },
+  { name: "甲居或中路藏寨", region: "丹巴", level: "core", tag: "核心", time: "1–1.5h", cost: "甲居约 ¥50", altitude: "约 2,000m", rule: "两者只选一个，控制在 1–1.5 小时", note: "A 线住在甲居：10.3 夜里到，10.4 早上出门看晨景；B 线 10.4 上午短停。" },
+  { name: "四姑娘山双桥沟", region: "四姑娘山", level: "core", tag: "核心", time: "7–8h", cost: "¥150 / 人", altitude: "3,200–3,800m", rule: "国庆售罄即止，出发前确认实名订单", note: "全程唯一完整景区日，以观光车串联雪峰、公路和湖泊。" },
   { name: "泸定桥 / 泸定县城", region: "泸定", level: "along", tag: "顺路", time: "30–60min", cost: "现场核验", altitude: "约 1,330m", rule: "D1 通畅且停车容易才去", note: "适合午餐和低海拔休息，不值得为排队拖延。" },
   { name: "康定机场路观景段", region: "S434", level: "along", tag: "顺路", time: "15min", cost: "免费", altitude: "4,000m+", rule: "不在车道和弯道拍照", note: "公路视野开阔，但停车条件决定能否停留。" },
   { name: "木雅金塔", region: "塔公", level: "along", tag: "顺路", time: "30min", cost: "现场核验", altitude: "约 3,700m", rule: "塔公寺拥堵时替换", note: "建筑与雪山同框，时间成本低。" },
   { name: "新都桥 / 瓦泽贡嘎观景窗口", region: "新都桥", level: "core", tag: "必看", time: "30–60min", cost: "免费", altitude: "约 3,460m", rule: "只停正规观景点，07:40 无开云就走", note: "本次贡嘎概率最高的清晨窗口，前一晚先向酒店确认可见方向。" },
-  { name: "墨石公园", region: "八美", level: "backup", tag: "备选", time: "2–3h", cost: "约 ¥80 含车", altitude: "约 3,500m", rule: "仅阴天进入，停车等待超 30 分钟放弃", note: "地貌独特但会压缩白天车程，晴天时间优先留给贡嘎和雅拉。" },
+  { name: "墨石公园", region: "八美", level: "along", tag: "顺路", time: "2h", cost: "约 ¥80 含车", altitude: "约 3,500m", rule: "排队超 30 分钟就换惠远寺", note: "A 线 10.4 中午顺路进入，高原上少见的石林地貌；下午时间要留给塔公雅拉。" },
   { name: "牦牛谷", region: "八美—丹巴", level: "along", tag: "顺路", time: "15–30min", cost: "免费", altitude: "持续下降", rule: "仅使用官方停车区", note: "河谷、彩林和溪流是这段道路本身的看点。" },
-  { name: "小金县城", region: "小金", level: "along", tag: "顺路", time: "1h", cost: "餐饮自理", altitude: "约 2,360m", rule: "安排午餐和补给", note: "进入四姑娘山前最后一个稳定补给节点。" },
-  { name: "猫鼻梁观景台", region: "四姑娘山镇", level: "core", tag: "必看", time: "20–40min", cost: "免费", altitude: "约 3,500m", rule: "晴天且 16:30 前抵达，停车满就回酒店", note: "小环线中观看四姑娘山完整四峰轮廓的核心窗口，阴天不专程等待。" },
+  { name: "小金县城", region: "小金", level: "along", tag: "顺路", time: "1h", cost: "餐饮自理", altitude: "约 2,360m", rule: "A 线 10.3 晚饭 + 加满油", note: "开夜路去丹巴前最后一个稳定补给点。" },
+  { name: "猫鼻梁观景台", region: "四姑娘山镇", level: "core", tag: "必看", time: "20–40min", cost: "免费", altitude: "约 3,500m", rule: "晴天且有正规车位才停，停车满就走", note: "小环线中观看四姑娘山完整四峰轮廓的核心窗口，阴天不专程等待。" },
   { name: "康定木格措", region: "康定", level: "backup", tag: "备选", time: "5–7h", cost: "约 ¥195 套票", altitude: "2,600–3,700m", rule: "增加 1 天才加入", note: "不是 D1 到康定后的顺手景点，需要完整半天以上。" },
   { name: "中路藏寨", region: "丹巴", level: "backup", tag: "备选", time: "2–3h", cost: "通常免费", altitude: "约 2,100m", rule: "替换甲居，不叠加", note: "生活感强、游客相对少，村道停车需提前问住宿方。" },
   { name: "沃日官寨", region: "小金", level: "backup", tag: "备选", time: "1–2h", cost: "现场核验", altitude: "约 2,500m", rule: "双桥沟无票时的低强度替换", note: "人文与建筑为主，不提供同等雪山景观。" },
-  { name: "四姑娘山长坪沟", region: "四姑娘山", level: "backup", tag: "备选", time: "6–8h", cost: "票价现场核验", altitude: "3,200m+", rule: "只用于雪山加量版", note: "徒步比双桥沟更重，还会把 10 月 7 日变成山区直奔机场的高风险返程。" },
-  { name: "都江堰", region: "返程", level: "core", tag: "核心", time: "3h", cost: "约 ¥80", altitude: "约 700m", rule: "仅晚班机安排，11:30 前离开", note: "均衡版的低海拔收尾，水利工程、人文历史和城市休息兼顾。" },
-  { name: "鱼子西空中花园", region: "新都桥", level: "backup", tag: "条件支线", time: "3–5h", cost: "清洁费现场核验", altitude: "4,000m+", rule: "天气、路况和全员状态达标才去", note: "晴天、道路干燥、官方确认开放且 15:30 前能出发时可选；任一条件不满足就留在新都桥。" },
+  { name: "四姑娘山长坪沟", region: "四姑娘山", level: "core", tag: "有票就去", time: "4–6h", cost: "约 ¥90 含观光车", altitude: "3,200–3,600m", rule: "A 线 10.2 有票就去，只走到枯树滩", note: "民宿就在沟口；正面看幺妹峰。雪山加量版则作为四姑娘山第 3 天。" },
+  { name: "都江堰", region: "返程", level: "along", tag: "顺路", time: "1–2h", cost: "南桥夜游免费", altitude: "约 700m", rule: "A 线仅过境；B 线 10.6 晚只做南桥夜游", note: "三条路线都不安排景区正门游览，10.7 早上直接去天府机场。" },
+  { name: "鱼子西空中花园", region: "新都桥", level: "core", tag: "核心", time: "3–5h", cost: "小程序预约，清洁费现场核验", altitude: "约 4,100m", rule: "A 线 10.5 傍晚上山看日落，日落后慢速下山", note: "360° 观景台同时看贡嘎和雅拉，日落金山是川西经典画面。山路窄，国庆可能限流。" },
   { name: "八郎生都", region: "塔公", level: "skip", tag: "下次", time: "3–4h", cost: "约 ¥30", altitude: "约 4,200m", rule: "本次取消", note: "高海拔机位与主路线重复，天气不确定性高。" },
   { name: "冷噶措", region: "贡嘎西坡", level: "skip", tag: "下次", time: "完整 1 天", cost: "接驳另计", altitude: "4,500m 左右", rule: "单独做贡嘎线", note: "距离、路况和体力需求均超出本次小环线。" },
   { name: "党岭 / 葫芦海", region: "丹巴北线", level: "skip", tag: "下次", time: "增加 2 天", cost: "马帮 / 住宿另计", altitude: "4,000m+", rule: "单独留夜", note: "不能把党岭当作丹巴顺路半日景点。" },
   { name: "海子沟", region: "四姑娘山", level: "skip", tag: "下次", time: "完整 1 天", cost: "票价现场核验", altitude: "高海拔徒步", rule: "本次取消", note: "体力要求最高，不适合首次高原团队临时加入。" },
-  { name: "卧龙中华大熊猫苑", region: "卧龙", level: "core", tag: "推荐", time: "约 2h", cost: "票价现场核验", altitude: "约 1,700m", rule: "提前核验预约，排队过长直接跳过", note: "从四姑娘山下撤都江堰的顺路体验，让全程不只围绕雪山和观景台。" }
+  { name: "卧龙中华大熊猫苑", region: "卧龙", level: "core", tag: "推荐", time: "约 2h", cost: "¥85 网购 / ¥90 现场", altitude: "约 1,700m", rule: "9:00 开园就进，16:30 停止入园", note: "A 线 10.1 上午看熊猫（福宝在幼儿园 2 号馆），9:00—11:00 最活跃；B 线 10.6 下撤时顺路。" }
 ];
 
 const spotOrderByRoute = {
-  balanced: ["小金县城", "猫鼻梁观景台", "四姑娘山双桥沟", "甲居或中路藏寨", "牦牛谷", "墨石公园", "塔公草原 / 塔公寺", "木雅金塔", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "S434 红海子", "康定折多河老城", "康定木格措", "泸定桥 / 泸定县城", "卧龙中华大熊猫苑", "都江堰"],
+  balanced: ["卧龙中华大熊猫苑", "四姑娘山长坪沟", "猫鼻梁观景台", "四姑娘山双桥沟", "小金县城", "甲居或中路藏寨", "牦牛谷", "墨石公园", "塔公草原 / 塔公寺", "木雅金塔", "S434 红海子", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "康定折多河老城", "康定木格措", "泸定桥 / 泸定县城", "都江堰"],
   clockwise: ["泸定桥 / 泸定县城", "康定折多河老城", "康定机场路观景段", "S434 红海子", "塔公草原 / 塔公寺", "木雅金塔", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "墨石公园", "牦牛谷", "甲居或中路藏寨", "小金县城", "猫鼻梁观景台", "四姑娘山双桥沟", "卧龙中华大熊猫苑", "都江堰"],
   snow: ["泸定桥 / 泸定县城", "康定折多河老城", "康定机场路观景段", "S434 红海子", "塔公草原 / 塔公寺", "木雅金塔", "新都桥 / 瓦泽贡嘎观景窗口", "鱼子西空中花园", "墨石公园", "牦牛谷", "甲居或中路藏寨", "小金县城", "猫鼻梁观景台", "四姑娘山双桥沟", "四姑娘山长坪沟", "卧龙中华大熊猫苑", "都江堰"]
 };
@@ -1269,7 +1308,7 @@ const spotDetails = {
     credit: "File:四川 丹巴-甲居-藏寨 - panoramio.jpg",
     xhs: "甲居藏寨 中路藏寨 国庆 自驾 停车",
     photo: "观景台拍山坡村落全景，不在民居门口长时间摆拍。",
-    access: "二选一并压缩至 1–1.5 小时；村道堵车或停车排队时，完成主视角后立即离开。",
+    access: "A 线就住在甲居寨内：10.3 夜里用民宿定位进村，10.4 早上 07:00 出门就是观景点，07:50 回来退房。",
     photoGuide: {
       spot: "甲居 1/2/3 号观景台俯瞰全景、中路贡布碉楼群侧坡高地",
       time: "清晨 07:30–09:00 晨雾轻抚山谷炊烟、傍晚夕阳洒在白墙",
@@ -1287,7 +1326,7 @@ const spotDetails = {
     credit: "File:四姑娘山双桥沟.jpg",
     xhs: "双桥沟 国庆 游览顺序 红杉林 布达拉峰",
     photo: "红杉林拍近景雪峰，布达拉峰拍公路，四姑娜措拍倒影；三类画面完成即可。",
-    access: "先乘观光车到红杉林再向下游览。排队明显变长时少下一站，16:30 前离园。",
+    access: "先乘观光车到红杉林再向下游览。排队明显变长时少下一站；A 线 10.3 要赶夜路，15:30 出园、最晚 16:00。",
     photoGuide: {
       spot: "红杉林雪峰栈道(3840m)、布达拉峰前笔直公路延伸处、四姑娜措枯木倒影",
       time: "上午 09:30–11:30 光线通透，下午 14:00–16:00 湖面泛金光",
@@ -1373,7 +1412,7 @@ const spotDetails = {
     credit: "File:Yalamountain.jpg",
     xhs: "墨石公园 国庆 排队 观光车",
     photo: "阴天可强化黑灰石林质感；晴天不要为了拍照牺牲贡嘎、雅拉窗口。",
-    access: "仅阴天且停车等待不超过 30 分钟时进入，完整游览至少需要 2 小时。",
+    access: "停车等待超过 30 分钟就改去离八美约 10km 的惠远寺；进入的话控制在 2 小时，以观光车和核心石林为主。",
     photoGuide: {
       spot: "异域星球栈道下沉区、穿梭太空步道最高点、黑石林中孤独的树",
       time: "阴天 / 雨后最佳（岩石湿润呈现极致纯黑，冷酷科幻感拉满）",
@@ -1407,7 +1446,7 @@ const spotDetails = {
     credit: "File:Xiaojin, Aba, Sichuan, China - panoramio - Leeshan Chung (9).jpg",
     xhs: "小金县 国庆 吃饭 加油 停车",
     photo: "这里不是摄影主场，重点是热食、厕所、加油和采购。",
-    access: "餐饮控制在 45–60 分钟，离开前补齐双桥沟早餐和饮用水。",
+    access: "A 线 10.3 傍晚在这里吃晚饭、加满油、换夜路司机，再走 G350 去丹巴。",
     photoGuide: {
       spot: "小金川沿江步道、红军会师广场、高处俯瞰山谷城镇全景",
       time: "中午 12:00–13:30 顺光记录高原县城市井生活与雪山环抱",
@@ -1424,7 +1463,7 @@ const spotDetails = {
     credit: "File:Mount Siguniang.jpg",
     xhs: "猫鼻梁 四姑娘山 日落 停车 国庆",
     photo: "中长焦拍完整四峰轮廓，广角保留山谷环境；日照金山只当奖励。",
-    access: "目标 16:30 前到正规停车区。停车满、云遮山或道路拥堵时直接回酒店。",
+    access: "A 线 10.2 傍晚、B 线 10.4 下午顺光时段到正规停车区。停车满、云遮山或道路拥堵时直接回酒店。",
     photoGuide: {
       spot: "观景台最右侧无遮挡护栏处、公路停车带开阔台阶",
       time: "傍晚 17:30–18:30 日落余晖金山（四峰自西向东渐次染金）",
@@ -1492,7 +1531,7 @@ const spotDetails = {
     credit: "File:四姑娘山景区 Mount Siguniang Scenic Area 17.jpg",
     xhs: "长坪沟 国庆 枯树滩 下干海子 徒步",
     photo: "用森林、枯木和河谷作为前景拍幺妹峰方向；与双桥沟的公路和湖泊画面形成区别。",
-    access: "只在主动选择雪山加量版时进入；14:00 无条件折返，连续高反或雨雪时整日取消。",
+    access: "民宿就在沟口。阿坝旅游实名购票，门票+观光车约 ¥90/人；观光车到喇嘛寺后走栈道到枯树滩，14:30 前回民宿。",
     photoGuide: {
       spot: "枯树滩森林溪流栈道、下干海子草甸、木骡子幺妹峰脚下",
       time: "上午 10:00–13:00 光线穿过原始落叶松林，丁达尔光效明显",
@@ -1507,7 +1546,7 @@ const spotDetails = {
       { src: "assets/spots/18-dujiangyan.jpg?v=4", caption: "都江堰安澜索桥与岷江分流全景" }
     ],
     credit: "File:36665-Dujiangyan (30418293747).jpg",
-    xhs: "都江堰 国庆 半日游 离堆公园 停车",
+    xhs: "都江堰 南桥 夜景 停车",
     photo: "宝瓶口、飞沙堰和安澜索桥按人流选择两处，不追求全景区走完。",
     access: "A 线返程日不安排景区；B 线仅作为 10.6 下撤住宿，开放与停车以当天为准。",
     photoGuide: {
@@ -1521,12 +1560,13 @@ const spotDetails = {
     image: "assets/spots/19-yuzixi.jpg",
     imageLabel: "鱼子西贡嘎日落实景",
     images: [
-      { src: "assets/spots/19-yuzixi.jpg", caption: "360度贡嘎日落与晚霞" }
+      { src: "assets/spots/21-lenggacuo.jpg", caption: "贡嘎主峰（鱼子西可远眺，参考图）" },
+      { src: "assets/spots/19-yuzixi.jpg", caption: "贡嘎西侧历史黑白照片" }
     ],
     credit: "File:Minya Konka, from the west..jpg",
     xhs: "鱼子西 国庆 堵车 路况 日落",
     photo: "优势是贡嘎日落，但机位价值建立在晴天、道路和返程余量同时满足。",
-    access: "条件支线：官方确认开放、道路干燥、全员无明显高反且能天黑前回到新都桥主路时才考虑。",
+    access: "新都桥出发约 1 小时，三村上山、二村下山；“鱼子西旅游管理”小程序预约，19:00 后停止进入。日落后慢速下山。",
     photoGuide: {
       spot: "星空帐篷前开阔草甸、秋千与贡嘎/雅拉对望处、山顶白色钢琴",
       time: "傍晚 17:30–18:40 360° 日落霞光与日照金山全景",
@@ -1611,7 +1651,7 @@ const spotDetails = {
     credit: "File:Pandas!! (GIANT PANDA-WOLONG-SICHUAN-CHINA) (2150600169).jpg",
     xhs: "卧龙中华大熊猫苑 国庆 预约 停车",
     photo: "优先观察熊猫活动，不敲玻璃、不投喂，也不为了合影阻塞通道。",
-    access: "提前核验国庆开放、实名预约和停车规则；排队过长或无票时直接前往映秀。",
+    access: "耿达镇，车可直接开到检票口旁停车场。9:00 开园就进，福宝在熊猫幼儿园 2 号馆，游览约 2 小时。",
     photoGuide: {
       spot: "外圈高处木栈道、幼年熊猫活动圈木架旁、竹林步道",
       time: "上午 09:30–11:00 熊猫进食与活跃期（天气凉爽时更爱活动）",
@@ -1655,6 +1695,20 @@ let activeSpotLevel = "all";
 
 function currentRoute() {
   return routeData[activePlan];
+}
+
+function todayLabel() {
+  const now = new Date();
+  if (now.getFullYear() !== 2026) return null;
+  if (now.getMonth() === 8 && now.getDate() === 30) return "9.30";
+  if (now.getMonth() === 9 && now.getDate() <= 7) return `10.${now.getDate()}`;
+  return null;
+}
+
+function todayIndex() {
+  const label = todayLabel();
+  const index = label ? currentRoute().itinerary.findIndex(day => day.date === label) : -1;
+  return index >= 0 ? index : null;
 }
 
 function money(value) {
@@ -1768,7 +1822,7 @@ function renderRouteMap() {
 function selectPlan(planId) {
   if (!routeData[planId]) return;
   activePlan = planId;
-  activeDay = 0;
+  activeDay = todayIndex() ?? 0;
   localStorage.setItem("chuanxi-route", activePlan);
   const url = new URL(window.location.href);
   url.searchParams.set("route", activePlan);
@@ -1837,20 +1891,20 @@ function renderStays() {
       </div>
       <div class="stay-card-body">
         <header class="stay-card-header">
-          <div><span>${recommendation?.type || "主路旁正规住宿"}</span><h3>${stay.city}</h3></div>
+          <div><span>${stay.booked ? `${stay.date} · 已订住宿` : recommendation?.type || "主路旁正规住宿"}</span><h3>${stay.city}</h3></div>
           <p>${stay.alt}</p>
         </header>
-        ${priceSnapshot ? `<section class="stay-live-price"><div class="stay-live-price-head"><span>三档住宿建议 · ${priceSnapshot.query}</span><small>${ctripPriceSnapshot.guests} · ${ctripPriceSnapshot.fetchedAt} 携程查询</small></div><ul>${priceSnapshot.hotels.map(hotel => `<li><span class="stay-rank">${hotel.rank}</span><div><a href="${amapSearchUrl(`${stay.city} ${hotel.name}`)}" target="_blank" rel="noreferrer"><strong>${hotel.name}</strong>${icon("map-pinned")}</a><small>${hotel.room}</small><small class="stay-confirmed">携程已显示：${hotel.confirmed}</small><small class="stay-verify">仍需确认：${hotel.verify}</small></div><b>${hotel.price}</b></li>`).join("")}</ul><p>${priceSnapshot.note} 当前价格仅作预算参考，不代表锁定库存。</p></section>` : `<section class="stay-hotel-section"><span>区域候选参考</span><ul class="stay-hotel-list">${hotelOptions.map((name, optIndex) => `<li><span>0${optIndex + 1}</span><a href="${amapSearchUrl(`${stay.city} ${name}`)}" target="_blank" rel="noreferrer"><strong>${name}</strong>${icon("map-pinned")}</a></li>`).join("")}</ul></section>`}
+        ${stay.booked ? `<section class="stay-booked"><div class="stay-booked-head"><span>${icon("badge-check")}已预订</span><small>${stay.date}</small></div><strong>${stay.booked.name}</strong><a href="${stay.link}" target="_blank" rel="noreferrer">${icon("map-pin")}${stay.booked.address}</a><p>${stay.booked.detail}</p></section>` : priceSnapshot ? `<section class="stay-live-price"><div class="stay-live-price-head"><span>三档住宿建议 · ${priceSnapshot.query}</span><small>${ctripPriceSnapshot.guests} · ${ctripPriceSnapshot.fetchedAt} 携程查询</small></div><ul>${priceSnapshot.hotels.map(hotel => `<li><span class="stay-rank">${hotel.rank}</span><div><a href="${amapSearchUrl(`${stay.city} ${hotel.name}`)}" target="_blank" rel="noreferrer"><strong>${hotel.name}</strong>${icon("map-pinned")}</a><small>${hotel.room}</small><small class="stay-confirmed">携程已显示：${hotel.confirmed}</small><small class="stay-verify">仍需确认：${hotel.verify}</small></div><b>${hotel.price}</b></li>`).join("")}</ul><p>${priceSnapshot.note} 当前价格仅作预算参考，不代表锁定库存。</p></section>` : `<section class="stay-hotel-section"><span>区域候选参考</span><ul class="stay-hotel-list">${hotelOptions.map((name, optIndex) => `<li><span>0${optIndex + 1}</span><a href="${amapSearchUrl(`${stay.city} ${name}`)}" target="_blank" rel="noreferrer"><strong>${name}</strong>${icon("map-pinned")}</a></li>`).join("")}</ul></section>`}
         <div class="stay-facts">
-          <div><span>国庆目标价</span><strong>${stay.target}</strong><small>${stay.rooms}</small></div>
-          <div><span>优先落点</span><strong>${stay.area}</strong></div>
+          <div><span>${stay.booked ? "费用 / 房间" : "国庆目标价"}</span><strong>${stay.target}</strong><small>${stay.rooms}</small></div>
+          <div><span>${stay.booked ? "位置" : "优先落点"}</span><strong>${stay.area}</strong></div>
         </div>
         <div class="stay-checks">
-          <p><i data-lucide="circle-check"></i><span><strong>下单前确认</strong>${stay.must}</span></p>
+          <p><i data-lucide="circle-check"></i><span><strong>${stay.booked ? "出发前电话确认" : "下单前确认"}</strong>${stay.must}</span></p>
           <p class="stay-warning"><i data-lucide="circle-alert"></i><span><strong>主动避开</strong>${stay.avoid}</span></p>
         </div>
         <footer class="stay-links">
-          <a href="${stay.link}" target="_blank" rel="noreferrer">区域酒店地图 ${icon("map")}</a>
+          <a href="${stay.link}" target="_blank" rel="noreferrer">${stay.booked ? "高德打开住处" : "区域酒店地图"} ${icon("map")}</a>
           ${(stay.xhsLinks || []).map((note) => `<a href="${xiaohongshuNoteUrl(note)}" target="_blank" rel="noreferrer" title="${note.title}">📕 ${note.title} ${icon("external-link")}</a>`).join("")}
           <a href="${xiaohongshuSearchUrl(stay.guide)}" target="_blank" rel="noreferrer">最新攻略 ${icon("search")}</a>
         </footer>
@@ -2006,10 +2060,13 @@ function renderSpots() {
 function renderTabs() {
   const selectedItinerary = currentRoute().itinerary;
   const root = document.querySelector("[data-day-tabs]");
+  const today = todayIndex();
   root.innerHTML = selectedItinerary.map((day, index) => `
-    <button class="day-tab ${index === activeDay ? "active" : ""}" type="button" role="tab" aria-selected="${index === activeDay}" data-day="${index}">
-      <span>${day.label}</span><strong>${day.date}</strong><small>${day.weekday}</small>
+    <button class="day-tab ${index === activeDay ? "active" : ""} ${index === today ? "is-today" : ""}" type="button" role="tab" aria-selected="${index === activeDay}" data-day="${index}">
+      <span>${day.label}</span><strong>${day.date}</strong><small>${day.weekday}</small>${index === today ? `<em class="day-today-chip">今天</em>` : ""}
     </button>`).join("");
+  const activeTab = root.querySelector(".day-tab.active");
+  if (activeTab) root.scrollLeft = activeTab.offsetLeft - (root.clientWidth - activeTab.offsetWidth) / 2;
   root.querySelectorAll("[data-day]").forEach(button => button.addEventListener("click", () => {
     activeDay = Number(button.dataset.day);
     renderTabs();
@@ -2023,7 +2080,7 @@ function renderDay() {
   root.innerHTML = `
     <div class="day-overview">
       <div class="day-title">
-        <span class="day-number">${day.label} · ${day.date} ${day.weekday}</span>
+        <span class="day-number">${activeDay === todayIndex() ? "今天 · " : ""}${day.label} · ${day.date} ${day.weekday}</span>
         <h3>${day.title}</h3>
         <p>${day.subtitle}</p>
         <div class="day-metrics">
@@ -2249,7 +2306,7 @@ function setupLightbox() {
 function setupActions() {
   document.querySelectorAll("[data-print]").forEach(button => button.addEventListener("click", () => window.print()));
   document.querySelector("[data-copy-plan]").addEventListener("click", async () => {
-    const summary = `2026 国庆 5 人川西小环线｜${currentRoute().summary} 9 月 30 日晚成都取车，10 月 7 日返回广州。国庆交通、景区开放和管制信息需在 9 月底再次核验。`;
+    const summary = `2026 国庆 5 人川西小环线｜${currentRoute().summary} 9 月 30 日晚成都取车，10 月 7 日返回广州。每天出发前再看交警通告、景区公告和天气。`;
     try { await navigator.clipboard.writeText(summary); showToast("行程摘要已复制"); }
     catch { showToast("浏览器未允许复制，请手动选择文字"); }
   });
@@ -2267,7 +2324,34 @@ function setupActions() {
   }, { passive: true });
 }
 
+function renderHeroNote() {
+  const note = document.querySelector("[data-hero-note]");
+  if (!note) return;
+  const index = todayIndex();
+  if (index !== null) {
+    const day = currentRoute().itinerary[index];
+    note.innerHTML = `<strong>今天 · ${day.label} ${day.date}：</strong>${day.title}。<a href="#days">看今天的安排 →</a>`;
+    return;
+  }
+  const now = new Date();
+  const daysLeft = Math.round((new Date(2026, 8, 30) - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+  if (daysLeft > 0) note.innerHTML = `<strong>距出发还有 ${daysLeft} 天：</strong>先买好熊猫基地、长坪沟、双桥沟门票，约好鱼子西，再下载四川离线地图。`;
+}
+
+function setupMobileDock() {
+  const links = [...document.querySelectorAll("[data-dock-link]")];
+  if (todayIndex() !== null) document.querySelector("[data-dock-today]").textContent = "今天";
+  const sections = document.querySelectorAll("main > section");
+  const observer = new IntersectionObserver(entries => {
+    entries.filter(entry => entry.isIntersecting).forEach(entry => {
+      links.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`));
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  sections.forEach(section => observer.observe(section));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  activeDay = todayIndex() ?? 0;
   setupHeroCarousel();
   setupLightbox();
   renderPlans();
@@ -2281,5 +2365,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderBudget();
   renderPacking();
   setupActions();
+  setupMobileDock();
+  renderHeroNote();
   if (window.lucide) window.lucide.createIcons();
 });

@@ -16,9 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=18.0" />
+    <link rel="stylesheet" href="styles.css?v=25.0" />
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-    <script src="app.js?v=18.0" defer></script>
+    <script src="app.js?v=25.0" defer></script>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -33,7 +33,7 @@
         <a href="#roadbook">路况</a>
         <a href="#snow">雪山</a>
         <a href="#budget">预算</a>
-        <a href="#booking">预订</a>
+        <a href="#booking">核查</a>
         <a href="#safety">安全</a>
       </nav>
       <button class="icon-button" type="button" data-print aria-label="打印路书" title="打印路书">
@@ -45,28 +45,24 @@
       <section class="hero" aria-labelledby="hero-title" data-hero-carousel>
         <div class="hero-slides" data-hero-slides>
           <div class="hero-slide active" data-slide="0">
-            <img class="hero-image" src="assets/siguniang.jpg" alt="四姑娘山雪峰与高原山谷" />
-            <span class="hero-slide-tag">四姑娘山 · 双桥沟与幺妹峰</span>
+            <img class="hero-image" src="assets/siguniang.jpg" alt="四姑娘山雪峰与高原山谷" fetchpriority="high" />
+            <span class="hero-slide-tag">10.2—10.3 · 四姑娘山 · 长坪沟与双桥沟</span>
           </div>
           <div class="hero-slide" data-slide="1">
-            <img class="hero-image" src="assets/tagong.jpg" alt="塔公草原与雅拉雪山" />
-            <span class="hero-slide-tag">塔公草原 · 雅拉神山与金顶佛寺</span>
+            <img class="hero-image" src="assets/danba.jpg" alt="丹巴甲居藏寨山谷" loading="lazy" decoding="async" />
+            <span class="hero-slide-tag">10.3—10.4 · 丹巴甲居 · 嘉绒藏寨</span>
           </div>
           <div class="hero-slide" data-slide="2">
-            <img class="hero-image" src="assets/danba.jpg" alt="丹巴甲居藏寨山谷" />
-            <span class="hero-slide-tag">丹巴藏寨 · 嘉绒千碉之国</span>
+            <img class="hero-image" src="assets/hero/06-moshi.jpg" alt="墨石公园变质岩石林全景" loading="lazy" decoding="async" />
+            <span class="hero-slide-tag">10.4 · 墨石公园 · 高原石林</span>
           </div>
           <div class="hero-slide" data-slide="3">
-            <img class="hero-image" src="assets/kangding.jpg" alt="康定古城与折多河" />
-            <span class="hero-slide-tag">康定山城 · 溜溜城与折多河谷</span>
+            <img class="hero-image" src="assets/tagong.jpg" alt="塔公草原与雅拉雪山" loading="lazy" decoding="async" />
+            <span class="hero-slide-tag">10.4—10.5 · 塔公草原 · 雅拉神山</span>
           </div>
           <div class="hero-slide" data-slide="4">
-            <img class="hero-image" src="assets/hero/06-moshi.jpg" alt="墨石公园变质岩石林全景" />
-            <span class="hero-slide-tag">异域星球 · 墨石公园变质岩石林</span>
-          </div>
-          <div class="hero-slide" data-slide="5">
-            <img class="hero-image" src="assets/spots/02-honghaizi.jpg" alt="S434 红海子高山湖泊雪山" />
-            <span class="hero-slide-tag">高原明镜 · S434 红海子与贡嘎群峰</span>
+            <img class="hero-image" src="assets/kangding.jpg" alt="康定山谷与雪峰" loading="lazy" decoding="async" />
+            <span class="hero-slide-tag">10.6 · 折多山 · 康定山城</span>
           </div>
         </div>
         <div class="hero-shade"></div>
@@ -74,12 +70,12 @@
         <div class="hero-content">
           <p class="eyebrow">2026 NATIONAL DAY · ROADBOOK 01</p>
           <h1 id="hero-title">川西小环线</h1>
-          <p class="hero-lead">三条小环线可以切换：传统逆时针、顺时针渐进海拔与雪山加量版。</p>
+          <p class="hero-lead">卧龙熊猫 · 四姑娘山 · 甲居藏寨 · 塔公草原 · 红海子 · 鱼子西日落 · 折多山</p>
           <div class="hero-meta" aria-label="行程概要">
             <span><i data-lucide="calendar-days"></i>9.30 晚—10.7</span>
             <span><i data-lucide="users"></i>5 人</span>
             <span><i data-lucide="car-front"></i>成都租车自驾</span>
-            <span><i data-lucide="route"></i>约 1,050 km</span>
+            <span><i data-lucide="route"></i>约 1,300 km</span>
           </div>
           <div class="hero-actions">
             <a class="primary-button" href="#days">展开每日路书 <i data-lucide="arrow-down"></i></a>
@@ -99,21 +95,21 @@
         </div>
         <div class="hero-note">
           <span class="note-index">01</span>
-          <p><strong>先说明日期：</strong>9 月 30 日入住、10 月 7 日返程，实际是 8 个日历日、7 晚住宿。本站按日期优先排程；“7 天 6 夜”视为 10 月 1 日至 7 日的主行程。</p>
+          <p data-hero-note><strong>9.30 晚出发：</strong>天府机场取车，10.7 从天府机场返程，共 7 晚。</p>
         </div>
         <a class="scroll-cue" href="#decision" aria-label="继续浏览"><i data-lucide="arrow-down"></i></a>
       </section>
 
       <section class="decision-band" id="decision">
-        <div class="section-kicker">核心结论</div>
+        <div class="section-kicker">最终路线</div>
         <div class="decision-copy">
-          <h2>雪山、人文与地貌都保留，<br />路线可以按队伍状态切换。</h2>
-          <p>默认推荐传统逆时针：四姑娘山、丹巴藏寨、墨石公园、塔公草原、新都桥、康定和雅安依次串联。更担心高反可以选择顺时针，愿意承担返航压力再选择雪山加量版。</p>
+          <h2>熊猫、雪山、藏寨、草原，<br />七天走一个完整的环。</h2>
+          <p>A 线传统逆时针：成都 → 卧龙熊猫 → 四姑娘山（长坪沟 · 猫鼻梁 · 双桥沟）→ 丹巴甲居 → 墨石 → 塔公 → 红海子 → 新都桥 · 鱼子西 → 折多山 → 康定 → 雅安 → 成都。住宿已全部订好。</p>
         </div>
         <div class="decision-facts">
-          <div><span>可选路线</span><strong>3 条</strong><small>均衡 / 渐进 / 雪山加量</small></div>
-          <div><span>最高游览点</span><strong>约 3,840 m</strong><small>双桥沟红杉林</small></div>
-          <div><span>推荐方向</span><strong>逆时针</strong><small>经典顺序，返航住雅安</small></div>
+          <div><span>总里程</span><strong>约 1,300 km</strong><small>最长一天 10.1 约 290 km</small></div>
+          <div><span>最高点</span><strong>4,298 m</strong><small>折多山垭口</small></div>
+          <div><span>最紧的两天</span><strong>10.3 · 10.5</strong><small>双桥沟 + 夜路 / 红海子 + 鱼子西</small></div>
         </div>
       </section>
 
@@ -123,7 +119,7 @@
             <p class="section-kicker">ROUTE / 01</p>
             <h2>一条可以撤退的环线</h2>
           </div>
-          <p>主线全部选择铺装国省道，不安排冷噶措、鱼子西空中花园等非铺装支线。雪山机位只使用景区、国道观景区和正规停车点。</p>
+          <p>主线走国省道，鱼子西是唯一上山支线（10.5 日落）；冷噶措、八郎生都等非铺装支线不安排。雪山机位只使用景区、国道观景区和正规停车点。</p>
         </div>
 
         <div class="route-layout">
@@ -237,7 +233,7 @@
               <div class="snow-card-top"><span>WINDOW 04</span><em class="snow-badge core">全景主窗</em></div>
               <strong class="snow-peak-name">四姑娘山完整四峰</strong>
               <h3>猫鼻梁观景台</h3>
-              <p>顺路且停车稳定时短停；16:30 前抵达，停车已满或山体被云遮时直接回酒店。</p>
+              <p>顺路且停车稳定时短停，下午顺光最好；停车已满或山体被云遮时直接回酒店。</p>
               <div class="snow-card-foot"><i data-lucide="mountain-snow"></i><span>四姑娘山镇 · 幺妹金山</span></div>
             </article>
             <article class="snow-card">
@@ -297,29 +293,29 @@
               <p class="section-kicker">SCENERY / 03</p>
               <h2 id="scenery-title">沿途不是一种风景</h2>
             </div>
-            <p>四个停留点分别负责城市河谷、草原雪山、嘉绒藏寨和冰川山谷，避免一路只追同一种“公路大片”。</p>
+            <p>按行程顺序：冰川雪峰、嘉绒藏寨、草原神山、高山日落，一路不重样。</p>
           </div>
         </div>
         <div class="photo-ribbon">
           <figure class="photo-panel tall">
-            <img src="assets/kangding.jpg" alt="康定山谷与城市" loading="lazy" />
-            <span class="photo-panel-alt">海拔 2,560m · 川西门户</span>
-            <figcaption><span>01</span><strong>康定山城</strong><small>先适应海拔，再翻折多山</small></figcaption>
+            <img src="assets/spots/13-maobiliang.jpg" alt="猫鼻梁远眺四姑娘山四峰" loading="lazy" />
+            <span class="photo-panel-alt">10.1—10.3 · 海拔 3,200m</span>
+            <figcaption><span>01</span><strong>四姑娘山</strong><small>长坪沟、猫鼻梁与双桥沟</small></figcaption>
           </figure>
           <figure class="photo-panel">
-            <img src="assets/tagong.jpg" alt="塔公草原与群山" loading="lazy" />
-            <span class="photo-panel-alt">海拔 3,730m · 康巴神山</span>
-            <figcaption><span>02</span><strong>塔公草原</strong><small>草甸、寺院与雅拉神山</small></figcaption>
+            <img src="assets/danba.jpg" alt="丹巴甲居藏寨山谷" loading="lazy" />
+            <span class="photo-panel-alt">10.3—10.4 · 海拔 2,000m</span>
+            <figcaption><span>02</span><strong>甲居藏寨</strong><small>住在寨子里，推门看晨景</small></figcaption>
           </figure>
           <figure class="photo-panel tall">
-            <img src="assets/danba.jpg" alt="丹巴山谷与藏寨" loading="lazy" />
-            <span class="photo-panel-alt">海拔 1,800m · 嘉绒千碉</span>
-            <figcaption><span>03</span><strong>丹巴藏寨</strong><small>回到低海拔舒适睡一晚</small></figcaption>
+            <img src="assets/stays/stay-05-bamei.jpg" alt="塔公草原与雅拉雪山" loading="lazy" />
+            <span class="photo-panel-alt">10.4—10.5 · 海拔 3,700m</span>
+            <figcaption><span>03</span><strong>塔公草原</strong><small>金顶寺院与雅拉神山</small></figcaption>
           </figure>
           <figure class="photo-panel">
-            <img src="assets/siguniang.jpg" alt="四姑娘山景区雪峰" loading="lazy" />
-            <span class="photo-panel-alt">最高 3,840m · 东方圣山</span>
-            <figcaption><span>04</span><strong>四姑娘山</strong><small>用完整一天看双桥沟雪峰</small></figcaption>
+            <img src="assets/spots/21-lenggacuo.jpg" alt="贡嘎主峰（参考图）" loading="lazy" />
+            <span class="photo-panel-alt">10.5—10.6 · 贡嘎 7,556m</span>
+            <figcaption><span>04</span><strong>鱼子西 · 贡嘎</strong><small>日落金山与瓦泽日出</small></figcaption>
           </figure>
         </div>
       </section>
@@ -370,27 +366,39 @@
       <section class="booking-section content-width" id="booking">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">BOOKING / 06</p>
-            <h2>现在就该订什么</h2>
+            <p class="section-kicker">PRE-DEPARTURE / 06</p>
+            <h2>出发前最后核查</h2>
           </div>
-          <p>当前规划与酒店查询日期为 2026 年 8 月 19 日，国庆核心资源已进入紧张窗口。先锁可退，再慢慢比较。</p>
+          <p>以下按 2026-09-28 查到的官方通报整理，针对 A 线传统逆时针。路况每天会变，10.1 凌晨出发前再看一次阿坝州路况和 12122。</p>
         </div>
         <div class="booking-grid">
           <article class="booking-item urgent">
-            <div class="booking-date">今天</div>
-            <div><span>优先级 A</span><h3>天府往返机票、7 座车、可取消酒店</h3><p>本次统一成都天府机场取还车；10 月 7 日约 18:00 航班，A 线 10.6 住雅安、B 线 10.6 住都江堰，均以 13:30 前还车为目标。</p></div>
+            <div class="booking-date">必须在手</div>
+            <div><span>A 线 10.2 / 10.3</span><h3>双桥沟改 10.3，长坪沟抢 10.2</h3><p>双桥沟 10.2 已售罄，锁定 10.3 实名票；10.2 住处就在长坪沟口，有票就去，没票就休息适应。景区每天 17:00 公布次日余票，捡到 10.2 双桥沟就退 10.3。不买黄牛票。</p></div>
+          </article>
+          <article class="booking-item ok">
+            <div class="booking-date">已通车</div>
+            <div><span>A 线 10.1</span><h3>G350 映秀—卧龙—巴朗山</h3><p>8 月 18 日关门沟、观音庙泥石流断道，现已抢通；阿坝州 9.18 通报映秀至小金交界“道路畅通”。山体仍松动，白天通过、灾害点不停车；遇临时管制原地等放行。</p></div>
           </article>
           <article class="booking-item">
-            <div class="booking-date">9.21 前后</div>
-            <div><span>优先级 A</span><h3>双桥沟门票，日期按路线选择</h3><p>传统逆时针计划 10.2 入园，顺时针和雪山加量版计划 10.5 入园。双桥沟已核验为门票 ¥80 + 观光车 ¥70/人，国庆开放与预约时间以 9 月底公告为准。</p></div>
+            <div class="booking-date">提前买</div>
+            <div><span>A 线 10.1</span><h3>卧龙熊猫基地门票</h3><p>卧龙中华大熊猫苑神树坪基地（耿达镇），9:00—17:00 开放、16:30 停止入园。提前一天网上买 ¥85，现场 ¥90；网上买的凭身份证在售票中心取票。福宝在熊猫幼儿园 2 号馆，上午最活跃。</p></div>
           </article>
           <article class="booking-item">
-            <div class="booking-date">9.25–9.29</div>
-            <div><span>优先级 B</span><h3>复核交通管制与天气</h3><p>重点看雅康高速、G318 泸定—康定、S434 康定—塔公、G248 新都桥—八美、G350 丹巴—小金。</p></div>
+            <div class="booking-date">夜路</div>
+            <div><span>A 线 10.3</span><h3>双桥沟后夜下甲居，途经半扇门施工段</h3><p>15:30 出园，小金吃饭加满油、换夜路司机。G350 丹巴半扇门镇阿娘寨段 9.9—11.30 半幅施工、单边放行，夜间注意锥桶和施工车。最后约 8km 甲居村道用民宿定位，提前告诉老板约 20:30 到。</p></div>
           </article>
           <article class="booking-item">
-            <div class="booking-date">出发前 1 天</div>
-            <div><span>优先级 B</span><h3>下载离线地图，建立共享清单</h3><p>高德离线包覆盖四川；把酒店、景区、加油站和备用医院收藏到同一地图清单，截图保存订单二维码。</p></div>
+            <div class="booking-date">降温雨雪</div>
+            <div><span>9.28—10.1</span><h3>四川有一次降水过程，气温降 2—4℃</h3><p>巴朗山隧道口约 3,900m、S434 最高约 4,200m，清晨可能雨夹雪或暗冰。取车时当面确认防滑链规格和安装方法，羽绒服放在随手可拿的位置。</p></div>
+          </article>
+          <article class="booking-item">
+            <div class="booking-date">高峰日</div>
+            <div><span>10.1 / 10.7</span><h3>出城和返程车流最大</h3><p>7 座及以下小客车 10.1 0:00—10.7 24:00 高速免费。10.1 五点前出城；10.7 雅安 09:00 出发，13:30 前还车。</p></div>
+          </article>
+          <article class="booking-item">
+            <div class="booking-date">今晚</div>
+            <div><span>全员</span><h3>离线地图和共享清单</h3><p>高德下载四川离线包；把酒店、景区、加油站和备用医院收藏到同一清单，截图保存门票和酒店订单二维码。</p></div>
           </article>
         </div>
       </section>
@@ -465,11 +473,13 @@
             <table class="fallback-table">
               <thead><tr><th>触发情况</th><th>立即动作</th><th>删减内容</th><th>新的住宿 / 路线</th><th>恢复条件</th></tr></thead>
               <tbody>
-                <tr><td><strong>10.1 雅康严重拥堵</strong><small>预计 20:00 后才能到康定</small></td><td>16:00 前重新评估</td><td>取消康定散步和次日红海子首停</td><td>能到泸定则住泸定；不要夜翻山</td><td>次日路况正常后再进康定</td></tr>
+                <tr><td><strong>A 线 10.1 G350 卧龙段管制</strong><small>落石 / 泥石流，放行时间不明</small></td><td>原地等官方放行，不抄村道</td><td>取消熊猫基地</td><td>预计超过 3 小时：改雅安—天全—G351 夹金山—小金，或当晚住都江堰、次日 04:30 进山</td><td>官方恢复通行，且能在天黑前抵达</td></tr>
+                <tr><td><strong>A 线 10.3 夜路状况不好</strong><small>司机疲劳、大雾、落石或施工长时间不放行</small></td><td>在小金或丹巴县城停下</td><td>放弃当晚进甲居</td><td>就近住县城，电话告知甲居民宿；10.4 早上进寨看一眼再出发</td><td>天亮、司机睡够</td></tr>
+                <tr><td><strong>B 线 10.1 雅康严重拥堵</strong><small>预计 20:00 后才能到康定</small></td><td>16:00 前重新评估</td><td>取消康定散步和次日红海子首停</td><td>能到泸定则住泸定；不要夜翻山</td><td>次日路况正常后再进康定</td></tr>
                 <tr><td><strong>多人出现明显高反</strong><small>头痛、恶心或失眠持续加重</small></td><td>停止继续上升</td><td>取消新都桥、墨石和高海拔观景点</td><td>下撤康定或丹巴，必要时就医</td><td>症状充分缓解且专业意见允许</td></tr>
                 <tr><td><strong>S434 雨雪 / 结冰 / 浓雾</strong><small>交警分流或能见度明显下降</small></td><td>服从管制，切换主路</td><td>取消红海子、机场路所有停车</td><td>按导航走 G318 或留宿康定</td><td>官方解除管制且白天能见度良好</td></tr>
-                <tr><td><strong>D3 比计划晚 2 小时</strong><small>14:00 仍未离开八美</small></td><td>直接前往丹巴</td><td>取消墨石公园或塔公重复停留</td><td>保持丹巴县城住宿不变</td><td>不恢复，当天留出天黑前余量</td></tr>
-                <tr><td><strong>双桥沟门票未抢到</strong><small>官方渠道确认售罄</small></td><td>不购买黄牛票</td><td>取消对应景区日</td><td>沃日官寨、小金或猫鼻梁低强度替换</td><td>有官方退票余量再恢复</td></tr>
+                <tr><td><strong>B 线 10.3 比计划晚 2 小时</strong><small>14:00 仍未离开八美</small></td><td>直接前往丹巴</td><td>取消墨石公园或塔公重复停留</td><td>保持丹巴县城住宿不变</td><td>不恢复，当天留出天黑前余量</td></tr>
+                <tr><td><strong>10.3 双桥沟也没票</strong><small>官方渠道确认售罄</small></td><td>不购买黄牛票</td><td>取消对应景区日</td><td>先查长坪沟余票；再不行换沃日官寨、猫鼻梁低强度替换</td><td>有官方退票余量再恢复</td></tr>
                 <tr><td><strong>传统逆时针首日多人高反</strong><small>到卧龙后症状持续加重</small></td><td>停止继续升高</td><td>取消当晚四姑娘山住宿</td><td>留宿卧龙，次日重新评估</td><td>症状充分缓解且道路正常</td></tr>
                 <tr><td><strong>传统线 10.6 进度落后</strong><small>16:00 仍未离开康定</small></td><td>取消泸定桥和雅安目标</td><td>不再增加任何景点</td><td>当晚住泸定，10.7 更早出发</td><td>不恢复，当天避免夜间疲劳驾驶</td></tr>
                 <tr><td><strong>雪山加量版道路转差</strong><small>降雪、管制或次日预计到天府超过 8 小时</small></td><td>10.6 取消长坪沟并下撤</td><td>取消四姑娘山第 3 晚</td><td>当晚住都江堰，次日直达天府机场</td><td>不恢复，航班安全优先</td></tr>
@@ -585,6 +595,7 @@
           </div>
           <div class="safety-links" aria-label="出发前复核入口">
             <div><strong>出发前复核入口</strong><p>官方信息决定是否通行、预约与开放；经验攻略只用来判断排队、停车和装备取舍。</p></div>
+            <a href="https://abazhou.gov.cn/abazhou/c109697/bmxxgk_list.shtml" target="_blank" rel="noreferrer">阿坝州路况（G350） <i data-lucide="external-link"></i></a>
             <a href="http://jtj.gzz.gov.cn/gsgg1/" target="_blank" rel="noreferrer">甘孜州交通公告 <i data-lucide="external-link"></i></a>
             <a href="https://www.sgns.cn/info/notice/" target="_blank" rel="noreferrer">四姑娘山景区公告 <i data-lucide="external-link"></i></a>
             <a href="https://www.abatour.com/" target="_blank" rel="noreferrer">阿坝旅游预约入口 <i data-lucide="external-link"></i></a>
@@ -619,6 +630,7 @@
             <a href="https://www.sgns.cn/play" target="_blank" rel="noreferrer">四姑娘山景区官网：票价、游览方式与开放时间 <i data-lucide="external-link"></i></a>
             <a href="https://www.sgns.cn/info/notice/6379-2025-09-28-12-15-18" target="_blank" rel="noreferrer">2025 国庆旅游高峰通告：预约、限流与入园时间 <i data-lucide="external-link"></i></a>
             <a href="http://jtj.gzz.gov.cn/gsgg1/article/726323" target="_blank" rel="noreferrer">甘孜州交通运输局：2026 暑期重点路段管制范围 <i data-lucide="external-link"></i></a>
+            <a href="https://abazhou.gov.cn/abazhou/c109697/bmxxgk_list.shtml" target="_blank" rel="noreferrer">阿坝州国省干线路况：G350 映秀—小金每周通报 <i data-lucide="external-link"></i></a>
             <a href="https://www.abatour.com/" target="_blank" rel="noreferrer">阿坝旅游网：官方门票预约入口 <i data-lucide="external-link"></i></a>
             <a href="https://you.ctrip.com/sight/daofu1446234/1416437.html" target="_blank" rel="noreferrer">墨石公园：开放时间、位置与咨询电话交叉核验 <i data-lucide="external-link"></i></a>
             <a href="https://you.ctrip.com/sight/danba704/76687.html" target="_blank" rel="noreferrer">甲居藏寨：票价、位置与咨询电话交叉核验 <i data-lucide="external-link"></i></a>
@@ -626,7 +638,7 @@
           <div>
             <h3>经验信息</h3>
             <p>每个景点卡片都提供小红书精确检索入口，关键词已细化到停车、机位、排队或徒步。小红书 Web 登录态可能失效，因此页面不伪造具体作者和笔记标题；游客经验只用于判断拥堵、机位和取舍，不作为票价、管制或开放状态依据。</p>
-            <p><strong>资料核验时间：</strong>2026-08-19。2026 年国庆专项通告尚未发布，页面已把需要 9 月底复核的内容单独列出。</p>
+            <p><strong>资料核验时间：</strong>酒店价格 2026-08-19；路况、施工管制、景区入园与天气 2026-09-28。四姑娘山 2026 国庆专项通告以景区公告页为准。</p>
           </div>
           <div>
             <h3>图片授权</h3>
@@ -651,6 +663,14 @@
         <p class="lightbox-caption" data-lightbox-caption></p>
       </div>
     </div>
+
+    <nav class="mobile-dock" aria-label="快捷导航">
+      <a href="#days" data-dock-link><i data-lucide="calendar-clock"></i><span data-dock-today>日程</span></a>
+      <a href="#route" data-dock-link><i data-lucide="map"></i><span>路线</span></a>
+      <a href="#stays" data-dock-link><i data-lucide="bed-double"></i><span>住宿</span></a>
+      <a href="#roadbook" data-dock-link><i data-lucide="traffic-cone"></i><span>路况</span></a>
+      <a href="#safety" data-dock-link><i data-lucide="shield-plus"></i><span>安全</span></a>
+    </nav>
 
     <button class="back-to-top" type="button" data-back-top aria-label="返回顶部" title="返回顶部">
       <i data-lucide="arrow-up"></i>

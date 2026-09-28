@@ -4673,6 +4673,81 @@ p {
   width: fit-content;
 }
 
+.energy-plan {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.energy-plan-head {
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.energy-plan-head .mono-label {
+  color: var(--gold-light);
+}
+
+.energy-plan-head p:last-child {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.energy-days {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.energy-days li {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.energy-days span {
+  color: var(--gold-light);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.energy-days strong {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.energy-days p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1080px) {
+  .energy-days {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .energy-plan-head,
+  .energy-days {
+    grid-template-columns: 1fr;
+  }
+}
+
 .spot-live-photo {
   position: absolute;
   z-index: 4;

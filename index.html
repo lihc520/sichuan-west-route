@@ -16,9 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=32.0" />
+    <link rel="stylesheet" href="styles.css?v=34.0" />
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-    <script src="app.js?v=32.0" defer></script>
+    <script src="app.js?v=34.0" defer></script>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -32,6 +32,7 @@
         <a href="#days">日程</a>
         <a href="#roadbook">路况</a>
         <a href="#snow">雪山</a>
+        <a href="#vehicle">用车</a>
         <a href="#budget">预算</a>
         <a href="#booking">核查</a>
         <a href="#safety">安全</a>
@@ -262,7 +263,7 @@
             <p class="section-kicker">ROAD DETAILS / 02B</p>
             <h2>不是“开到康定”，而是每一段在哪里停</h2>
           </div>
-          <p>距离为路线规划参考，国庆不以导航显示的到达时间为承诺。厕所、加油和司机轮换尽量放在县城、服务区及正规停车区。</p>
+          <p>距离为路线规划参考，国庆不以导航显示的到达时间为承诺。厕所、充电和司机轮换尽量放在县城、服务区、换电站及正规停车区。</p>
         </div>
         <div class="road-table-wrap">
           <table class="road-table">
@@ -330,7 +331,7 @@
             <p class="section-kicker">BUDGET / 04</p>
             <h2>五个人，钱主要花在哪里</h2>
           </div>
-          <p>滑动修改机票、住宿和餐饮标准。默认按 2 间房、7 晚、7 座车国庆价估算，所有价格均非实时报价。</p>
+          <p>滑动修改机票、住宿和餐饮标准。租车按乐道 L90 实付 ¥4,271.11；电费按约 1,300km、山路 20–25 度/百公里估算；其余为估算，不是实时报价。</p>
         </div>
         <div class="budget-layout">
           <div class="budget-controls" data-budget-controls></div>
@@ -344,26 +345,42 @@
         </div>
       </section>
 
-      <section class="vehicle-section">
+      <section class="vehicle-section" id="vehicle">
         <div class="content-width vehicle-grid">
           <div class="vehicle-title">
             <p class="section-kicker">CAR / 05</p>
-            <h2>一台车够，<br />但行李必须克制。</h2>
+            <h2>纯电大六座，<br />每晚先充电。</h2>
           </div>
           <div class="vehicle-recommendation">
-            <div class="vehicle-icon"><i data-lucide="car-front"></i></div>
+            <div class="vehicle-icon"><i data-lucide="battery-charging"></i></div>
             <div>
-              <p class="mono-label">RECOMMENDED</p>
-              <h3>2.0T 级 7 座 SUV / MPV</h3>
-              <p>五位成年人使用第三排后，硬壳箱空间会非常紧。建议每人 1 个 20 寸箱或软包，摄影器材统一装一个公共箱。全程主线是铺装路，四驱不是刚需，轮胎、刹车和保险比“越野外观”重要。</p>
+              <p class="mono-label">已租 · ¥4,271.11</p>
+              <h3>乐道 L90 · 纯电六座 SUV</h3>
+              <p>85kWh 电池，CLTC 续航 570–605km，可充可换。川西满载 5 人、连续爬坡、早晚低温，实际按 <strong>330–400km</strong> 算；上坡电耗可到 20–25 度/百公里，下坡靠能量回收能补回一部分。原则：<strong>电量不低于 30%，每晚能充就充</strong>。</p>
             </div>
           </div>
           <div class="vehicle-checks">
-            <div><i data-lucide="shield-check"></i><span><strong>保险</strong>基础保障 + 车损无忧 + 玻璃/轮胎，确认高原道路救援范围。</span></div>
-            <div><i data-lucide="scan-line"></i><span><strong>取车</strong>全车 4K 视频，拍轮毂、玻璃、底盘边缘、油表和里程。</span></div>
-            <div><i data-lucide="circle-gauge"></i><span><strong>车况</strong>胎纹、备胎、刹车、雨刮、防冻液；向门店确认防滑链适配规格。</span></div>
-            <div><i data-lucide="user-round-check"></i><span><strong>驾驶员</strong>登记两位司机，山路不夜驾、不连续驾驶超过 2 小时。</span></div>
+            <div><i data-lucide="key-round"></i><span><strong>换电权限</strong>取车时当面问清：能不能用蔚来 / 乐道换电站、怎么授权、换电费怎么结算。租车评价里有“商家给权限就能换”的情况，不给权限就只能充电。</span></div>
+            <div><i data-lucide="battery-medium"></i><span><strong>电量与还车</strong>拍下取车电量和里程；问清还车要求多少电量、不足怎么收费，是否另收进甘孜 / 阿坝的费用。</span></div>
+            <div><i data-lucide="smartphone"></i><span><strong>充电 App</strong>装好乐道 App（看换电站排队），再装特来电、星星充电、国网 e 充电、快电，川西各家桩数据不全，多一个多一份保险。</span></div>
+            <div><i data-lucide="circle-gauge"></i><span><strong>驾驶</strong>长下坡开强能量回收，不一直踩刹车；清晨出发前插着枪预热电池；确认防滑链规格。两位司机都要登记。</span></div>
           </div>
+        </div>
+        <div class="content-width energy-plan">
+          <div class="energy-plan-head">
+            <p class="mono-label">CHARGING PLAN · A 线每日补能</p>
+            <p>换电站：都江堰、康定、丹巴甲居（G248）、天全、雅安均属蔚来川西环线；四姑娘山、塔公、新都桥以充电桩为主，出发当天在 App 里再确认。国庆换电站可能排队，优先在住处或景点停车时慢充 / 快充。</p>
+          </div>
+          <ol class="energy-days">
+            <li><span>9.30</span><strong>取车</strong><p>确认换电权限和还车电量要求；电量不到 90% 就在机场附近充满。</p></li>
+            <li><span>10.1</span><strong>约 290km · 爬到 3,900m</strong><p>07:00 都江堰换电 / 快充补到 90%+ 再进山；到四姑娘山镇约剩 35–50%。</p></li>
+            <li><span>10.2</span><strong>用车很少</strong><p>长坪村旅游中心国网充电站充到 90%+，离民宿很近。</p></li>
+            <li><span>10.3</span><strong>约 135km · 以下坡为主</strong><p>只耗约 15–20%，小金不用专门充；到甲居后去 G248 蔚来换电站换满。</p></li>
+            <li><span>10.4</span><strong>约 160km · 爬到 3,700m</strong><p>从甲居满电出发，到塔公约剩 55–65%；晚上在雅拉雪山游客中心特来电或民宿充电。</p></li>
+            <li><span>10.5</span><strong>约 225km · 两次上 4,000m</strong><p>出发 ≥85%；红海子回来约剩 50%，新都桥午饭时快充到 80%+，再上鱼子西。</p></li>
+            <li><span>10.6</span><strong>约 250km · 翻折多山后一路下坡</strong><p>康定蔚来换电站换满，到雅安电量充足；按还车要求在雅安补电。</p></li>
+            <li><span>10.7</span><strong>约 200km 高速</strong><p>雅安满电出发，还车前按合同电量在机场附近补齐。</p></li>
+          </ol>
         </div>
       </section>
 
@@ -380,6 +397,10 @@
             <div class="booking-date">必须在手</div>
             <div><span>A 线 10.2 / 10.3</span><h3>双桥沟改 10.3，长坪沟抢 10.2</h3><p>双桥沟 10.2 已售罄，锁定 10.3 实名票；10.2 住处就在长坪沟口，有票就去，没票就休息适应。景区每天 17:00 公布次日余票，捡到 10.2 双桥沟就退 10.3。不买黄牛票。</p></div>
           </article>
+          <article class="booking-item urgent">
+            <div class="booking-date">取车必问</div>
+            <div><span>乐道 L90</span><h3>换电权限、还车电量、额外费用</h3><p>当面确认能否用蔚来 / 乐道换电站及怎么授权和结算；拍下取车电量；问清还车电量要求、是否另收进甘孜 / 阿坝的费用。没有换电权限就改为每晚充电，10.1 在都江堰快充补满再进山。</p></div>
+          </article>
           <article class="booking-item ok">
             <div class="booking-date">已通车</div>
             <div><span>A 线 10.1</span><h3>G350 映秀—卧龙—巴朗山</h3><p>8 月 18 日关门沟、观音庙泥石流断道，现已抢通；阿坝州 9.18 通报映秀至小金交界“道路畅通”。山体仍松动，白天通过、灾害点不停车；遇临时管制原地等放行。</p></div>
@@ -390,7 +411,7 @@
           </article>
           <article class="booking-item">
             <div class="booking-date">夜路</div>
-            <div><span>A 线 10.3</span><h3>双桥沟后夜下甲居，途经半扇门施工段</h3><p>15:30 出园，小金吃饭加满油、换夜路司机。G350 丹巴半扇门镇阿娘寨段 9.9—11.30 半幅施工、单边放行，夜间注意锥桶和施工车。最后约 8km 甲居村道用民宿定位，提前告诉老板约 20:30 到。</p></div>
+            <div><span>A 线 10.3</span><h3>双桥沟后夜下甲居，途经半扇门施工段</h3><p>15:30 出园，小金吃饭、换夜路司机，到甲居后去 G248 蔚来换电站换满。G350 丹巴半扇门镇阿娘寨段 9.9—11.30 半幅施工、单边放行，夜间注意锥桶和施工车。最后约 8km 甲居村道用民宿定位，提前告诉老板约 20:30 到。</p></div>
           </article>
           <article class="booking-item">
             <div class="booking-date">降温雨雪</div>
@@ -402,7 +423,7 @@
           </article>
           <article class="booking-item">
             <div class="booking-date">今晚</div>
-            <div><span>全员</span><h3>离线地图和共享清单</h3><p>高德下载四川离线包；把酒店、景区、加油站和备用医院收藏到同一清单，截图保存门票和酒店订单二维码。</p></div>
+            <div><span>全员</span><h3>离线地图和共享清单</h3><p>高德下载四川离线包；把酒店、景区、充换电站和备用医院收藏到同一清单，截图保存门票和酒店订单二维码。</p></div>
           </article>
         </div>
       </section>
@@ -441,7 +462,7 @@
             </div>
             <span class="role-tag">路线信息</span>
             <h3>领航员</h3>
-            <p>只负责导航、路况、停车区和加油点，不让驾驶员在行车时操作手机。</p>
+            <p>只负责导航、路况、停车区和充换电站，不让驾驶员在行车时操作手机。</p>
           </article>
           <article class="role-card role-finance">
             <div class="role-card-header">
@@ -450,7 +471,7 @@
             </div>
             <span class="role-tag">公共账目</span>
             <h3>财务员</h3>
-            <p>管理团队公款、油费、停车票和押金，隔天在群内公布一次清晰账目。</p>
+            <p>管理团队公款、电费、停车票和押金，隔天在群内公布一次清晰账目。</p>
           </article>
           <article class="role-card role-medic">
             <div class="role-card-header">
@@ -505,7 +526,7 @@
           <div class="risk-grid">
             <article><i data-lucide="activity"></i><h3>高原反应</h3><p>首两天慢走、少说话、不饮酒。头痛、恶心、失眠持续加重时停止行程；呼吸困难、意识异常、步态不稳时立即下撤并拨打 120。</p><span>不要用吸氧掩盖严重症状继续上山</span></article>
             <article><i data-lucide="cloud-snow"></i><h3>低温与结冰</h3><p>国庆高海拔清晨可能低于 0°C。车辆准备合规防滑链，驾驶员提前学会安装；遇降雪、浓雾或暗冰，取消 S434 沿途停靠。</p><span>保暖层 + 防水层 + 帽子手套</span></article>
-            <article><i data-lucide="traffic-cone"></i><h3>国庆拥堵</h3><p>每天 06:00 前后出发，油量低于半箱就补。山区不要因堵车抄村道；官方分流、交警指挥优先于任何攻略和旧导航。</p><span>路线切换不能替代当天路况判断</span></article>
+            <article><i data-lucide="traffic-cone"></i><h3>国庆拥堵</h3><p>每天 06:00 前后出发，电量低于 30% 就补电。山区不要因堵车抄村道；官方分流、交警指挥优先于任何攻略和旧导航。</p><span>路线切换不能替代当天路况判断</span></article>
             <article><i data-lucide="mountain-snow"></i><h3>景区节奏</h3><p>双桥沟乘车到最高点后自上而下游览，减少无效爬升。出现不适可跳过站点，直接乘观光车回入口。</p><span>景色不会因为少走一站而消失</span></article>
           </div>
           <div class="altitude-response" id="altitude-response">
@@ -569,7 +590,7 @@
               </article>
               <article>
                 <i data-lucide="car-front"></i><h4>驾驶与车辆</h4>
-                <ul><li>连续驾驶不超过 2 小时，山路不夜驾，不为日落或网红机位赶路。</li><li>油量低于半箱就补；长下坡用低挡和发动机制动，不连续踩刹车。</li><li>雨雪、暗冰、浓雾、落石或管制出现时，停止景观支线，按官方路线撤离。</li></ul>
+                <ul><li>连续驾驶不超过 2 小时，山路不夜驾，不为日落或网红机位赶路。</li><li>电量低于 30% 就补电；长下坡开强能量回收，不连续踩刹车。</li><li>雨雪、暗冰、浓雾、落石或管制出现时，停止景观支线，按官方路线撤离。</li></ul>
               </article>
               <article>
                 <i data-lucide="cloud-sun"></i><h4>低温与失温</h4>
